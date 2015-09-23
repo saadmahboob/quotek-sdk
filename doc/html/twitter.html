@@ -1,7 +1,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Yahoo! Finance</title>
+  <title>Twitter</title>
   
   <link href='_static/css/bootstrap.css' rel='stylesheet' type='text/css'>
   <link href='_static/css/bootstrap-theme.css' rel='stylesheet' type='text/css'>
@@ -95,9 +95,9 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="data_sources.html">Data Sources</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Time-Series Importer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="twitter.html">Twitter Statuses Reader</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Yahoo! Finance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Twitter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yahoo.html">Yahoo! Finance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rss.html">RSS Feeds</a></li>
 </ul>
 </li>
@@ -115,39 +115,28 @@
 
       <div class="rst-content">
         
-  <div class="section" id="yahoo-finance">
-<h1>Yahoo! Finance<a class="headerlink" href="#yahoo-finance" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="twitter">
+<h1>Twitter<a class="headerlink" href="#twitter" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="_CPPv2N6quotek10datasource12yahoofinanceE">
-<span id="quotek::datasource::yahoofinance"></span><span class="target" id="project0classquotek_1_1datasource_1_1yahoofinance"></span><em class="property">class </em><code class="descclassname">quotek::datasource::</code><code class="descname">yahoofinance</code><a class="headerlink" href="#_CPPv2N6quotek10datasource12yahoofinanceE" title="Permalink to this definition">¶</a></dt>
-<dd><p>yahoofinance is a class which allows to query the Yahoo! Finance API service to fetch historical data on stocks and indices. </p>
+<dt id="_CPPv2N6quotek10datasource7twitterE">
+<span id="quotek::datasource::twitter"></span><span class="target" id="project0classquotek_1_1datasource_1_1twitter"></span><em class="property">class </em><code class="descclassname">quotek::datasource::</code><code class="descname">twitter</code><a class="headerlink" href="#_CPPv2N6quotek10datasource7twitterE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Twitter is a class that allows to fetch twitter content from the regular API. </p>
 <div class="breathe-sectiondef container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N6quotek10datasource12yahoofinance12yahoofinanceEv">
-<span id="quotek::datasource::yahoofinance::yahoofinance"></span><span class="target" id="project0classquotek_1_1datasource_1_1yahoofinance_1a7d08a4ed1a174d19078beea3250912a7"></span><code class="descname">yahoofinance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek10datasource12yahoofinance12yahoofinanceEv" title="Permalink to this definition">¶</a></dt>
-<dd><p>yahoofinance class constructor </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv2N6quotek10datasource12yahoofinanceD0Ev">
-<span id="quotek::datasource::yahoofinance::~yahoofinance"></span><span class="target" id="project0classquotek_1_1datasource_1_1yahoofinance_1a730f7b0c2e4c97b93064a7efd2011802"></span><code class="descname">~yahoofinance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek10datasource12yahoofinanceD0Ev" title="Permalink to this definition">¶</a></dt>
-<dd><p>yahoofinance class destructor </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv2N6quotek10datasource12yahoofinance7historyENSt6stringENSt6stringENSt6stringE">
-<span id="quotek::datasource::yahoofinance::history__ss.ss.ss"></span><span class="target" id="project0classquotek_1_1datasource_1_1yahoofinance_1ab1bc3277a9201eb3fff2298d3a419472"></span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7historyE" title="quotek::data::history">history</a>&gt; <code class="descname">history</code><span class="sig-paren">(</span>std::string <em>symbol</em>, std::string <em>from</em>, std::string <em>to</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek10datasource12yahoofinance7historyENSt6stringENSt6stringENSt6stringE" title="Permalink to this definition">¶</a></dt>
-<dd><p>returns an asset history under the form of a quotek history vector (open,close,high,low). <dl class="docutils">
-<dt><strong>Return</strong></dt>
-<dd>a vector of quotek history records. </dd>
+<dt id="_CPPv2N6quotek10datasource7twitter7twitterENSt6stringENSt6stringENSt6stringENSt6stringE">
+<span id="quotek::datasource::twitter::twitter__ss.ss.ss.ss"></span><span class="target" id="project0classquotek_1_1datasource_1_1twitter_1aaa77f7b931af53090606c841fec6fc9f"></span><code class="descname">twitter</code><span class="sig-paren">(</span>std::string <em>consumer_key</em>, std::string <em>consumer_secret</em>, std::string <em>token</em>, std::string <em>token_secret</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek10datasource7twitter7twitterENSt6stringENSt6stringENSt6stringENSt6stringE" title="Permalink to this definition">¶</a></dt>
+<dd><p>twitter class constructor. To get all the constructor parameters, just go to <a class="reference external" href="https://apps.twitter.com/,">https://apps.twitter.com/,</a> create a new app and go to &#8220;Keys and Access Tokens&#8221;.</p>
+<p><dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last">
-<li><code class="first docutils literal"><span class="pre">symbol</span></code> - <p>yahoo! symbol for the asset. </p>
+<li><code class="first docutils literal"><span class="pre">consumer_key</span></code> - <p>Twitter app consumer key. </p>
 </li>
-<li><code class="first docutils literal"><span class="pre">from</span></code> - <p>string-formated date with the format &#8220;YYYY-MM-DD&#8221;. </p>
+<li><code class="first docutils literal"><span class="pre">consumer_secret</span></code> - <p>Twitter app consumer secret. </p>
 </li>
-<li><code class="first docutils literal"><span class="pre">to</span></code> - <p>string-formated date with the format &#8220;YYYY-MM-DD&#8221;. </p>
+<li><code class="first docutils literal"><span class="pre">token</span></code> - <p>Twitter app token. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">token_secret</span></code> - <p>Twitter app token secret. </p>
 </li>
 </ul>
 </dd>
@@ -156,18 +145,42 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek10datasource12yahoofinance13close_historyENSt6stringENSt6stringENSt6stringE">
-<span id="quotek::datasource::yahoofinance::close_history__ss.ss.ss"></span><span class="target" id="project0classquotek_1_1datasource_1_1yahoofinance_1ac2727ec66f775db24f9af2826c56439d"></span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> <code class="descname">close_history</code><span class="sig-paren">(</span>std::string <em>symbol</em>, std::string <em>from</em>, std::string <em>to</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek10datasource12yahoofinance13close_historyENSt6stringENSt6stringENSt6stringE" title="Permalink to this definition">¶</a></dt>
-<dd><p>returns the closing history of an asset defined by symbol. Compared to history, it is a very convenient function to perform moving average, VAR, etc.. computations. <dl class="docutils">
+<dt id="_CPPv2N6quotek10datasource7twitterD0Ev">
+<span id="quotek::datasource::twitter::~twitter"></span><span class="target" id="project0classquotek_1_1datasource_1_1twitter_1a962ba61d5f83284bc585c9a65562ef90"></span><code class="descname">~twitter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek10datasource7twitterD0Ev" title="Permalink to this definition">¶</a></dt>
+<dd><p>twitter class destructor </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N6quotek10datasource7twitter5fetchENSt6stringEi">
+<span id="quotek::datasource::twitter::fetch__ss.i"></span><span class="target" id="project0classquotek_1_1datasource_1_1twitter_1a5fd804bf9268d17db8b7c0b2071ececb"></span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data4newsE" title="quotek::data::news">news</a>&gt; <code class="descname">fetch</code><span class="sig-paren">(</span>std::string <em>screen_name</em>, int <em>nb_tweets</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek10datasource7twitter5fetchENSt6stringEi" title="Permalink to this definition">¶</a></dt>
+<dd><p>fetches the last tweets of given user.</p>
+<p><dl class="docutils">
 <dt><strong>Return</strong></dt>
-<dd>a quotek records structure containing closing prices as value. </dd>
+<dd>a vector of quotek news objects. </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last">
-<li><code class="first docutils literal"><span class="pre">symbol</span></code> - <p>yahoo! symbol for the asset. </p>
+<li><code class="first docutils literal"><span class="pre">screen_name</span></code> - <p>The name of account to fetch tweets for. </p>
 </li>
-<li><code class="first docutils literal"><span class="pre">from</span></code> - <p>string-formated date with the format &#8220;YYYY-MM-DD&#8221;. </p>
+<li><code class="first docutils literal"><span class="pre">nb_tweets</span></code> - <p>The number of tweets to fetch (sorted by descending date) </p>
 </li>
-<li><code class="first docutils literal"><span class="pre">to</span></code> - <p>string-formated date with the format &#8220;YYYY-MM-DD&#8221;. </p>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N6quotek10datasource7twitter6searchENSt6stringEi">
+<span id="quotek::datasource::twitter::search__ss.i"></span><span class="target" id="project0classquotek_1_1datasource_1_1twitter_1a9ce1541023f5eba10d3cdd80e5df90b4"></span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data4newsE" title="quotek::data::news">news</a>&gt; <code class="descname">search</code><span class="sig-paren">(</span>std::string <em>term</em>, int <em>nb_tweets</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek10datasource7twitter6searchENSt6stringEi" title="Permalink to this definition">¶</a></dt>
+<dd><p>searches the tweets matching the term provided as argument.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>a vector of quotek news objects. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">term</span></code> - <p>term to search in the global tweets feed? </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">nb_tweets</span></code> - <p>The number of found tweets to retrieve. </p>
 </li>
 </ul>
 </dd>
