@@ -95,8 +95,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data_sources.html">Data Sources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Time-Series Importer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="twitter.html">Twitter Statuses Reader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twitter.html">Twitter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="yahoo.html">Yahoo! Finance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rss.html">RSS Feeds</a></li>
 </ul>
@@ -154,8 +154,8 @@ algorithms in real situations.</em></p>
     <span class="cm">/* we send each news to the Alchemy API service for sentiment analysis. */</span>
     <span class="n">quotek</span><span class="o">::</span><span class="n">ml</span><span class="o">::</span><span class="n">sentiment</span> <span class="n">sent</span> <span class="o">=</span> <span class="n">a1</span><span class="p">.</span><span class="n">sentiment</span><span class="p">(</span> <span class="n">wsj_nlist</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">content</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;text&quot;</span><span class="p">);</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">sent</span><span class="p">.</span><span class="n">positive</span><span class="p">)</span> <span class="n">pos_sent</span><span class="o">++</span><span class="p">;</span>
-    <span class="k">else</span> <span class="n">neg_sent</span><span class="o">++</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">sent</span><span class="p">.</span><span class="n">sentiment</span> <span class="o">==</span> <span class="s">&quot;positive&quot;</span><span class="p">)</span> <span class="n">pos_sent</span><span class="o">++</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">sent</span><span class="p">.</span><span class="n">sentiment</span> <span class="o">==</span> <span class="s">&quot;negative&quot;</span><span class="p">)</span> <span class="n">neg_sent</span><span class="o">++</span><span class="p">;</span>
 
   <span class="p">}</span>
 

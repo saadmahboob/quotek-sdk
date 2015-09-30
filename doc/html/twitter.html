@@ -175,12 +175,34 @@
 <dd><p>searches the tweets matching the term provided as argument.</p>
 <p><dl class="docutils">
 <dt><strong>Return</strong></dt>
-<dd>a vector of quotek news objects. </dd>
+<dd>a vector of quotek news objects matching the search. </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last">
-<li><code class="first docutils literal"><span class="pre">term</span></code> - <p>term to search in the global tweets feed? </p>
+<li><code class="first docutils literal"><span class="pre">term</span></code> - <p>term to search in the global tweets feed. </p>
 </li>
 <li><code class="first docutils literal"><span class="pre">nb_tweets</span></code> - <p>The number of found tweets to retrieve. </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N6quotek10datasource7twitter6searchENSt6stringEiNSt6stringENSt6stringE">
+<span id="quotek::datasource::twitter::search__ss.i.ss.ss"></span><span class="target" id="project0classquotek_1_1datasource_1_1twitter_1a90b28ee03df453ef5040fdef952ebbc7"></span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data4newsE" title="quotek::data::news">news</a>&gt; <code class="descname">search</code><span class="sig-paren">(</span>std::string <em>term</em>, int <em>nb_tweets</em>, std::string <em>result_type</em>, std::string <em>lang</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek10datasource7twitter6searchENSt6stringEiNSt6stringENSt6stringE" title="Permalink to this definition">¶</a></dt>
+<dd><p>searches the tweets matching the term provided as argument. This method refines the usual <a class="reference internal" href="#project0classquotek_1_1datasource_1_1twitter_1a9ce1541023f5eba10d3cdd80e5df90b4"><span>search()</span></a> method by adding 2 extra parameters: result_type and language. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>a vector of quotek news objects matching the search. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">term</span></code> - <p>term to search in the global tweets feed. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">nb_tweets</span></code> - <p>The number of found tweets to retrieve. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">result_type</span></code> - <p>Type of the search result, can be either &#8220;popular&#8221;, &#8220;recent&#8221; or &#8220;mixed&#8221;. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">language</span></code> - <p>of the tweets, eg for english only tweets put lang = &#8220;en&#8221;. </p>
 </li>
 </ul>
 </dd>

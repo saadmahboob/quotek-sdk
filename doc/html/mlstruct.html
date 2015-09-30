@@ -95,8 +95,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data_sources.html">Data Sources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Time-Series Importer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="twitter.html">Twitter Statuses Reader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twitter.html">Twitter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="yahoo.html">Yahoo! Finance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rss.html">RSS Feeds</a></li>
 </ul>
@@ -130,15 +130,27 @@
 </dd></dl>
 
 <dl class="member">
-<dt id="_CPPv2N6quotek2ml9sentiment8positiveE">
-<span id="quotek::ml::sentiment::positive__b"></span><span class="target" id="project0structquotek_1_1ml_1_1sentiment_1a0520372d1f7e0902e0882973c4f0d992"></span>bool <code class="descname">positive</code><a class="headerlink" href="#_CPPv2N6quotek2ml9sentiment8positiveE" title="Permalink to this definition">¶</a></dt>
-<dd><p>Stores whether the computed sentiment is felt overall as positive or negative. If positive if false, then sentiment is persived as negative. </p>
+<dt id="_CPPv2N6quotek2ml9sentiment9sentimentE">
+<span id="quotek::ml::sentiment::sentiment__ss"></span><span class="target" id="project0structquotek_1_1ml_1_1sentiment_1afaa79f0f46557a024b089f321b744383"></span>std::string <code class="descname">sentiment</code><a class="headerlink" href="#_CPPv2N6quotek2ml9sentiment9sentimentE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores whether the computed sentiment is felt overall as positive, negative or neutral. so data stored in here can be &#8220;positive&#8221;, &#8220;negative&#8221; or &#8220;neutral&#8221; </p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv2N6quotek2ml9sentiment5mixedE">
 <span id="quotek::ml::sentiment::mixed__b"></span><span class="target" id="project0structquotek_1_1ml_1_1sentiment_1a88047cd93b074d6e89805b1a8836076c"></span>bool <code class="descname">mixed</code><a class="headerlink" href="#_CPPv2N6quotek2ml9sentiment5mixedE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stores whether the sentiment is felt as mixed or not. If sentiment is mixed, you should take the result carefully. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N6quotek2ml9sentiment5errorE">
+<span id="quotek::ml::sentiment::error__b"></span><span class="target" id="project0structquotek_1_1ml_1_1sentiment_1abc992b009a1627c6c0410809e9ba6fde"></span>bool <code class="descname">error</code><a class="headerlink" href="#_CPPv2N6quotek2ml9sentiment5errorE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tells if sentiment analysis failed or not </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N6quotek2ml9sentiment13error_messageE">
+<span id="quotek::ml::sentiment::error_message__ss"></span><span class="target" id="project0structquotek_1_1ml_1_1sentiment_1a4b39581cbacd442f5c4dd79deb39cc81"></span>std::string <code class="descname">error_message</code><a class="headerlink" href="#_CPPv2N6quotek2ml9sentiment13error_messageE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores the analysis error message in case of failure </p>
 </dd></dl>
 
 </div>

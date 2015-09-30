@@ -95,8 +95,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data_sources.html">Data Sources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Time-Series Importer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="twitter.html">Twitter Statuses Reader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twitter.html">Twitter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="yahoo.html">Yahoo! Finance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rss.html">RSS Feeds</a></li>
 </ul>
@@ -145,6 +145,12 @@
 <dt id="_CPPv2N6quotek5quant7_greeksE">
 <span id="quotek::quant::_greeks"></span><span class="target" id="project0namespacequotek_1_1quant_1a3e31442f8c1bf26b954308d50b80429c"></span><em class="property">typedef </em><em class="property">struct</em> quotek::<a class="reference internal" href="#_CPPv2N6quotek5quantE" title="quotek::quant">quant</a>::<a class="reference internal" href="#_CPPv2N6quotek5quant7_greeksE" title="quotek::quant::_greeks">_greeks</a> <code class="descname">_greeks</code><a class="headerlink" href="#_CPPv2N6quotek5quant7_greeksE" title="Permalink to this definition">¶</a></dt>
 <dd><p>greeks is a structure meant to store greek values involved in portfolio modeling. </p>
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv2N6quotek5quant11fibo_levelsE">
+<span id="quotek::quant::fibo_levels"></span><span class="target" id="project0namespacequotek_1_1quant_1a73f437965f60e23cc3f912d8e88b41c5"></span><em class="property">typedef </em><em class="property">struct</em> quotek::<a class="reference internal" href="#_CPPv2N6quotek5quantE" title="quotek::quant">quant</a>::<a class="reference internal" href="#_CPPv2N6quotek5quant11fibo_levelsE" title="quotek::quant::fibo_levels">fibo_levels</a> <code class="descname">fibo_levels</code><a class="headerlink" href="#_CPPv2N6quotek5quant11fibo_levelsE" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#project0structquotek_1_1quant_1_1fibo__levels"><span>fibo_levels</span></a> is a structure that stores the different fibonacci retracements for a time-serie </p>
 </dd></dl>
 
 </div>
@@ -534,6 +540,66 @@
 
 </div>
 <dl class="class">
+<dt id="_CPPv2N6quotek5quant7_greeksE">
+<span id="quotek::quant::_greeks"></span><span class="target" id="project0structquotek_1_1quant_1_1__greeks"></span><em class="property">struct </em><code class="descname">_greeks</code><a class="headerlink" href="#_CPPv2N6quotek5quant7_greeksE" title="Permalink to this definition">¶</a></dt>
+<dd><em>#include &lt;quant.hpp&gt;</em><p>greeks is a structure meant to store greek values involved in portfolio modeling. </p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N6quotek5quant7_greeks5deltaE">
+<span id="quotek::quant::_greeks::delta__float"></span><span class="target" id="project0structquotek_1_1quant_1_1__greeks_1a497bfded702f63e5d40893cd9e6f08f2"></span>float <code class="descname">delta</code><a class="headerlink" href="#_CPPv2N6quotek5quant7_greeks5deltaE" title="Permalink to this definition">¶</a></dt>
+<dd><p>stores delta part of the greeks </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N6quotek5quant7_greeks5gammaE">
+<span id="quotek::quant::_greeks::gamma__float"></span><span class="target" id="project0structquotek_1_1quant_1_1__greeks_1a2b12ed7072b4fb9c6e10747700713334"></span>float <code class="descname">gamma</code><a class="headerlink" href="#_CPPv2N6quotek5quant7_greeks5gammaE" title="Permalink to this definition">¶</a></dt>
+<dd><p>stores gamma part of the greeks </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N6quotek5quant7_greeks5thetaE">
+<span id="quotek::quant::_greeks::theta__float"></span><span class="target" id="project0structquotek_1_1quant_1_1__greeks_1aa7dfa9d17dc5273e0bb428a317be6d59"></span>float <code class="descname">theta</code><a class="headerlink" href="#_CPPv2N6quotek5quant7_greeks5thetaE" title="Permalink to this definition">¶</a></dt>
+<dd><p>stores theta part of the greeks </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N6quotek5quant7_greeks4vegaE">
+<span id="quotek::quant::_greeks::vega__float"></span><span class="target" id="project0structquotek_1_1quant_1_1__greeks_1aaa6b04f80dfea777769484551cc03e1c"></span>float <code class="descname">vega</code><a class="headerlink" href="#_CPPv2N6quotek5quant7_greeks4vegaE" title="Permalink to this definition">¶</a></dt>
+<dd><p>stores vega part of the greeks </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N6quotek5quant7_greeks3rhoE">
+<span id="quotek::quant::_greeks::rho__float"></span><span class="target" id="project0structquotek_1_1quant_1_1__greeks_1a6c719d2c9aa3d5940e3338f2c53dae5e"></span>float <code class="descname">rho</code><a class="headerlink" href="#_CPPv2N6quotek5quant7_greeks3rhoE" title="Permalink to this definition">¶</a></dt>
+<dd><p>stores rho part of the greeks </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv2N6quotek5quant6affineE">
+<span id="quotek::quant::affine"></span><span class="target" id="project0structquotek_1_1quant_1_1affine"></span><em class="property">struct </em><code class="descname">affine</code><a class="headerlink" href="#_CPPv2N6quotek5quant6affineE" title="Permalink to this definition">¶</a></dt>
+<dd><em>#include &lt;quant.hpp&gt;</em><p>This structure aims to store slope-intercept equations parameters. </p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N6quotek5quant6affine1aE">
+<span id="quotek::quant::affine::a__float"></span><span class="target" id="project0structquotek_1_1quant_1_1affine_1aab4b9fde4925945e78d7b7d86e214e36"></span>float <code class="descname">a</code><a class="headerlink" href="#_CPPv2N6quotek5quant6affine1aE" title="Permalink to this definition">¶</a></dt>
+<dd><p>slope </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N6quotek5quant6affine1bE">
+<span id="quotek::quant::affine::b__float"></span><span class="target" id="project0structquotek_1_1quant_1_1affine_1a8cea25a45f356704761ba1456bf83c30"></span>float <code class="descname">b</code><a class="headerlink" href="#_CPPv2N6quotek5quant6affine1bE" title="Permalink to this definition">¶</a></dt>
+<dd><p>intercept </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
 <dt id="_CPPv2N6quotek5quant12blackscholesE">
 <span id="quotek::quant::blackscholes"></span><span class="target" id="project0classquotek_1_1quant_1_1blackscholes"></span><em class="property">class </em><code class="descname">blackscholes</code><a class="headerlink" href="#_CPPv2N6quotek5quant12blackscholesE" title="Permalink to this definition">¶</a></dt>
 <dd><em>#include &lt;blackscholes.hpp&gt;</em><p>blackscholes provides an option pricing modelisation context. Please note that this class only support vanilla options pricing by default, and if you want to price exotics contracts with this class you&#8217;ll probably have to inherit it. </p>
@@ -573,6 +639,51 @@
 <dd>a greeks_ structure containing beta, gamme, delta.. </dd>
 </dl>
 </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv2N6quotek5quant11fibo_levelsE">
+<span id="quotek::quant::fibo_levels"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__levels"></span><em class="property">struct </em><code class="descname">fibo_levels</code><a class="headerlink" href="#_CPPv2N6quotek5quant11fibo_levelsE" title="Permalink to this definition">¶</a></dt>
+<dd><em>#include &lt;quant.hpp&gt;</em><p><a class="reference internal" href="#project0structquotek_1_1quant_1_1fibo__levels"><span>fibo_levels</span></a> is a structure that stores the different fibonacci retracements for a time-serie </p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N6quotek5quant11fibo_levels2p0E">
+<span id="quotek::quant::fibo_levels::p0__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__levels_1a76692fba551fe279fa144ed928ce664d"></span>float <code class="descname">p0</code><a class="headerlink" href="#_CPPv2N6quotek5quant11fibo_levels2p0E" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores level 0% </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N6quotek5quant11fibo_levels3p23E">
+<span id="quotek::quant::fibo_levels::p23__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__levels_1aa901aca41149131eb3b0279cf3869e16"></span>float <code class="descname">p23</code><a class="headerlink" href="#_CPPv2N6quotek5quant11fibo_levels3p23E" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores level 23.6 % </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N6quotek5quant11fibo_levels3p38E">
+<span id="quotek::quant::fibo_levels::p38__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__levels_1a0a69072b2e11b8176cb6258ac8d63dd4"></span>float <code class="descname">p38</code><a class="headerlink" href="#_CPPv2N6quotek5quant11fibo_levels3p38E" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores level 38.2 % </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N6quotek5quant11fibo_levels3p50E">
+<span id="quotek::quant::fibo_levels::p50__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__levels_1afe44ffe0dc4507b4ccb612e27df8877d"></span>float <code class="descname">p50</code><a class="headerlink" href="#_CPPv2N6quotek5quant11fibo_levels3p50E" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores level 50%. Please note that this is not really a fibo level but since it is highly used, it is also computed. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N6quotek5quant11fibo_levels3p61E">
+<span id="quotek::quant::fibo_levels::p61__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__levels_1a1acb544391d69eae097eb11f3536a4a7"></span>float <code class="descname">p61</code><a class="headerlink" href="#_CPPv2N6quotek5quant11fibo_levels3p61E" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores level 61.8 % </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N6quotek5quant11fibo_levels4p100E">
+<span id="quotek::quant::fibo_levels::p100__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__levels_1a1996333f7f015ace7ec983061ec49cfe"></span>float <code class="descname">p100</code><a class="headerlink" href="#_CPPv2N6quotek5quant11fibo_levels4p100E" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores level 100 % </p>
 </dd></dl>
 
 </div>
@@ -645,33 +756,6 @@
 </dd></dl>
 
 <dl class="class">
-<dt id="_CPPv2N6quotek5quant6affineE">
-<span id="quotek::quant::affine"></span><span class="target" id="project0structquotek_1_1quant_1_1affine"></span><em class="property">struct </em><code class="descname">affine</code><a class="headerlink" href="#_CPPv2N6quotek5quant6affineE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;quant.hpp&gt;</em><p>This structure aims to store slope-intercept equations parameters. </p>
-<div class="breathe-sectiondef container">
-<p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="member">
-<dt id="_CPPv2N6quotek5quant6affine1aE">
-<span id="quotek::quant::affine::a__float"></span><span class="target" id="project0structquotek_1_1quant_1_1affine_1aab4b9fde4925945e78d7b7d86e214e36"></span>float <code class="descname">a</code><a class="headerlink" href="#_CPPv2N6quotek5quant6affine1aE" title="Permalink to this definition">¶</a></dt>
-<dd><p>slope </p>
-</dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N6quotek5quant6affine1bE">
-<span id="quotek::quant::affine::b__float"></span><span class="target" id="project0structquotek_1_1quant_1_1affine_1a8cea25a45f356704761ba1456bf83c30"></span>float <code class="descname">b</code><a class="headerlink" href="#_CPPv2N6quotek5quant6affine1bE" title="Permalink to this definition">¶</a></dt>
-<dd><p>intercept </p>
-</dd></dl>
-
-</div>
-</dd></dl>
-
-<dl class="class">
-<dt id="_CPPv2N6quotek5quant6trinomE">
-<span id="quotek::quant::trinom"></span><span class="target" id="project0structquotek_1_1quant_1_1trinom"></span><em class="property">struct </em><code class="descname">trinom</code><a class="headerlink" href="#_CPPv2N6quotek5quant6trinomE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;quant.hpp&gt;</em><p>trinom is a struct that aims to store 2nd degree polynom parameters. </p>
-</dd></dl>
-
-<dl class="class">
 <dt id="_CPPv2N6quotek5quant7trend_pE">
 <span id="quotek::quant::trend_p"></span><span class="target" id="project0structquotek_1_1quant_1_1trend__p"></span><em class="property">struct </em><code class="descname">trend_p</code><a class="headerlink" href="#_CPPv2N6quotek5quant7trend_pE" title="Permalink to this definition">¶</a></dt>
 <dd><em>#include &lt;quant.hpp&gt;</em><p>This structure stores trend percentage analysis. </p>
@@ -699,42 +783,9 @@
 </dd></dl>
 
 <dl class="class">
-<dt id="_CPPv2N6quotek5quant7_greeksE">
-<span id="quotek::quant::_greeks"></span><span class="target" id="project0structquotek_1_1quant_1_1__greeks"></span><em class="property">struct </em><code class="descname">_greeks</code><a class="headerlink" href="#_CPPv2N6quotek5quant7_greeksE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;quant.hpp&gt;</em><p>greeks is a structure meant to store greek values involved in portfolio modeling. </p>
-<div class="breathe-sectiondef container">
-<p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="member">
-<dt id="_CPPv2N6quotek5quant7_greeks5deltaE">
-<span id="quotek::quant::_greeks::delta__float"></span><span class="target" id="project0structquotek_1_1quant_1_1__greeks_1a497bfded702f63e5d40893cd9e6f08f2"></span>float <code class="descname">delta</code><a class="headerlink" href="#_CPPv2N6quotek5quant7_greeks5deltaE" title="Permalink to this definition">¶</a></dt>
-<dd><p>stores delta part of the greeks </p>
-</dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N6quotek5quant7_greeks5gammaE">
-<span id="quotek::quant::_greeks::gamma__float"></span><span class="target" id="project0structquotek_1_1quant_1_1__greeks_1a2b12ed7072b4fb9c6e10747700713334"></span>float <code class="descname">gamma</code><a class="headerlink" href="#_CPPv2N6quotek5quant7_greeks5gammaE" title="Permalink to this definition">¶</a></dt>
-<dd><p>stores gamma part of the greeks </p>
-</dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N6quotek5quant7_greeks5thetaE">
-<span id="quotek::quant::_greeks::theta__float"></span><span class="target" id="project0structquotek_1_1quant_1_1__greeks_1aa7dfa9d17dc5273e0bb428a317be6d59"></span>float <code class="descname">theta</code><a class="headerlink" href="#_CPPv2N6quotek5quant7_greeks5thetaE" title="Permalink to this definition">¶</a></dt>
-<dd><p>stores theta part of the greeks </p>
-</dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N6quotek5quant7_greeks4vegaE">
-<span id="quotek::quant::_greeks::vega__float"></span><span class="target" id="project0structquotek_1_1quant_1_1__greeks_1aaa6b04f80dfea777769484551cc03e1c"></span>float <code class="descname">vega</code><a class="headerlink" href="#_CPPv2N6quotek5quant7_greeks4vegaE" title="Permalink to this definition">¶</a></dt>
-<dd><p>stores vega part of the greeks </p>
-</dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N6quotek5quant7_greeks3rhoE">
-<span id="quotek::quant::_greeks::rho__float"></span><span class="target" id="project0structquotek_1_1quant_1_1__greeks_1a6c719d2c9aa3d5940e3338f2c53dae5e"></span>float <code class="descname">rho</code><a class="headerlink" href="#_CPPv2N6quotek5quant7_greeks3rhoE" title="Permalink to this definition">¶</a></dt>
-<dd><p>stores rho part of the greeks </p>
-</dd></dl>
-
-</div>
+<dt id="_CPPv2N6quotek5quant6trinomE">
+<span id="quotek::quant::trinom"></span><span class="target" id="project0structquotek_1_1quant_1_1trinom"></span><em class="property">struct </em><code class="descname">trinom</code><a class="headerlink" href="#_CPPv2N6quotek5quant6trinomE" title="Permalink to this definition">¶</a></dt>
+<dd><em>#include &lt;quant.hpp&gt;</em><p>trinom is a struct that aims to store 2nd degree polynom parameters. </p>
 </dd></dl>
 
 </dd></dl>
