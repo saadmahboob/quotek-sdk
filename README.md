@@ -19,7 +19,7 @@ The goal behind Quotek SDK is to offer the maximum number of useful functions to
 
 The following scheme summurizes all the features which are already available in the SDK:
 
-![Quotek namespaces scheme](http://doc.quotek.io/images/quotek_sdk_ns.png)
+![Quotek namespaces scheme](http://docs.quotek.io/images/quotek_sdk_ns.png)
 
 Documentation
 =============
