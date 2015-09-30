@@ -24,7 +24,7 @@ The following scheme summurizes all the features which are already available in 
 Documentation
 =============
 
-You can find the full SDK documentation either directly in this repository or on the quotek documentation portal: http://doc.quotek.io/sdk
+You can find the full SDK documentation either directly in this repository or on the quotek documentation portal: http://docs.quotek.io/sdk
 
 Setup
 =====
