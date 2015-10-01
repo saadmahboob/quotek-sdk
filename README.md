@@ -38,7 +38,8 @@ Changelog
 v2.1.1
 ------
 
-  - Improvements on Alchemy API connector: better errors handling, change in quotek::ml::sentiment structure by replacing bool positive by std::string sentiment.
+  - Improvements on Alchemy API connector: better errors handling, change in quotek::ml::sentiment structure by replacing bool positive by std::string sentimentstr.
+
   - Added new TA function: fibo_retrace() which allows to compute fibonacci retracement levels for a time-series, along with a new structure: quotek::quand::fibo_levels
 
   - Added extra function in twitter connector: search(term,nb_results,search_type,lang) In order to refine your searches and extract only what you want as search results.
