@@ -35,6 +35,11 @@ In order to get full instructions about how to Setup Quotek SDK in your environm
 Changelog
 =========
 
+v2.1.3
+------
+
+  - Added Visual Studio 2015 Project Template.
+
 v2.1.2
 ------
 

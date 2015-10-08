@@ -11,6 +11,7 @@ xcopy lib\win64 "C:\Program Files\quotek\sdk\lib\" /e /y
 
 xcopy samples "C:\Program Files\quotek\sdk\samples\" /e /y
 xcopy tests "C:\Program Files\quotek\sdk\tests\" /e /y
+xcopy helpers "C:\Program Files\quotek\sdk\helpers\" /e /y
 
 xcopy curl\curl "C:\Program Files\quotek\sdk\include\curl\" /e /y
 copy curl\libcurl.lib "C:\Program Files\quotek\sdk\lib\"
