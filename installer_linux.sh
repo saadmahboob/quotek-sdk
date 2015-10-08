@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Quotek SDK 2.0.0 Installer"
+echo "Quotek SDK 2.1.2 Installer"
 echo "=========================="
 
 if [ ! -d /opt/quotek ]; then
@@ -19,6 +19,18 @@ if [ ! -d /opt/quotek/doc ]; then
   mkdir /opt/quotek/doc
 fi
 
+if [ ! -d /opt/quotek/samples ]; then
+  mkdir /opt/quotek/samples
+fi
+
+if [ ! -d /opt/quotek/tests ]; then
+  mkdir /opt/quotek/tests
+fi
+
 cp -r lib/linux/* /opt/quotek/lib/
 cp -r include/* /opt/quotek/include/
 cp -r doc/* /opt/quotek/doc/
+cp -r samples/* /opt/quotek/samples/
+cp -r tests/* /opt/quotek/tests/
+
+echo "Quotek Succesfully Installed !"

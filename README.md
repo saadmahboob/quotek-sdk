@@ -35,6 +35,14 @@ In order to get full instructions about how to Setup Quotek SDK in your environm
 Changelog
 =========
 
+v2.1.2
+------
+
+  - Multiple bugfixes regarding win64 version: 
+
+     * Incorrect curl headers distribution.
+     * Bug in quotek.hpp: wrong sub include order.
+
 v2.1.1
 ------
 

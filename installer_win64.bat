@@ -1,6 +1,6 @@
 @echo OFF
 
-echo "Quotek SDK 2.0.0 Installer"
+echo "Quotek SDK 2.1.2 Installer"
 echo "=========================="
 
 mkdir "C:\Program Files\quotek\sdk"
@@ -9,7 +9,12 @@ xcopy doc "C:\Program Files\quotek\sdk\doc\" /e /y
 xcopy include "C:\Program Files\quotek\sdk\include\" /e /y
 xcopy lib\win64 "C:\Program Files\quotek\sdk\lib\" /e /y
 
-copy lib\win64\libcurl.dll C:\Windows\System\
+xcopy samples "C:\Program Files\quotek\sdk\samples\" /e /y
+xcopy tests "C:\Program Files\quotek\sdk\tests\" /e /y
+
+xcopy curl\curl "C:\Program Files\quotek\sdk\include\curl\" /e /y
+copy curl\libcurl.lib "C:\Program Files\quotek\sdk\lib\"
+copy curl\libcurl.dll C:\Windows\System\
 
 echo "Quotek SDK installed succesfully, press any key to continue.."
 pause
