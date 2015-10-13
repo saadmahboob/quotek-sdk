@@ -95,10 +95,11 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data_sources.html">Data Sources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quandl.html">Quandl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="twitter.html">Twitter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="yahoo.html">Yahoo! Finance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rss.html">RSS Feeds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ta.html">Technical Analysis</a></li>
@@ -185,6 +186,22 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv2N6quotek2ml7alchemy8taxonomyENSt6stringENSt6stringE">
+<span id="quotek::ml::alchemy::taxonomy__ss.ss"></span><span class="target" id="project0classquotek_1_1ml_1_1alchemy_1a10ed2e9307cd4c61cd042a0fb242e8c2"></span>std::vector&lt;quotek::ml::category&gt; <code class="descname">taxonomy</code><span class="sig-paren">(</span>std::string <em>payload</em>, std::string <em>format</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek2ml7alchemy8taxonomyENSt6stringENSt6stringE" title="Permalink to this definition">¶</a></dt>
+<dd><p>taxonomy categorizes a text corpus in a pre-existing category-tree. You can get the full category-tree at <a class="reference external" href="http://www.alchemyapi.com/sites/default/files/taxonomyCategories.zip">http://www.alchemyapi.com/sites/default/files/taxonomyCategories.zip</a> <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">payload</span></code> - <p>Text or URL of text to get taxonomy for. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">format</span></code> - <p>tells wether payload is text, html, or url. </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv2N6quotek2ml7alchemy8languageENSt6stringENSt6stringE">
 <span id="quotek::ml::alchemy::language__ss.ss"></span><span class="target" id="project0classquotek_1_1ml_1_1alchemy_1af68abd0cc99a1b9be5ee5ecece850dc8"></span>std::string <code class="descname">language</code><span class="sig-paren">(</span>std::string <em>payload</em>, std::string <em>format</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek2ml7alchemy8languageENSt6stringENSt6stringE" title="Permalink to this definition">¶</a></dt>
 <dd><p>language function guesses the language used to write the text passed as argument. <dl class="docutils">
@@ -234,6 +251,12 @@ Note about API calls: You can find the whole list of Alchemy API Calls and full 
 
 
   <script type="text/javascript">
+
+    $.each( $('.breathe-sectiondef'), function(index,v) {
+
+      if ( $(this).hasClass('container') ) $(this).removeClass('container');
+
+     } );
 
     $("#header-pbtn").click(function() { product_dropdown_toggle(); });
 

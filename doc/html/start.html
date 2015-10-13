@@ -95,10 +95,11 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data_sources.html">Data Sources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quandl.html">Quandl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="twitter.html">Twitter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="yahoo.html">Yahoo! Finance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rss.html">RSS Feeds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ta.html">Technical Analysis</a></li>
@@ -126,12 +127,12 @@ install the SDK, how to setup your developement environment and how to build Pro
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Install</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="install.html#windows-install">Windows Install</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="install.html#building-linking">Building &amp; Linking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install.html#visual-studio-setup">Visual Studio Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="install.html#linux-install">Linux Install</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="install.html#dependancies">Dependancies</a></li>
-<li class="toctree-l3"><a class="reference internal" href="install.html#id1">Building &amp; Linking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install.html#dependencies">Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install.html#building-linking">Building &amp; Linking</a></li>
 </ul>
 </li>
 </ul>
@@ -167,6 +168,12 @@ install the SDK, how to setup your developement environment and how to build Pro
 
 
   <script type="text/javascript">
+
+    $.each( $('.breathe-sectiondef'), function(index,v) {
+
+      if ( $(this).hasClass('container') ) $(this).removeClass('container');
+
+     } );
 
     $("#header-pbtn").click(function() { product_dropdown_toggle(); });
 

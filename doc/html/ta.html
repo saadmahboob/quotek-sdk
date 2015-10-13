@@ -95,10 +95,11 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data_sources.html">Data Sources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quandl.html">Quandl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="twitter.html">Twitter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="yahoo.html">Yahoo! Finance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rss.html">RSS Feeds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Technical Analysis</a></li>
@@ -124,8 +125,8 @@
 <div class="breathe-sectiondef container">
 <p class="breathe-sectiondef-title rubric">Functions</p>
 <dl class="function">
-<dt id="_CPPv2N6quotek2ta39moving_average_convergeance_divergeanceERNSt6vectorIN6quotek4data6recordEEEiii">
-<span id="quotek::ta::moving_average_convergeance_divergeance__std::vector:quotek::data::record:R.i.i.i"></span><span class="target" id="project0namespacequotek_1_1ta_1a968036de1662f9b2ccd510f182cdcc37"></span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a>&gt; <code class="descname">moving_average_convergeance_divergeance</code><span class="sig-paren">(</span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs</em>, int <em>periods_short_ema</em>, int <em>periods_long_ema</em>, int <em>periods_signal_line</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek2ta39moving_average_convergeance_divergeanceERNSt6vectorIN6quotek4data6recordEEEiii" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek2ta39moving_average_convergeance_divergeanceERN6quotek4data7recordsEiii">
+<span id="quotek::ta::moving_average_convergeance_divergeance__quotek::data::recordsR.i.i.i"></span><span class="target" id="project0namespacequotek_1_1ta_1a77a93b369021c4006842c5262ff4c3f4"></span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a>&gt; <code class="descname">moving_average_convergeance_divergeance</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs</em>, int <em>periods_short_ema</em>, int <em>periods_long_ema</em>, int <em>periods_signal_line</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek2ta39moving_average_convergeance_divergeanceERN6quotek4data7recordsEiii" title="Permalink to this definition">¶</a></dt>
 <dd><p>MACD is an early trend indicator. It is composed of 2 graph lines. The first line, MACD, is a difference between an EMA small period and an EMA long period. the second line, the signal line, is usually a 9 periods EMA. When the MACD line is going away from 0, then it susually means the current momentum is gaining strength. On the other side when it&#8217;s nearing 0, then the momentum is losing strength. Also When the MACD crosses the signal line from above, it&#8217;s a good insight for a sell signal. When the MACD crosses the signal line from below, it&#8217;s a good insight for a buy signal. Note: the standard values for MACD periods is 12,26,9 and this is what we suggest to use.</p>
 <p><dl class="docutils">
 <dt><strong>Return</strong></dt>
@@ -147,8 +148,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek2ta12fibo_retraceERNSt6vectorIN6quotek4data6recordEEE">
-<span id="quotek::ta::fibo_retrace__std::vector:quotek::data::record:R"></span><span class="target" id="project0namespacequotek_1_1ta_1a45172cb9dcb8954dc47d957ac703713b"></span>quotek::<a class="reference internal" href="quant.html#_CPPv2N6quotek5quantE" title="quotek::quant">quant</a>::<a class="reference internal" href="quant.html#_CPPv2N6quotek5quant11fibo_levelsE" title="quotek::quant::fibo_levels">fibo_levels</a> <code class="descname">fibo_retrace</code><span class="sig-paren">(</span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek2ta12fibo_retraceERNSt6vectorIN6quotek4data6recordEEE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek2ta12fibo_retraceERN6quotek4data7recordsE">
+<span id="quotek::ta::fibo_retrace__quotek::data::recordsR"></span><span class="target" id="project0namespacequotek_1_1ta_1a4d63d47bf1bd077499d9dea2e16d7dbb"></span>quotek::<a class="reference internal" href="quant.html#_CPPv2N6quotek5quantE" title="quotek::quant">quant</a>::<a class="reference internal" href="quant.html#_CPPv2N6quotek5quant11fibo_levelsE" title="quotek::quant::fibo_levels">fibo_levels</a> <code class="descname">fibo_retrace</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek2ta12fibo_retraceERN6quotek4data7recordsE" title="Permalink to this definition">¶</a></dt>
 <dd><p>fibo_retrace takes a time-series and computes the different fibonacci retrace levels and puts it in a <a class="reference internal" href="quant.html#project0structquotek_1_1quant_1_1fibo__levels"><span>quotek::quant::fibo_levels</span></a> structure. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>a <a class="reference internal" href="quant.html#project0structquotek_1_1quant_1_1fibo__levels"><span>quotek::quant::fibo_levels</span></a> structure </dd>
@@ -175,6 +176,12 @@
 
 
   <script type="text/javascript">
+
+    $.each( $('.breathe-sectiondef'), function(index,v) {
+
+      if ( $(this).hasClass('container') ) $(this).removeClass('container');
+
+     } );
 
     $("#header-pbtn").click(function() { product_dropdown_toggle(); });
 

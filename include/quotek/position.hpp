@@ -99,11 +99,11 @@ namespace quotek {
         /** position open price */
       	float open;
       	
-      	/** position stop-loss, in BPS */
-      	int stop;
+      	/** position stop-loss. */
+      	float stop;
 
-        /** position limit, in BPS */
-      	int limit;
+        /** position limit. */
+      	float limit;
         
         /** position open date, as epoch timestamp */
         long open_date;
@@ -112,6 +112,10 @@ namespace quotek {
         long close_date;
 
         posstats* stats;
+
+        /** Identifier is a special string meant to identify the position taker. 
+         *  It is not mandatory if you don't need to know who/what actually opened the position. */
+        std::string identifier;
 
       private:
 

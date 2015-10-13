@@ -95,10 +95,11 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data_sources.html">Data Sources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quandl.html">Quandl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="twitter.html">Twitter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="yahoo.html">Yahoo! Finance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rss.html">RSS Feeds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ta.html">Technical Analysis</a></li>
@@ -125,37 +126,12 @@ you because everything is already setup for your inside your server environment.
 <p>Download and unzip the quotek SDK archive file. Then right-click on the &#8220;installer_win64.bat&#8221; script
 file which is located at the root of the decompressed directory, then finally click on &#8220;Run as Administrator&#8221;. The SDK will be installed in
 <strong>C:\Program Files\quotek\sdk</strong>, and ready to go.</p>
-<div class="section" id="building-linking">
-<h3>Building &amp; Linking<a class="headerlink" href="#building-linking" title="Permalink to this headline">¶</a></h3>
-<p>When using Quotek SDK on windows, The first thing you have to do is to let your IDE / Compiling Toolchain know where the Quotek SDK headers and libraries are located.</p>
-<p>For Visual studio 2015, the procedure is the following:</p>
-<ul class="simple">
-<li>Start a new, empty C++ Project.</li>
-<li>go to Project =&gt; Properties.</li>
-<li>Select &#8220;VC++ Directories&#8221;.</li>
-<li>Modify the Include Directories property to add <strong>C:\Program Files\quotek\sdk\include;</strong> as include search path.</li>
-<li>Modify the Library Directories property to add <strong>C:\Program Files\quotek\sdk\lib;</strong> as library search path.</li>
-</ul>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<img alt="_images/vs15_screen1.png" src="_images/vs15_screen1.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<ul class="simple">
-<li>Go to Linker, then Inputs.</li>
-<li>Modify the Additional Dependancies property to add <strong>&#8220;libcurl.lib;quotek.lib&#8221;</strong> as additional dependancies.</li>
-</ul>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<img alt="_images/vs15_screen2.png" src="_images/vs15_screen2.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Then you are good to go, you can start your project and compile it without any trouble.</p>
-<p><strong>Note:</strong> You will have to perform this operation for evey new visual studio project you start with quotek SDK.</p>
+<div class="section" id="visual-studio-setup">
+<h3>Visual Studio Setup<a class="headerlink" href="#visual-studio-setup" title="Permalink to this headline">¶</a></h3>
+<p>Just go to <strong>C:\Program Files\quotek\sdk\helpers\vstudio</strong>,
+then double click on the &#8220;Quotek.vsix&#8221; file. The SDK should now be installed with Visual Studio.
+If you start a new Project and go to &#8220;Visual C++&#8221; , you will see Quotek Project. Then Select it and
+start a new project: It&#8217;s all good, you are now ready to code with quotek.</p>
 </div>
 </div>
 <div class="section" id="linux-install">
@@ -163,18 +139,18 @@ file which is located at the root of the decompressed directory, then finally cl
 <p>Download and unzip the quotek SDK archive file, and launch the &#8220;installer_linux.sh&#8221; script
 located at the root of the decompressed directory. All of the Quotek SDK will then be installed
 in /opt/quotek/sdk. The libraries are located in <strong>/opt/quotek/sdk/lib</strong> and headers are in <strong>/opt/quotek/sdk/include</strong>.</p>
-<div class="section" id="dependancies">
-<h3>Dependancies<a class="headerlink" href="#dependancies" title="Permalink to this headline">¶</a></h3>
-<p>În order to work properly on Linux, Quotek SDK needs libcurl as a dependancy. This is
+<div class="section" id="dependencies">
+<h3>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h3>
+<p>În order to work properly on Linux, Quotek SDK needs libcurl as a dependency. This is
 a very common package which is probably already installed on your system. In any case,
 the install procedure for libcurl is as follow:</p>
 <p><strong>For Debian/Ubuntu</strong></p>
-<p><code class="docutils literal"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">libcurl4</span></code></p>
+<p><code class="docutils literal"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">libcurl4-openssl-dev</span></code></p>
 <p><strong>For CentOS/Fedora</strong></p>
-<p><code class="docutils literal"><span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">libcurl</span></code></p>
+<p><code class="docutils literal"><span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">libcurl-devel</span></code></p>
 </div>
-<div class="section" id="id1">
-<h3>Building &amp; Linking<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="building-linking">
+<h3>Building &amp; Linking<a class="headerlink" href="#building-linking" title="Permalink to this headline">¶</a></h3>
 <p>Given that the headers and libraries are not installed at the usual places in the system, you will need to
 add a few arguments to your compilation line. Also, because libquotek needs them, you will need to link the programs you code with libcurl and pthread.</p>
 <p>So the typical compilation line of a program using quotek SDK on Linux is the following:</p>
@@ -191,6 +167,12 @@ add a few arguments to your compilation line. Also, because libquotek needs them
 
 
   <script type="text/javascript">
+
+    $.each( $('.breathe-sectiondef'), function(index,v) {
+
+      if ( $(this).hasClass('container') ) $(this).removeClass('container');
+
+     } );
 
     $("#header-pbtn").click(function() { product_dropdown_toggle(); });
 

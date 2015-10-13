@@ -1,4 +1,4 @@
-Quotek Algo-trading SDK v2.1
+Quotek Algo-trading SDK v2.2
 ============================
 
 Quotek SDK is a C++ programming toolkit that aims to help traders and finance engineers to code
@@ -34,6 +34,14 @@ In order to get full instructions about how to Setup Quotek SDK in your environm
 
 Changelog
 =========
+
+v2.2
+----
+
+  - Implemented Quandl API client in SDK.
+  - Added support for AlchemyAPI function "Ranked Taxonomy".
+  - Interface Changes in quotek::quant functions: Now functions use quotek::data::records containers instead of vector<quotek::data::record>, which is must more coherent and powerful.
+  - Bugfix: uninitialized std::tm in p_strptime was triggering random behaviour when seconds not present in date string.
 
 v2.1.3
 ------

@@ -95,10 +95,11 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="data_sources.html">Data Sources</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">CSV Importer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quandl.html">Quandl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="twitter.html">Twitter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="yahoo.html">Yahoo! Finance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rss.html">RSS Feeds</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">CSV Importer</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ta.html">Technical Analysis</a></li>
@@ -143,6 +144,20 @@
 <dt id="_CPPv2N6quotek10datasource3csvD0Ev">
 <span id="quotek::datasource::csv::~csv"></span><span class="target" id="project0classquotek_1_1datasource_1_1csv_1a4242af2818bb678800f1142c40f0894c"></span><code class="descname">~csv</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek10datasource3csvD0Ev" title="Permalink to this definition">¶</a></dt>
 <dd><p>rss class destructor </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N6quotek10datasource3csv11from_stringENSt6stringE">
+<span id="quotek::datasource::csv::from_string__ss"></span><span class="target" id="project0classquotek_1_1datasource_1_1csv_1aaa7a7c16ff98ea4c3d3e31a9a030b2e6"></span>void <code class="descname">from_string</code><span class="sig-paren">(</span>std::string <em>content</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek10datasource3csv11from_stringENSt6stringE" title="Permalink to this definition">¶</a></dt>
+<dd><p>from_string loads csv data from string instead of file. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">content</span></code> - <p>csv string content. </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
 </dd></dl>
 
 <dl class="function">
@@ -208,10 +223,10 @@ Note about the filters list: filters add each other (boolean AND), so if you wan
 
 <dl class="function">
 <dt id="_CPPv2N6quotek10datasource3csv14import_recordsEii">
-<span id="quotek::datasource::csv::import_records__i.i"></span><span class="target" id="project0classquotek_1_1datasource_1_1csv_1a72089ae4f0e8750a082ccb65f2ad5736"></span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; <code class="descname">import_records</code><span class="sig-paren">(</span>int <em>nb_records</em>, int <em>value_colnum</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek10datasource3csv14import_recordsEii" title="Permalink to this definition">¶</a></dt>
-<dd><p>Imports data in the source csv as a vector of quotek records. <dl class="docutils">
+<span id="quotek::datasource::csv::import_records__i.i"></span><span class="target" id="project0classquotek_1_1datasource_1_1csv_1abffc4a40a564c5cb7883884075d8125a"></span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> <code class="descname">import_records</code><span class="sig-paren">(</span>int <em>nb_records</em>, int <em>value_colnum</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek10datasource3csv14import_recordsEii" title="Permalink to this definition">¶</a></dt>
+<dd><p>Imports data in the source csv as quotek records. <dl class="docutils">
 <dt><strong>Return</strong></dt>
-<dd>a vector of <a class="reference internal" href="record.html#project0classquotek_1_1data_1_1record"><span>quotek::data::record</span></a> objects. </dd>
+<dd>a <a class="reference internal" href="records.html#project0classquotek_1_1data_1_1records"><span>quotek::data::records</span></a> container. </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last">
 <li><code class="first docutils literal"><span class="pre">nb_records</span></code> - <p>Sets the maximum size of lines to import, if user wants to import only a part of the data nb_records = 0 means import all. </p>
@@ -226,7 +241,7 @@ Note about the filters list: filters add each other (boolean AND), so if you wan
 
 <dl class="function">
 <dt id="_CPPv2N6quotek10datasource3csv14import_historyEiiiii">
-<span id="quotek::datasource::csv::import_history__i.i.i.i.i"></span><span class="target" id="project0classquotek_1_1datasource_1_1csv_1a27385820560354d105d4fb32c64a3f31"></span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7historyE" title="quotek::data::history">history</a>&gt; <code class="descname">import_history</code><span class="sig-paren">(</span>int <em>nb_lines</em>, int <em>open_colnum</em>, int <em>close_colnum</em>, int <em>low_colnum</em>, int <em>high_colnum</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek10datasource3csv14import_historyEiiiii" title="Permalink to this definition">¶</a></dt>
+<span id="quotek::datasource::csv::import_history__i.i.i.i.i"></span><span class="target" id="project0classquotek_1_1datasource_1_1csv_1a55fd650bcd85e03eba62922a7e98496b"></span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7historyE" title="quotek::data::history">history</a>&gt; <code class="descname">import_history</code><span class="sig-paren">(</span>int <em>nb_lines</em>, int <em>open_colnum</em>, int <em>high_colnum</em>, int <em>low_colnum</em>, int <em>close_colnum</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek10datasource3csv14import_historyEiiiii" title="Permalink to this definition">¶</a></dt>
 <dd><p>Imports data in the source csv as a vector of quotek history objects. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>a vector of <a class="reference internal" href="history.html#project0classquotek_1_1data_1_1history"><span>quotek::data::history</span></a> objects. </dd>
@@ -236,11 +251,11 @@ Note about the filters list: filters add each other (boolean AND), so if you wan
 </li>
 <li><code class="first docutils literal"><span class="pre">open_column</span></code> - <p>zero-starting index of the column containing the open value. </p>
 </li>
-<li><code class="first docutils literal"><span class="pre">close_colnum</span></code> - <p>zero-starting index of the column containing the close value. </p>
+<li><code class="first docutils literal"><span class="pre">high_colnum</span></code> - <p>zero-starting index of the column containing the high value. </p>
 </li>
 <li><code class="first docutils literal"><span class="pre">low_colnum</span></code> - <p>zero-starting index of the column containing the low value. </p>
 </li>
-<li><code class="first docutils literal"><span class="pre">high_colnum</span></code> - <p>zero-starting index of the column containing the high value. </p>
+<li><code class="first docutils literal"><span class="pre">close_colnum</span></code> - <p>zero-starting index of the column containing the close value. </p>
 </li>
 </ul>
 </dd>
@@ -261,6 +276,12 @@ Note about the filters list: filters add each other (boolean AND), so if you wan
 
 
   <script type="text/javascript">
+
+    $.each( $('.breathe-sectiondef'), function(index,v) {
+
+      if ( $(this).hasClass('container') ) $(this).removeClass('container');
+
+     } );
 
     $("#header-pbtn").click(function() { product_dropdown_toggle(); });
 

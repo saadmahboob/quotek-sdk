@@ -95,10 +95,11 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Data Sources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quandl.html">Quandl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="twitter.html">Twitter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="yahoo.html">Yahoo! Finance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rss.html">RSS Feeds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ta.html">Technical Analysis</a></li>
@@ -133,6 +134,24 @@
 </dd></dl>
 
 <dl class="class">
+<dt id="_CPPv2N6quotek10datasource6quandlE">
+<span id="quotek::datasource::quandl"></span><span class="target" id="project0classquotek_1_1datasource_1_1quandl"></span><em class="property">class </em><code class="descname">quandl</code><a class="headerlink" href="#_CPPv2N6quotek10datasource6quandlE" title="Permalink to this definition">¶</a></dt>
+<dd><em>#include &lt;quandl.hpp&gt;</em><p>quandl is a class meant to provide a simple quandl API client. Quandl is a very useful service for retrieving lots of financial data coming from various sources. </p>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv2N6quotek10datasource9quandl_dbE">
+<span id="quotek::datasource::quandl_db"></span><span class="target" id="project0classquotek_1_1datasource_1_1quandl__db"></span><em class="property">class </em><code class="descname">quandl_db</code><a class="headerlink" href="#_CPPv2N6quotek10datasource9quandl_dbE" title="Permalink to this definition">¶</a></dt>
+<dd><em>#include &lt;quandl.hpp&gt;</em><p><a class="reference internal" href="#project0classquotek_1_1datasource_1_1quandl__db"><span>quandl_db</span></a> is a class created to store information relative to databases, fetched via get_databases() </p>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv2N6quotek10datasource11quandl_metaE">
+<span id="quotek::datasource::quandl_meta"></span><span class="target" id="project0classquotek_1_1datasource_1_1quandl__meta"></span><em class="property">class </em><code class="descname">quandl_meta</code><a class="headerlink" href="#_CPPv2N6quotek10datasource11quandl_metaE" title="Permalink to this definition">¶</a></dt>
+<dd><em>#include &lt;quandl.hpp&gt;</em><p><a class="reference internal" href="#project0classquotek_1_1datasource_1_1quandl__meta"><span>quandl_meta</span></a> is a class meant to store quandl dataset metadata. </p>
+</dd></dl>
+
+<dl class="class">
 <dt id="_CPPv2N6quotek10datasource3rssE">
 <span id="quotek::datasource::rss"></span><span class="target" id="project0classquotek_1_1datasource_1_1rss"></span><em class="property">class </em><code class="descname">rss</code><a class="headerlink" href="#_CPPv2N6quotek10datasource3rssE" title="Permalink to this definition">¶</a></dt>
 <dd><em>#include &lt;rss.hpp&gt;</em><p>rss is a class which allows to fetch rss feeds inside quotek strategies in order to process them (and potentially dedude positions to take). </p>
@@ -164,6 +183,12 @@
 
 
   <script type="text/javascript">
+
+    $.each( $('.breathe-sectiondef'), function(index,v) {
+
+      if ( $(this).hasClass('container') ) $(this).removeClass('container');
+
+     } );
 
     $("#header-pbtn").click(function() { product_dropdown_toggle(); });
 

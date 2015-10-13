@@ -95,10 +95,11 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data_sources.html">Data Sources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quandl.html">Quandl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="twitter.html">Twitter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="yahoo.html">Yahoo! Finance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rss.html">RSS Feeds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ta.html">Technical Analysis</a></li>
@@ -157,8 +158,8 @@
 <div class="breathe-sectiondef container">
 <p class="breathe-sectiondef-title rubric">Functions</p>
 <dl class="function">
-<dt id="_CPPv2N6quotek5quant5aboveERNSt6vectorIN6quotek4data6recordEEEff">
-<span id="quotek::quant::above__std::vector:quotek::data::record:R.float.float"></span><span class="target" id="project0namespacequotek_1_1quant_1a19269e11871782607fc9891243a7035a"></span>bool <code class="descname">above</code><span class="sig-paren">(</span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs</em>, float <em>value</em>, float <em>thereshold</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant5aboveERNSt6vectorIN6quotek4data6recordEEEff" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant5aboveERN6quotek4data7recordsEff">
+<span id="quotek::quant::above__quotek::data::recordsR.float.float"></span><span class="target" id="project0namespacequotek_1_1quant_1abd17868f0f93e2b7848d3dbda353b1ad"></span>bool <code class="descname">above</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs</em>, float <em>value</em>, float <em>thereshold</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant5aboveERN6quotek4data7recordsEff" title="Permalink to this definition">¶</a></dt>
 <dd><p>above tells if the values contained in the provided dataset are mostly above or below value. accuracy will depend on provided thereshold (between 0 and 1) , 1 meaning that all the values of dataset must be higher than value to return true, 0.5 meaning that half the values must be higher. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>true if dataset is above value, false otherwise. </dd>
@@ -177,8 +178,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek5quant7crossesERNSt6vectorIN6quotek4data6recordEEERNSt6vectorIN6quotek4data6recordEEE">
-<span id="quotek::quant::crosses__std::vector:quotek::data::record:R.std::vector:quotek::data::record:R"></span><span class="target" id="project0namespacequotek_1_1quant_1acddad8e7d56e61af181274928849c755"></span>bool <code class="descname">crosses</code><span class="sig-paren">(</span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs1</em>, std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs2</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant7crossesERNSt6vectorIN6quotek4data6recordEEERNSt6vectorIN6quotek4data6recordEEE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant7crossesERN6quotek4data7recordsERN6quotek4data7recordsE">
+<span id="quotek::quant::crosses__quotek::data::recordsR.quotek::data::recordsR"></span><span class="target" id="project0namespacequotek_1_1quant_1a8def58466e7f2952eeaacad83ad8096d"></span>bool <code class="descname">crosses</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs1</em>, quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs2</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant7crossesERN6quotek4data7recordsERN6quotek4data7recordsE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Detects if 2 value datasets cross each other. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>true if 2 datasets cross each other, false otherwise. </dd>
@@ -195,9 +196,9 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek5quant3minERNSt6vectorIN6quotek4data6recordEEE">
-<span id="quotek::quant::min__std::vector:quotek::data::record:R"></span><span class="target" id="project0namespacequotek_1_1quant_1a12bffe1a553720a4da40be2fb811f37d"></span>float <code class="descname">min</code><span class="sig-paren">(</span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant3minERNSt6vectorIN6quotek4data6recordEEE" title="Permalink to this definition">¶</a></dt>
-<dd><p><a class="reference internal" href="#project0namespacequotek_1_1quant_1a12bffe1a553720a4da40be2fb811f37d"><span>min()</span></a> returns the smallest value contained in the provided recs dataset to work on. <dl class="docutils">
+<dt id="_CPPv2N6quotek5quant3minERN6quotek4data7recordsE">
+<span id="quotek::quant::min__quotek::data::recordsR"></span><span class="target" id="project0namespacequotek_1_1quant_1aa4564f8368d7576085cf00fbc30ba127"></span>float <code class="descname">min</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant3minERN6quotek4data7recordsE" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#project0namespacequotek_1_1quant_1aa4564f8368d7576085cf00fbc30ba127"><span>min()</span></a> returns the smallest value contained in the provided recs dataset to work on. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>the smallest value stored in recs dataset. </dd>
 <dt><strong>Parameters</strong></dt>
@@ -211,9 +212,9 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek5quant3maxERNSt6vectorIN6quotek4data6recordEEE">
-<span id="quotek::quant::max__std::vector:quotek::data::record:R"></span><span class="target" id="project0namespacequotek_1_1quant_1ace27454a64adfba501225598ebd715f2"></span>float <code class="descname">max</code><span class="sig-paren">(</span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant3maxERNSt6vectorIN6quotek4data6recordEEE" title="Permalink to this definition">¶</a></dt>
-<dd><p><a class="reference internal" href="#project0namespacequotek_1_1quant_1ace27454a64adfba501225598ebd715f2"><span>max()</span></a> return the largest value contained in the provided <dl class="docutils">
+<dt id="_CPPv2N6quotek5quant3maxERN6quotek4data7recordsE">
+<span id="quotek::quant::max__quotek::data::recordsR"></span><span class="target" id="project0namespacequotek_1_1quant_1a42d6e03c557d63b5ca4755bc1239a9fa"></span>float <code class="descname">max</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant3maxERN6quotek4data7recordsE" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#project0namespacequotek_1_1quant_1a42d6e03c557d63b5ca4755bc1239a9fa"><span>max()</span></a> return the largest value contained in the provided <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>the largest value stored in recs dataset. </dd>
 <dt><strong>Parameters</strong></dt>
@@ -227,8 +228,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek5quant7averageERNSt6vectorIN6quotek4data6recordEEE">
-<span id="quotek::quant::average__std::vector:quotek::data::record:R"></span><span class="target" id="project0namespacequotek_1_1quant_1acd7e2bac34edb98a4ef6e769e6ce265d"></span>float <code class="descname">average</code><span class="sig-paren">(</span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant7averageERNSt6vectorIN6quotek4data6recordEEE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant7averageERN6quotek4data7recordsE">
+<span id="quotek::quant::average__quotek::data::recordsR"></span><span class="target" id="project0namespacequotek_1_1quant_1a032568e7e960c11acba8c378cb7605d5"></span>float <code class="descname">average</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant7averageERN6quotek4data7recordsE" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function returns an average of the values contained in the provided recs dataset. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>the mean value of the dataset, as a float value. </dd>
@@ -243,8 +244,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek5quant16weighted_averageERNSt6vectorIN6quotek4data6recordEEERNSt6vectorIiEE">
-<span id="quotek::quant::weighted_average__std::vector:quotek::data::record:R.std::vector:i:R"></span><span class="target" id="project0namespacequotek_1_1quant_1abdc09aa152327de62d8fd4fcc86ccc94"></span>float <code class="descname">weighted_average</code><span class="sig-paren">(</span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs</em>, std::vector&lt;int&gt; &amp;<em>weights</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant16weighted_averageERNSt6vectorIN6quotek4data6recordEEERNSt6vectorIiEE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant16weighted_averageERN6quotek4data7recordsERNSt6vectorIiEE">
+<span id="quotek::quant::weighted_average__quotek::data::recordsR.std::vector:i:R"></span><span class="target" id="project0namespacequotek_1_1quant_1abc402e371a508098f3555fe977d1bb50"></span>float <code class="descname">weighted_average</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs</em>, std::vector&lt;int&gt; &amp;<em>weights</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant16weighted_averageERN6quotek4data7recordsERNSt6vectorIiEE" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function returns a weight average of the values contained in the provided recs dataset. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>the mean value of the dataset, as a float value. </dd>
@@ -261,8 +262,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek5quant8varianceERNSt6vectorIN6quotek4data6recordEEEb">
-<span id="quotek::quant::variance__std::vector:quotek::data::record:R.b"></span><span class="target" id="project0namespacequotek_1_1quant_1a388978b6e34e496f99b55b70efb65e0e"></span>float <code class="descname">variance</code><span class="sig-paren">(</span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs</em>, bool <em>sampled</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant8varianceERNSt6vectorIN6quotek4data6recordEEEb" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant8varianceERN6quotek4data7recordsEb">
+<span id="quotek::quant::variance__quotek::data::recordsR.b"></span><span class="target" id="project0namespacequotek_1_1quant_1a7bb99b0dbd574615968ce6705a54032b"></span>float <code class="descname">variance</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs</em>, bool <em>sampled</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant8varianceERN6quotek4data7recordsEb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the variance of the values contained in the provided recs dataset. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>variance of the recs dataset, as a float value. </dd>
@@ -279,8 +280,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek5quant10variance_qERNSt6vectorIN6quotek4data6recordEEEbf">
-<span id="quotek::quant::variance_q__std::vector:quotek::data::record:R.b.float"></span><span class="target" id="project0namespacequotek_1_1quant_1a657bb7a6449263f826285a54556f9b86"></span>float <code class="descname">variance_q</code><span class="sig-paren">(</span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs</em>, bool <em>sampled</em>, float <em>average</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant10variance_qERNSt6vectorIN6quotek4data6recordEEEbf" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant10variance_qERN6quotek4data7recordsEbf">
+<span id="quotek::quant::variance_q__quotek::data::recordsR.b.float"></span><span class="target" id="project0namespacequotek_1_1quant_1ac8fe64bfb35ec7d69302eeb24473c8a2"></span>float <code class="descname">variance_q</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs</em>, bool <em>sampled</em>, float <em>average</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant10variance_qERN6quotek4data7recordsEbf" title="Permalink to this definition">¶</a></dt>
 <dd><p>variance_q is a performance-shaped function that will compute variance of the values for the provided recs dataset but also provided that you already know the average of the values from a previous compute. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>variance of the recs dataset, as a float value. </dd>
@@ -299,8 +300,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek5quant10covarianceERNSt6vectorIN6quotek4data6recordEEERNSt6vectorIN6quotek4data6recordEEE">
-<span id="quotek::quant::covariance__std::vector:quotek::data::record:R.std::vector:quotek::data::record:R"></span><span class="target" id="project0namespacequotek_1_1quant_1adc2987ea5bf611198b49f671f287d4f9"></span>float <code class="descname">covariance</code><span class="sig-paren">(</span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs1</em>, std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs2</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant10covarianceERNSt6vectorIN6quotek4data6recordEEERNSt6vectorIN6quotek4data6recordEEE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant10covarianceERN6quotek4data7recordsERN6quotek4data7recordsE">
+<span id="quotek::quant::covariance__quotek::data::recordsR.quotek::data::recordsR"></span><span class="target" id="project0namespacequotek_1_1quant_1a31b68ea0e03bb18ad66d8418b0917064"></span>float <code class="descname">covariance</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs1</em>, quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs2</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant10covarianceERN6quotek4data7recordsERN6quotek4data7recordsE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes covariance of values between two datasets recs1 and recs2. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>the covariance between the 2 provided datasets, as a float. </dd>
@@ -317,8 +318,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek5quant12covariance_qERNSt6vectorIN6quotek4data6recordEEERNSt6vectorIN6quotek4data6recordEEEff">
-<span id="quotek::quant::covariance_q__std::vector:quotek::data::record:R.std::vector:quotek::data::record:R.float.float"></span><span class="target" id="project0namespacequotek_1_1quant_1aec2dd00928cb991abcacc64543fb5a28"></span>float <code class="descname">covariance_q</code><span class="sig-paren">(</span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs1</em>, std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs2</em>, float <em>average_1</em>, float <em>average_2</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant12covariance_qERNSt6vectorIN6quotek4data6recordEEERNSt6vectorIN6quotek4data6recordEEEff" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant12covariance_qERN6quotek4data7recordsERN6quotek4data7recordsEff">
+<span id="quotek::quant::covariance_q__quotek::data::recordsR.quotek::data::recordsR.float.float"></span><span class="target" id="project0namespacequotek_1_1quant_1a30126d195f0f17d4a9a7297dd4cb8815"></span>float <code class="descname">covariance_q</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs1</em>, quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs2</em>, float <em>average_1</em>, float <em>average_2</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant12covariance_qERN6quotek4data7recordsERN6quotek4data7recordsEff" title="Permalink to this definition">¶</a></dt>
 <dd><p>Quick version of covariance, provided that you already know the averages of the 2 datasets. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>the covariance between the 2 provided datasets, as a float. </dd>
@@ -339,8 +340,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek5quant18standard_deviationERNSt6vectorIN6quotek4data6recordEEEb">
-<span id="quotek::quant::standard_deviation__std::vector:quotek::data::record:R.b"></span><span class="target" id="project0namespacequotek_1_1quant_1abbda292ff5bf5f3ea1b5b1dc9f18893c"></span>float <code class="descname">standard_deviation</code><span class="sig-paren">(</span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs</em>, bool <em>sample</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant18standard_deviationERNSt6vectorIN6quotek4data6recordEEEb" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant18standard_deviationERN6quotek4data7recordsEb">
+<span id="quotek::quant::standard_deviation__quotek::data::recordsR.b"></span><span class="target" id="project0namespacequotek_1_1quant_1a40e27b51169fcfdeb44ee1b25ceef4d0"></span>float <code class="descname">standard_deviation</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs</em>, bool <em>sample</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant18standard_deviationERN6quotek4data7recordsEb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the standard deviation for the values contained in the recs dataset. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>the standard deviation of the provided dataset, as a float. </dd>
@@ -355,8 +356,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek5quant13percent_deltaERNSt6vectorIN6quotek4data6recordEEE">
-<span id="quotek::quant::percent_delta__std::vector:quotek::data::record:R"></span><span class="target" id="project0namespacequotek_1_1quant_1a971ffbea73ec9ca5417dab91d320b489"></span>float <code class="descname">percent_delta</code><span class="sig-paren">(</span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant13percent_deltaERNSt6vectorIN6quotek4data6recordEEE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant13percent_deltaERN6quotek4data7recordsE">
+<span id="quotek::quant::percent_delta__quotek::data::recordsR"></span><span class="target" id="project0namespacequotek_1_1quant_1a39f7c7865a0c1248669abd5c9f2b6b68"></span>float <code class="descname">percent_delta</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant13percent_deltaERN6quotek4data7recordsE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the delta in percent between first and last value of the recs dataset. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>the variation in percents from the beginning to the end of the dataset. </dd>
@@ -371,8 +372,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek5quant14moving_averageERNSt6vectorIN6quotek4data6recordEEEi">
-<span id="quotek::quant::moving_average__std::vector:quotek::data::record:R.i"></span><span class="target" id="project0namespacequotek_1_1quant_1afb9bab7f9f60f73fc7416121523f40cb"></span>std::vector&lt;float&gt; <code class="descname">moving_average</code><span class="sig-paren">(</span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs</em>, int <em>periods</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant14moving_averageERNSt6vectorIN6quotek4data6recordEEEi" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant14moving_averageERN6quotek4data7recordsEi">
+<span id="quotek::quant::moving_average__quotek::data::recordsR.i"></span><span class="target" id="project0namespacequotek_1_1quant_1a38d2d365b66923b8b546b56269ee471e"></span>std::vector&lt;float&gt; <code class="descname">moving_average</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs</em>, int <em>periods</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant14moving_averageERN6quotek4data7recordsEi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the simple moving average of the provided dataset for n periods. eg if you want to compute an SMA50 for the provided dataset, use moving_average(recs,50) <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>a vector of floats containing the graph values of the moving average for the dataset. </dd>
@@ -389,8 +390,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek5quant26exponential_moving_averageERNSt6vectorIN6quotek4data6recordEEEi">
-<span id="quotek::quant::exponential_moving_average__std::vector:quotek::data::record:R.i"></span><span class="target" id="project0namespacequotek_1_1quant_1af5c63e7fd51aef622576af616ca3251b"></span>std::vector&lt;float&gt; <code class="descname">exponential_moving_average</code><span class="sig-paren">(</span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs</em>, int <em>periods</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant26exponential_moving_averageERNSt6vectorIN6quotek4data6recordEEEi" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant26exponential_moving_averageERN6quotek4data7recordsEi">
+<span id="quotek::quant::exponential_moving_average__quotek::data::recordsR.i"></span><span class="target" id="project0namespacequotek_1_1quant_1af66b311c1f8977e916e0106ebe78b3d7"></span>std::vector&lt;float&gt; <code class="descname">exponential_moving_average</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs</em>, int <em>periods</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant26exponential_moving_averageERN6quotek4data7recordsEi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the exponential moving average (EMA) of the provided dataset for n periods. As a reminder, EMA is is a special kind of moving average giving more weight to recent values. eg if you want to compute an EMA100 for the provided dataset, use exponential_moving_average(recs,50) <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>a vector of floats containing the graph values of the moving average for the dataset. </dd>
@@ -407,8 +408,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek5quant23weighted_moving_averageERNSt6vectorIN6quotek4data6recordEEEi">
-<span id="quotek::quant::weighted_moving_average__std::vector:quotek::data::record:R.i"></span><span class="target" id="project0namespacequotek_1_1quant_1a63e3df288a3bb42d5e1853217ca3ee7b"></span>std::vector&lt;float&gt; <code class="descname">weighted_moving_average</code><span class="sig-paren">(</span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs</em>, int <em>periods</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant23weighted_moving_averageERNSt6vectorIN6quotek4data6recordEEEi" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant23weighted_moving_averageERN6quotek4data7recordsEi">
+<span id="quotek::quant::weighted_moving_average__quotek::data::recordsR.i"></span><span class="target" id="project0namespacequotek_1_1quant_1a2633f62b9dd8cb1ba86fa2aecfb91929"></span>std::vector&lt;float&gt; <code class="descname">weighted_moving_average</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs</em>, int <em>periods</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant23weighted_moving_averageERN6quotek4data7recordsEi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the weighted moving average (WMA) of the provided dataset for n periods. WMA gives even more weight to recent values than EMA. Note: the weight vector for this function is {1,2,..periods-1,periods} <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last">
@@ -423,8 +424,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek5quant17linear_regressionERNSt6vectorIN6quotek4data6recordEEERNSt6vectorIfEE">
-<span id="quotek::quant::linear_regression__std::vector:quotek::data::record:R.std::vector:float:R"></span><span class="target" id="project0namespacequotek_1_1quant_1a7e051165fc7037e6d7b0533f97d18651"></span>void <code class="descname">linear_regression</code><span class="sig-paren">(</span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs</em>, std::vector&lt;float&gt; &amp;<em>result</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant17linear_regressionERNSt6vectorIN6quotek4data6recordEEERNSt6vectorIfEE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant17linear_regressionERN6quotek4data7recordsERNSt6vectorIfEE">
+<span id="quotek::quant::linear_regression__quotek::data::recordsR.std::vector:float:R"></span><span class="target" id="project0namespacequotek_1_1quant_1a32c383f0b6159e4b50157ec4a685eb54"></span>void <code class="descname">linear_regression</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs</em>, std::vector&lt;float&gt; &amp;<em>result</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant17linear_regressionERN6quotek4data7recordsERNSt6vectorIfEE" title="Permalink to this definition">¶</a></dt>
 <dd><p>linear_regression computes the linear regression of the provided dataset. Note about linear regression: in order to avoid troublesome scaling problems, it is computed which sequence(1..dataset_size) as x coordinates. So in order to work properly, it assumes constant interval on x between points of the dataset. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>none. </dd>
@@ -441,8 +442,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek5quant17linear_regressionERNSt6vectorIN6quotek4data6recordEEE">
-<span id="quotek::quant::linear_regression__std::vector:quotek::data::record:R"></span><span class="target" id="project0namespacequotek_1_1quant_1a2bac5018614668c054bcf7a8d987a73b"></span><a class="reference internal" href="#_CPPv2N6quotek5quant6affineE" title="quotek::quant::affine">affine</a> <code class="descname">linear_regression</code><span class="sig-paren">(</span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant17linear_regressionERNSt6vectorIN6quotek4data6recordEEE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant17linear_regressionERN6quotek4data7recordsE">
+<span id="quotek::quant::linear_regression__quotek::data::recordsR"></span><span class="target" id="project0namespacequotek_1_1quant_1a5133f3a3707ce35d6952eb7ff0103ed1"></span><a class="reference internal" href="#_CPPv2N6quotek5quant6affineE" title="quotek::quant::affine">affine</a> <code class="descname">linear_regression</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant17linear_regressionERN6quotek4data7recordsE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the linear regression of the values contained in the dataset using an ordinary least squares method, and gives the result as an affine structure such as the line equation is y = <a class="reference internal" href="#project0structquotek_1_1quant_1_1affine_1aab4b9fde4925945e78d7b7d86e214e36"><span>affine.a</span></a> * x + <a class="reference internal" href="#project0structquotek_1_1quant_1_1affine_1a8cea25a45f356704761ba1456bf83c30"><span>affine.b</span></a> Note about linear regression: in order to avoid troublesome scaling problems, it is computed which sequence(1..dataset_size) as x coordinates. So in order to work properly, it assumes constant interval on x between points of the dataset. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>affine structure containing slope and intercept values. </dd>
@@ -457,8 +458,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek5quant17trend_percentagesERNSt6vectorIN6quotek4data6recordEEE">
-<span id="quotek::quant::trend_percentages__std::vector:quotek::data::record:R"></span><span class="target" id="project0namespacequotek_1_1quant_1a020235b1ee2f12b985ec1a6b2ec94b73"></span><a class="reference internal" href="#_CPPv2N6quotek5quant7trend_pE" title="quotek::quant::trend_p">trend_p</a> <code class="descname">trend_percentages</code><span class="sig-paren">(</span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant17trend_percentagesERNSt6vectorIN6quotek4data6recordEEE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant17trend_percentagesERN6quotek4data7recordsE">
+<span id="quotek::quant::trend_percentages__quotek::data::recordsR"></span><span class="target" id="project0namespacequotek_1_1quant_1aa1d3294addf0ffd5de89818cd34b5ef5"></span><a class="reference internal" href="#_CPPv2N6quotek5quant7trend_pE" title="quotek::quant::trend_p">trend_p</a> <code class="descname">trend_percentages</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant17trend_percentagesERN6quotek4data7recordsE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the bull, bear and neutral ratios for the provided dataset. ratios are provided in percentage. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>a <a class="reference internal" href="#project0structquotek_1_1quant_1_1trend__p"><span>trend_p</span></a> structure containing the bull, bear and neutral trend percentages for the dataset. </dd>
@@ -523,8 +524,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek5quant21polynomial_regressionERNSt6vectorIN6quotek4data6recordEEE">
-<span id="quotek::quant::polynomial_regression__std::vector:quotek::data::record:R"></span><span class="target" id="project0namespacequotek_1_1quant_1ab41cea400b6a093b7b5c61dd508088fa"></span>std::vector&lt;float&gt; <code class="descname">polynomial_regression</code><span class="sig-paren">(</span>std::vector&lt;quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a>&gt; &amp;<em>recs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant21polynomial_regressionERNSt6vectorIN6quotek4data6recordEEE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant21polynomial_regressionERN6quotek4data7recordsE">
+<span id="quotek::quant::polynomial_regression__quotek::data::recordsR"></span><span class="target" id="project0namespacequotek_1_1quant_1a4191c4a6f45483c267822fe0b5796a3d"></span>std::vector&lt;float&gt; <code class="descname">polynomial_regression</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek5quant21polynomial_regressionERN6quotek4data7recordsE" title="Permalink to this definition">¶</a></dt>
 <dd><p>This fucntion computes a polynomial regression from a provided recs dataset. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>vector of floats representing the polynomial regression of dataset. </dd>
@@ -806,6 +807,12 @@
 
 
   <script type="text/javascript">
+
+    $.each( $('.breathe-sectiondef'), function(index,v) {
+
+      if ( $(this).hasClass('container') ) $(this).removeClass('container');
+
+     } );
 
     $("#header-pbtn").click(function() { product_dropdown_toggle(); });
 

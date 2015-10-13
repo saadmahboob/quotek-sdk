@@ -95,10 +95,11 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data_sources.html">Data Sources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quandl.html">Quandl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="twitter.html">Twitter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="yahoo.html">Yahoo! Finance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rss.html">RSS Feeds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ta.html">Technical Analysis</a></li>
@@ -184,6 +185,64 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv2N6quotek4data7records6searchEl">
+<span id="quotek::data::records::search__l"></span><span class="target" id="project0classquotek_1_1data_1_1records_1ac74031f1debb9c731832c214e8ea3d28"></span>int <code class="descname">search</code><span class="sig-paren">(</span>long <em>search_timestamp</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek4data7records6searchEl" title="Permalink to this definition">¶</a></dt>
+<dd><p>search performs a binary search inside a vector of records given a timestamp. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>index of the found record element inside the dataset. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">recs</span></code> - <p>the record dataset to search in </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">search_timestamp</span></code> - <p>the timestamp to search for inside the dataset. </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N6quotek4data7records6sampleEll">
+<span id="quotek::data::records::sample__l.l"></span><span class="target" id="project0classquotek_1_1data_1_1records_1ab7cc0c7261ac97be77c17d819e2586ee"></span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> <code class="descname">sample</code><span class="sig-paren">(</span>long <em>time_inf</em>, long <em>time_sup</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek4data7records6sampleEll" title="Permalink to this definition">¶</a></dt>
+<dd><p>sample is a method to extract a subvector of records from a vector of records, given starting and ending timestamps. Note: timestamps can be negative, in which case the real timestamps are time() + time_inf, time() + time_sup. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>resampled dataset containing only the data in time interval [time_inf, time_sup] </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">recs</span></code> - <p>the record dataset to extract sample from. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">time_inf</span></code> - <p>epoch timestamp for first element of sample. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">time_sup</span></code> - <p>epoch timestamp for the last element of sample. </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N6quotek4data7records7extractEii">
+<span id="quotek::data::records::extract__i.i"></span><span class="target" id="project0classquotek_1_1data_1_1records_1a4de2dd1c93eb77c21edcec811f4194d1"></span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> <code class="descname">extract</code><span class="sig-paren">(</span>int <em>start_offset</em>, int <em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek4data7records7extractEii" title="Permalink to this definition">¶</a></dt>
+<dd><p>extract is a conviency subvector extract. it takes begin() + start_offset, begin + start_offset + size iterators to create a new subvector. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>extraced dataset containing data in interval [start_offsret, start_offset + size] </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">recs</span></code> - <p>record dataset to extract data from. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">start_offset</span></code> - <p>the element index from which to start extract </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">size</span></code> - <p>the size of the extract. </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv2N6quotek4data7records11down_sampleEifNSt6stringE">
 <span id="quotek::data::records::down_sample__i.float.ss"></span><span class="target" id="project0classquotek_1_1data_1_1records_1a478a7fb95bdc4a4ff05597262338222b"></span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> <code class="descname">down_sample</code><span class="sig-paren">(</span>int <em>period</em>, float <em>tick</em>, std::string <em>method</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek4data7records11down_sampleEifNSt6stringE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Downsample reduces the amount of points in the dataset by agrregating data in &#8220;period&#8221; intervals. 
@@ -246,6 +305,18 @@ How down sampling methods work:<ul class="simple">
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv2N6quotek4data7records6appendERN6quotek4data6recordE">
+<span id="quotek::data::records::append__quotek::data::recordR"></span><span class="target" id="project0classquotek_1_1data_1_1records_1a5c09e27407d2b06251e66b8905e07c7d"></span>void <code class="descname">append</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a> &amp;<em>r</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek4data7records6appendERN6quotek4data6recordE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds new entry to records container (record form) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N6quotek4data7records6appendEf">
+<span id="quotek::data::records::append__float"></span><span class="target" id="project0classquotek_1_1data_1_1records_1a71f16bbb1c82ad84928838dbbcf2160d"></span>void <code class="descname">append</code><span class="sig-paren">(</span>float <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek4data7records6appendEf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds new entry to records container (value only) </p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv2N6quotek4data7records6appendElf">
 <span id="quotek::data::records::append__l.float"></span><span class="target" id="project0classquotek_1_1data_1_1records_1ae908537585faf38f7dde8a6339634b7b"></span>void <code class="descname">append</code><span class="sig-paren">(</span>long <em>timestamp</em>, float <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek4data7records6appendElf" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds new entry to records container (no spread) </p>
@@ -258,9 +329,15 @@ How down sampling methods work:<ul class="simple">
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek4data7records6appendERN6quotek4data6recordE">
-<span id="quotek::data::records::append__quotek::data::recordR"></span><span class="target" id="project0classquotek_1_1data_1_1records_1a5c09e27407d2b06251e66b8905e07c7d"></span>void <code class="descname">append</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a> &amp;<em>r</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek4data7records6appendERN6quotek4data6recordE" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds new entry to records container (record form) </p>
+<dt id="_CPPv2N6quotek4data7records3minEv">
+<span id="quotek::data::records::min"></span><span class="target" id="project0classquotek_1_1data_1_1records_1af920dbe87793e6a151038bd0b29f908e"></span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a> <code class="descname">min</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek4data7records3minEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>finds record which has the smallest value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N6quotek4data7records3maxEv">
+<span id="quotek::data::records::max"></span><span class="target" id="project0classquotek_1_1data_1_1records_1a8af2c8a6f0c0e865a0b7d8a0780c4062"></span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data6recordE" title="quotek::data::record">record</a> <code class="descname">max</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek4data7records3maxEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>finds record which has the highest value. </p>
 </dd></dl>
 
 </div>
@@ -276,6 +353,12 @@ How down sampling methods work:<ul class="simple">
 
 
   <script type="text/javascript">
+
+    $.each( $('.breathe-sectiondef'), function(index,v) {
+
+      if ( $(this).hasClass('container') ) $(this).removeClass('container');
+
+     } );
 
     $("#header-pbtn").click(function() { product_dropdown_toggle(); });
 
