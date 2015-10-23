@@ -81,6 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="record.html">Record</a></li>
 <li class="toctree-l2"><a class="reference internal" href="records.html">Records</a></li>
 <li class="toctree-l2"><a class="reference internal" href="history.html">History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marray.html">N-Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="news.html">News</a></li>
 </ul>
 </li>
@@ -153,6 +154,51 @@ which is the typical data structure returned by financial databases like yahoo! 
 <h3>Extracting and Down-Sampling<a class="headerlink" href="#extracting-and-down-sampling" title="Permalink to this headline">¶</a></h3>
 <p>In order to analyze time-series data, you will often have to use a subset sample or reduce the amount of ticks in the sample.
 This is why these functions were implemented in Quotek SDK, and they work as follows:</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="cp">#include &lt;quotek/record.hpp&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="n">quotek</span><span class="o">::</span><span class="n">data</span><span class="o">::</span><span class="n">records</span> <span class="n">r1</span><span class="p">({</span><span class="mi">4559</span><span class="p">,</span><span class="mi">4557</span><span class="p">,</span><span class="mf">4556.2</span><span class="p">,</span><span class="mf">4558.4</span><span class="p">});</span>
+
+  <span class="c1">//we extract the last 2 values of r1:</span>
+  <span class="n">quotek</span><span class="o">::</span><span class="n">data</span><span class="o">::</span><span class="n">records</span> <span class="n">r2</span> <span class="o">=</span> <span class="n">r1</span><span class="p">.</span><span class="n">extract</span><span class="p">(</span> <span class="n">r1</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span><span class="mi">2</span> <span class="p">,</span> <span class="mi">2</span> <span class="p">);</span>
+
+  <span class="c1">//we down-sample r1 to reduce it to only 2 values:</span>
+  <span class="n">quotek</span><span class="o">::</span><span class="n">data</span><span class="o">::</span><span class="n">records</span> <span class="n">r3</span> <span class="o">=</span> <span class="n">r1</span><span class="p">.</span><span class="n">down_sample</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;typical&quot;</span><span class="p">);</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="multi-dimentional-arrays">
+<h2>Multi-Dimentional Arrays<a class="headerlink" href="#multi-dimentional-arrays" title="Permalink to this headline">¶</a></h2>
+<p>Quotek SDK embedds a series of classes which were created to instanciate and manipulate multi-dimentional
+arrays. This is the original work of Pramod Gupta from University of Washington, and it was designed for
+maximum performance and ease of use.</p>
+<div class="section" id="quotek-data-array-n-d">
+<h3>quotek::data::array{n}d<a class="headerlink" href="#quotek-data-array-n-d" title="Permalink to this headline">¶</a></h3>
+<p>This is the main set of classes for handling multi-dimentional arrays. the {n} parameter depends
+of the number of dimensions you want to create for your array.</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="cp">#include &lt;quotek/marray.hpp&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="c1">//instanciates a 3 dimensions array</span>
+  <span class="n">quotek</span><span class="o">::</span><span class="n">data</span><span class="o">::</span><span class="n">array3d</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">a1</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+  <span class="c1">//assigns a value to array coord(1,1,1)</span>
+  <span class="n">a1</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="mf">1.618</span><span class="p">;</span>
+
+  <span class="c1">//instanciates a 7 dimensions array</span>
+  <span class="n">quotek</span><span class="o">::</span><span class="n">data</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">a2</span><span class="p">(</span><span class="mi">23</span><span class="p">,</span><span class="mi">38</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">61</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">123</span><span class="p">,</span><span class="mi">138</span><span class="p">);</span>
+  <span class="c1">//assigns a value to array coord(7,7,7,7,7,7,7)</span>
+  <span class="n">a2</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span> <span class="o">=</span> <span class="mf">1.618</span><span class="p">;</span>
+
+  <span class="c1">//retrieves value we just set</span>
+  <span class="kt">float</span> <span class="n">golden</span> <span class="o">=</span> <span class="n">a2</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">);</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="text-data">

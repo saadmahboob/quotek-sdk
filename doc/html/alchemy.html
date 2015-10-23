@@ -81,6 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="record.html">Record</a></li>
 <li class="toctree-l2"><a class="reference internal" href="records.html">Records</a></li>
 <li class="toctree-l2"><a class="reference internal" href="history.html">History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marray.html">N-Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="news.html">News</a></li>
 </ul>
 </li>
@@ -118,6 +119,28 @@
         
   <div class="section" id="alchemy-api">
 <h1>Alchemy API<a class="headerlink" href="#alchemy-api" title="Permalink to this headline">¶</a></h1>
+<a class="qimg reference internal image-reference" href="_images/alchemy-logo.png"><img alt="Quandl data service Logo." class="qimg align-left" src="_images/alchemy-logo.png" style="width: 200px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p>You will find below the documentation of the QUotek Alchemy API client. With it you will be able to
+perform on text content advanced sentiment analysis, categorization or relations finding, these tools being the key factors for accurately analysing financial news. You can register for a free API key at the following URL: <a class="reference external" href="http://www.alchemyapi.com/api/register.html">http://www.alchemyapi.com/api/register.html</a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
 <dl class="class">
 <dt id="_CPPv2N6quotek2ml7alchemyE">
 <span id="quotek::ml::alchemy"></span><span class="target" id="project0classquotek_1_1ml_1_1alchemy"></span><em class="property">class </em><code class="descclassname">quotek::ml::</code><code class="descname">alchemy</code><a class="headerlink" href="#_CPPv2N6quotek2ml7alchemyE" title="Permalink to this definition">¶</a></dt>
@@ -241,6 +264,35 @@ Note about API calls: You can find the whole list of Alchemy API Calls and full 
 </div>
 </dd></dl>
 
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>You will find below and sample source code about how to use the alchemy API client for sentiment
+analysis.</p>
+<blockquote>
+<div><div class="highlight-c++"><div class="highlight"><pre><span class="cp">#include &lt;quotek/quotek.hpp&gt;</span>
+<span class="cp">#include &lt;quotek/alchemy.hpp&gt;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">quotek</span><span class="o">::</span><span class="n">ml</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="c1">//we declare a text corpus for analysis</span>
+
+  <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">txt</span> <span class="o">=</span> <span class="s">&quot;Before you knew it, it was an all-out Eastern USD reserve liquidation party, leading some to ask what effect the drawdowns would ultimately have on UST yields because all else equal, FX reserve selling is just QE in reverse.&quot;</span><span class="p">;</span>
+
+  <span class="c1">//We create a new alchemy object</span>
+  <span class="n">alchemy</span> <span class="n">al</span><span class="p">(</span><span class="s">&quot;JSKJS-09304832-SJ0390S&quot;</span><span class="p">);</span>
+
+  <span class="c1">//We ask Alchemy API an sentiment analysis on text txt</span>
+  <span class="n">sentiment</span> <span class="n">sent</span> <span class="o">=</span> <span class="n">al</span><span class="p">.</span><span class="n">sentiment</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span><span class="s">&quot;text&quot;</span><span class="p">);</span>
+
+  <span class="c1">//We display sentiment on standard output.</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;TEXT SENTIMENT:&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">sent</span><span class="p">.</span><span class="n">sentimentstr</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
 </div>
 
 

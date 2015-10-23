@@ -81,6 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="record.html">Record</a></li>
 <li class="toctree-l2"><a class="reference internal" href="records.html">Records</a></li>
 <li class="toctree-l2"><a class="reference internal" href="history.html">History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marray.html">N-Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="news.html">News</a></li>
 </ul>
 </li>
@@ -191,12 +192,17 @@ algorithms in real situations.</em></p>
 <span class="cp">#include &lt;quotek/quant.hpp&gt;</span>
 <span class="cp">#include &lt;iostream&gt;</span>
 
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">quotek</span><span class="o">::</span><span class="n">quant</span><span class="p">;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">quotek</span><span class="o">::</span><span class="n">rand</span><span class="p">;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">quotek</span><span class="o">::</span><span class="n">data</span><span class="p">;</span>
+
+
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 
   <span class="n">quotek</span><span class="o">::</span><span class="n">data</span><span class="o">::</span><span class="n">records</span> <span class="n">current</span><span class="p">;</span>
 
   <span class="cm">/* we generate a full day of fake Dow-Jones quotations, which represents about 25000 ticks of 1 second */</span>
-  <span class="n">quotek</span><span class="o">::</span><span class="n">data</span><span class="o">::</span><span class="n">records</span> <span class="n">dquotes</span> <span class="o">=</span> <span class="n">quotek</span><span class="o">::</span><span class="n">rand</span><span class="o">::</span><span class="n">generators</span><span class="o">::</span><span class="n">normal</span><span class="p">(</span><span class="mi">25000</span><span class="p">,</span> <span class="mi">17000</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+  <span class="n">quotek</span><span class="o">::</span><span class="n">data</span><span class="o">::</span><span class="n">records</span> <span class="n">dquotes</span> <span class="o">=</span> <span class="n">generators</span><span class="o">::</span><span class="n">normal</span><span class="p">(</span><span class="mi">25000</span><span class="p">,</span> <span class="mi">17000</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
 
   <span class="cm">/* Next we&#39;ll simulate the running of the quotation day */</span>
   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span> <span class="n">dquotes</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
@@ -207,16 +213,18 @@ algorithms in real situations.</em></p>
     <span class="k">if</span> <span class="p">(</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span>  <span class="p">)</span> <span class="p">{</span>
 
       <span class="c1">//we down-sample current for 15-minute ticks</span>
-      <span class="n">quotek</span><span class="o">::</span><span class="n">data</span><span class="o">::</span><span class="n">records</span> <span class="n">current_ds1</span> <span class="o">=</span> <span class="n">current</span><span class="p">.</span><span class="n">down_sample</span><span class="p">(</span><span class="mi">900</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;typical&quot;</span><span class="p">);</span>
+      <span class="n">records</span> <span class="n">current_ds1</span> <span class="o">=</span> <span class="n">current</span><span class="p">.</span><span class="n">down_sample</span><span class="p">(</span><span class="mi">900</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;typical&quot;</span><span class="p">);</span>
 
       <span class="c1">//we down-sample current for 50secs ticks.</span>
-      <span class="n">quotek</span><span class="o">::</span><span class="n">data</span><span class="o">::</span><span class="n">records</span> <span class="n">current_ds2</span> <span class="o">=</span> <span class="n">current</span><span class="p">.</span><span class="n">down_sample</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;typical&quot;</span><span class="p">);</span>
+      <span class="n">records</span> <span class="n">current_ds2</span> <span class="o">=</span> <span class="n">current</span><span class="p">.</span><span class="n">down_sample</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;typical&quot;</span><span class="p">);</span>
 
       <span class="c1">//we compute 20 periods SMA for 15 minutes sample</span>
-      <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">quotek</span><span class="o">::</span><span class="n">data</span><span class="o">::</span><span class="n">record</span><span class="o">&gt;</span> <span class="n">avg1</span> <span class="o">=</span> <span class="n">quotek</span><span class="o">::</span><span class="n">quant</span><span class="o">::</span><span class="n">SMA</span><span class="p">(</span><span class="n">current_ds1</span><span class="p">.</span><span class="n">get_data</span><span class="p">(),</span><span class="mi">20</span><span class="p">);</span>
+      <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">a1</span> <span class="o">=</span> <span class="n">SMA</span><span class="p">(</span><span class="n">current_ds1</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span>
+      <span class="n">records</span> <span class="n">avg1</span> <span class="o">=</span> <span class="n">records</span><span class="p">(</span><span class="n">a1</span><span class="p">);</span>
 
       <span class="c1">//we compute 20 periods SMA for 50 seconds sample</span>
-      <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">quotek</span><span class="o">::</span><span class="n">data</span><span class="o">::</span><span class="n">record</span><span class="o">&gt;</span> <span class="n">avg2</span> <span class="o">=</span> <span class="n">quotek</span><span class="o">::</span><span class="n">quant</span><span class="o">::</span><span class="n">SMA</span><span class="p">(</span><span class="n">current_ds2</span><span class="p">.</span><span class="n">get_data</span><span class="p">(),</span><span class="mi">20</span><span class="p">);</span>
+      <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">a2</span> <span class="o">=</span> <span class="n">SMA</span><span class="p">(</span><span class="n">current_ds2</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span>
+      <span class="n">records</span> <span class="n">avg2</span> <span class="o">=</span> <span class="n">records</span><span class="p">(</span><span class="n">a2</span><span class="p">);</span>
 
       <span class="k">if</span> <span class="p">(</span>  <span class="n">percent_delta</span><span class="p">(</span><span class="n">avg1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">percent_delta</span><span class="p">(</span><span class="n">avg2</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
         <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;We got a BUY Signal at &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">dquotes</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">value</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>

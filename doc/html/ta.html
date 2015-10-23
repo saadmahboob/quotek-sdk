@@ -81,6 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="record.html">Record</a></li>
 <li class="toctree-l2"><a class="reference internal" href="records.html">Records</a></li>
 <li class="toctree-l2"><a class="reference internal" href="history.html">History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marray.html">N-Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="news.html">News</a></li>
 </ul>
 </li>
@@ -149,10 +150,26 @@
 
 <dl class="function">
 <dt id="_CPPv2N6quotek2ta12fibo_retraceERN6quotek4data7recordsE">
-<span id="quotek::ta::fibo_retrace__quotek::data::recordsR"></span><span class="target" id="project0namespacequotek_1_1ta_1a4d63d47bf1bd077499d9dea2e16d7dbb"></span>quotek::<a class="reference internal" href="quant.html#_CPPv2N6quotek5quantE" title="quotek::quant">quant</a>::<a class="reference internal" href="quant.html#_CPPv2N6quotek5quant11fibo_levelsE" title="quotek::quant::fibo_levels">fibo_levels</a> <code class="descname">fibo_retrace</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek2ta12fibo_retraceERN6quotek4data7recordsE" title="Permalink to this definition">¶</a></dt>
-<dd><p>fibo_retrace takes a time-series and computes the different fibonacci retrace levels and puts it in a <a class="reference internal" href="quant.html#project0structquotek_1_1quant_1_1fibo__levels"><span>quotek::quant::fibo_levels</span></a> structure. <dl class="docutils">
+<span id="quotek::ta::fibo_retrace__quotek::data::recordsR"></span><span class="target" id="project0namespacequotek_1_1ta_1a7f1fc0840a79e0d6db05df3b13358732"></span>quotek::<a class="reference internal" href="quant.html#_CPPv2N6quotek5quantE" title="quotek::quant">quant</a>::<a class="reference internal" href="quant.html#_CPPv2N6quotek5quant8fibo_retE" title="quotek::quant::fibo_ret">fibo_ret</a> <code class="descname">fibo_retrace</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek2ta12fibo_retraceERN6quotek4data7recordsE" title="Permalink to this definition">¶</a></dt>
+<dd><p>fibo_retrace takes a time-series and computes the different fibonacci retracement levels and puts it in a <a class="reference internal" href="quant.html#project0structquotek_1_1quant_1_1fibo__ret"><span>quotek::quant::fibo_ret</span></a> structure. <dl class="docutils">
 <dt><strong>Return</strong></dt>
-<dd>a <a class="reference internal" href="quant.html#project0structquotek_1_1quant_1_1fibo__levels"><span>quotek::quant::fibo_levels</span></a> structure </dd>
+<dd>a <a class="reference internal" href="quant.html#project0structquotek_1_1quant_1_1fibo__ret"><span>quotek::quant::fibo_ret</span></a> structure </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">recs</span></code> - <p>dataset to compute fibonacci levels for. </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N6quotek2ta14fibo_extensionERN6quotek4data7recordsE">
+<span id="quotek::ta::fibo_extension__quotek::data::recordsR"></span><span class="target" id="project0namespacequotek_1_1ta_1a32662cb585677d088734f212400c0ed0"></span>quotek::<a class="reference internal" href="quant.html#_CPPv2N6quotek5quantE" title="quotek::quant">quant</a>::<a class="reference internal" href="quant.html#_CPPv2N6quotek5quant8fibo_extE" title="quotek::quant::fibo_ext">fibo_ext</a> <code class="descname">fibo_extension</code><span class="sig-paren">(</span>quotek::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4dataE" title="quotek::data">data</a>::<a class="reference internal" href="data_struct.html#_CPPv2N6quotek4data7recordsE" title="quotek::data::records">records</a> &amp;<em>recs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek2ta14fibo_extensionERN6quotek4data7recordsE" title="Permalink to this definition">¶</a></dt>
+<dd><p>fibo_extension takes a time-series, computes the different fibonacci extension levels and puts it in a <a class="reference internal" href="quant.html#project0structquotek_1_1quant_1_1fibo__ext"><span>quotek::quant::fibo_ext</span></a> structure. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>a <a class="reference internal" href="quant.html#project0structquotek_1_1quant_1_1fibo__ext"><span>quotek::quant::fibo_ext</span></a> structure </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last">
 <li><code class="first docutils literal"><span class="pre">recs</span></code> - <p>dataset to compute fibonacci levels for. </p>

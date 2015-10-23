@@ -81,6 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="record.html">Record</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Records</a></li>
 <li class="toctree-l2"><a class="reference internal" href="history.html">History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marray.html">N-Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="news.html">News</a></li>
 </ul>
 </li>
@@ -275,20 +276,20 @@ How down sampling methods work:<ul class="simple">
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek4data7records14get_timestampsEv">
-<span id="quotek::data::records::get_timestamps"></span><span class="target" id="project0classquotek_1_1data_1_1records_1aa770400f3d00b33380fe98b139b6fb25"></span>std::vector&lt;long&gt; &amp;<code class="descname">get_timestamps</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek4data7records14get_timestampsEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek4data7records17export_timestampsEv">
+<span id="quotek::data::records::export_timestamps"></span><span class="target" id="project0classquotek_1_1data_1_1records_1a1c41741fdb7db7d70f4a9214e3977176"></span>std::vector&lt;long&gt; <code class="descname">export_timestamps</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek4data7records17export_timestampsEv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves a vector that contains all the timestamps of the dataset. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek4data7records10get_valuesEv">
-<span id="quotek::data::records::get_values"></span><span class="target" id="project0classquotek_1_1data_1_1records_1a9670ded422c4d8f498bd556cc8e1fa01"></span>std::vector&lt;float&gt; &amp;<code class="descname">get_values</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek4data7records10get_valuesEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek4data7records13export_valuesEv">
+<span id="quotek::data::records::export_values"></span><span class="target" id="project0classquotek_1_1data_1_1records_1a339761df49d222171512521a15c7183f"></span>std::vector&lt;float&gt; <code class="descname">export_values</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek4data7records13export_valuesEv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves a vector that contains all the values of the dataset. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N6quotek4data7records11get_spreadsEv">
-<span id="quotek::data::records::get_spreads"></span><span class="target" id="project0classquotek_1_1data_1_1records_1a36a92279bf47b2be62bc1ce47d1eadf8"></span>std::vector&lt;float&gt; &amp;<code class="descname">get_spreads</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek4data7records11get_spreadsEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek4data7records14export_spreadsEv">
+<span id="quotek::data::records::export_spreads"></span><span class="target" id="project0classquotek_1_1data_1_1records_1aa540fdd3a0700c1d7c3e7b43c17e8d47"></span>std::vector&lt;float&gt; <code class="descname">export_spreads</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N6quotek4data7records14export_spreadsEv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves a vector that contains all the spreads of a dataset. </p>
 </dd></dl>
 
@@ -343,6 +344,52 @@ How down sampling methods work:<ul class="simple">
 </div>
 </dd></dl>
 
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>The code below will show you how to manipulate records containers to store and
+retrieve time-series data.</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="cp">#include &lt;quotek/record.hpp&gt;</span>
+<span class="cp">#include &lt;iostream&gt;</span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">quotek</span><span class="o">::</span><span class="n">data</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="c1">//First we create a vector of float values as fake data.</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">vals</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">4530</span><span class="p">,</span> <span class="mi">4575</span><span class="p">,</span> <span class="mi">4890</span><span class="p">,</span> <span class="mi">4235</span><span class="p">,</span> <span class="mi">4144</span><span class="p">,</span> <span class="mi">4356</span><span class="p">,</span> <span class="mi">4588</span><span class="p">,</span> <span class="mi">4720</span><span class="p">,</span> <span class="mi">4989</span> <span class="p">};</span>
+
+  <span class="c1">//Then we can import these values inside a records container.</span>
+  <span class="n">records</span> <span class="n">r1</span><span class="p">(</span><span class="n">vals</span><span class="p">);</span>
+
+  <span class="c1">//We can iterate through this container with a simple loop:</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span> <span class="n">r1</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span>  <span class="p">)</span> <span class="p">{</span>
+
+    <span class="c1">//we assign a fake timestamp and spread value to record at position i</span>
+    <span class="n">r1</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">timestamp</span> <span class="o">=</span> <span class="n">time</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">r1</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">spread</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="c1">//Prints the value of record at position i</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">r1</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">value</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+  <span class="p">}</span>
+
+  <span class="c1">//To append some data in the container, you must use the append() function:</span>
+  <span class="n">r1</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">time</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="mi">4794</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+
+  <span class="c1">//Also works, it will not assign any value to timestamp and spread for the newly added record.</span>
+  <span class="n">r1</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4794</span><span class="p">);</span>
+
+  <span class="c1">//Alternatively you can create a record object then append it to the container:</span>
+  <span class="n">record</span> <span class="n">trec</span><span class="p">;</span>
+  <span class="n">trec</span><span class="p">.</span><span class="n">timestamp</span> <span class="o">=</span> <span class="n">time</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="n">trec</span><span class="p">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">4794</span><span class="p">;</span>
+  <span class="n">trec</span><span class="p">.</span><span class="n">spread</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">r1</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">trec</span><span class="p">);</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 

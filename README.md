@@ -31,9 +31,15 @@ Setup
 
 In order to get full instructions about how to Setup Quotek SDK in your environment, please look at the documentation page http://docs.quotek.io/sdk/install.html
 
-
 Changelog
 =========
+
+v2.2.1
+------
+
+  - Added N-dimensions array classes, specially crafted for performance and ease of use.
+  - Added a new function: fibo_extensions, which computes the fibonacci extensions (127.2% to 261.8% ) of the provided time-series.
+  - Improved SDK Documentation.
 
 v2.2
 ----

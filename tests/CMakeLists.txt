@@ -4,7 +4,7 @@ project(quotek)
 
 SET (CMAKE_CXX_COMPILER "/usr/bin/clang++")
 SET (CMAKE_C_COMPILER "/usr/bib/clang")
-SET (CMAKE_CXX_FLAGS "-O3 -std=c++11 -stdlib=libc++ -fPIC")
+SET (CMAKE_CXX_FLAGS "-O3 -std=c++1y -stdlib=libc++ -fPIC")
 
 SET (CMAKE_LINKER_FLAGS    "-rdynamic")
 
@@ -14,6 +14,7 @@ SET (CMAKE_NM      "/usr/bin/llvm-nm")
 SET (CMAKE_OBJDUMP "/usr/bin/llvm-objdump")
 SET (CMAKE_RANLIB  "/usr/bin/llvm-ranlib")
 SET (CMAKE_INSTALL_PREFIX  "/usr")
+
 
 add_executable(
        test_quant
@@ -77,6 +78,12 @@ add_executable(
 )
 
 add_executable(
+    test_oanda
+    src/test_oanda.cpp
+)
+
+
+add_executable(
     test_quandl
     src/test_quandl.cpp
 )
@@ -90,6 +97,12 @@ add_executable(
     test_techanalysis
     src/test_techanalysis.cpp
 )
+
+add_executable(
+       test_marray
+       src/test_marray.cpp
+)
+
 
 
 find_library (quotek QUOTEK) 
@@ -160,6 +173,13 @@ target_link_libraries(
 
 target_link_libraries(
         test_rss
+        quotek
+        pthread
+        curl
+)
+
+target_link_libraries(
+        test_oanda
         quotek
         pthread
         curl

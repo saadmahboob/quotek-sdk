@@ -81,6 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="record.html">Record</a></li>
 <li class="toctree-l2"><a class="reference internal" href="records.html">Records</a></li>
 <li class="toctree-l2"><a class="reference internal" href="history.html">History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marray.html">N-Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="news.html">News</a></li>
 </ul>
 </li>
@@ -118,6 +119,7 @@
         
   <div class="section" id="quantitative-analysis">
 <h1>Quantitative Analysis<a class="headerlink" href="#quantitative-analysis" title="Permalink to this headline">¶</a></h1>
+<p>The following section describes all the functions of the SDK which are meant to analyse your time-series from a quantitative perspective.</p>
 <dl class="type">
 <dt id="_CPPv2N6quotek5quantE">
 <span id="quotek::quant"></span><span class="target" id="project0namespacequotek_1_1quant"></span><em class="property">namespace </em><code class="descclassname">quotek::</code><code class="descname">quant</code><a class="headerlink" href="#_CPPv2N6quotek5quantE" title="Permalink to this definition">¶</a></dt>
@@ -149,9 +151,15 @@
 </dd></dl>
 
 <dl class="type">
-<dt id="_CPPv2N6quotek5quant11fibo_levelsE">
-<span id="quotek::quant::fibo_levels"></span><span class="target" id="project0namespacequotek_1_1quant_1a73f437965f60e23cc3f912d8e88b41c5"></span><em class="property">typedef </em><em class="property">struct</em> quotek::<a class="reference internal" href="#_CPPv2N6quotek5quantE" title="quotek::quant">quant</a>::<a class="reference internal" href="#_CPPv2N6quotek5quant11fibo_levelsE" title="quotek::quant::fibo_levels">fibo_levels</a> <code class="descname">fibo_levels</code><a class="headerlink" href="#_CPPv2N6quotek5quant11fibo_levelsE" title="Permalink to this definition">¶</a></dt>
-<dd><p><a class="reference internal" href="#project0structquotek_1_1quant_1_1fibo__levels"><span>fibo_levels</span></a> is a structure that stores the different fibonacci retracements for a time-serie </p>
+<dt id="_CPPv2N6quotek5quant8fibo_retE">
+<span id="quotek::quant::fibo_ret"></span><span class="target" id="project0namespacequotek_1_1quant_1a1638e69a3650f83c084205927ff09815"></span><em class="property">typedef </em><em class="property">struct</em> quotek::<a class="reference internal" href="#_CPPv2N6quotek5quantE" title="quotek::quant">quant</a>::<a class="reference internal" href="#_CPPv2N6quotek5quant8fibo_retE" title="quotek::quant::fibo_ret">fibo_ret</a> <code class="descname">fibo_ret</code><a class="headerlink" href="#_CPPv2N6quotek5quant8fibo_retE" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#project0structquotek_1_1quant_1_1fibo__ret"><span>fibo_ret</span></a> is a structure that stores the different fibonacci retracements for a time-serie </p>
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv2N6quotek5quant8fibo_extE">
+<span id="quotek::quant::fibo_ext"></span><span class="target" id="project0namespacequotek_1_1quant_1ab331acecf117409094c749b18ddf36f4"></span><em class="property">typedef </em><em class="property">struct</em> quotek::<a class="reference internal" href="#_CPPv2N6quotek5quantE" title="quotek::quant">quant</a>::<a class="reference internal" href="#_CPPv2N6quotek5quant8fibo_extE" title="quotek::quant::fibo_ext">fibo_ext</a> <code class="descname">fibo_ext</code><a class="headerlink" href="#_CPPv2N6quotek5quant8fibo_extE" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#project0structquotek_1_1quant_1_1fibo__ext"><span>fibo_ext</span></a> is a structure that stores the different fibonacci extensions for a time-series </p>
 </dd></dl>
 
 </div>
@@ -646,44 +654,83 @@
 </dd></dl>
 
 <dl class="class">
-<dt id="_CPPv2N6quotek5quant11fibo_levelsE">
-<span id="quotek::quant::fibo_levels"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__levels"></span><em class="property">struct </em><code class="descname">fibo_levels</code><a class="headerlink" href="#_CPPv2N6quotek5quant11fibo_levelsE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;quant.hpp&gt;</em><p><a class="reference internal" href="#project0structquotek_1_1quant_1_1fibo__levels"><span>fibo_levels</span></a> is a structure that stores the different fibonacci retracements for a time-serie </p>
+<dt id="_CPPv2N6quotek5quant8fibo_extE">
+<span id="quotek::quant::fibo_ext"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__ext"></span><em class="property">struct </em><code class="descname">fibo_ext</code><a class="headerlink" href="#_CPPv2N6quotek5quant8fibo_extE" title="Permalink to this definition">¶</a></dt>
+<dd><em>#include &lt;quant.hpp&gt;</em><p><a class="reference internal" href="#project0structquotek_1_1quant_1_1fibo__ext"><span>fibo_ext</span></a> is a structure that stores the different fibonacci extensions for a time-series </p>
 <div class="breathe-sectiondef container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="member">
-<dt id="_CPPv2N6quotek5quant11fibo_levels2p0E">
-<span id="quotek::quant::fibo_levels::p0__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__levels_1a76692fba551fe279fa144ed928ce664d"></span>float <code class="descname">p0</code><a class="headerlink" href="#_CPPv2N6quotek5quant11fibo_levels2p0E" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant8fibo_ext4p100E">
+<span id="quotek::quant::fibo_ext::p100__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__ext_1aceae2a0ba182323bc4ee3d30835a3bb2"></span>float <code class="descname">p100</code><a class="headerlink" href="#_CPPv2N6quotek5quant8fibo_ext4p100E" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stores level 0% </p>
 </dd></dl>
 
 <dl class="member">
-<dt id="_CPPv2N6quotek5quant11fibo_levels3p23E">
-<span id="quotek::quant::fibo_levels::p23__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__levels_1aa901aca41149131eb3b0279cf3869e16"></span>float <code class="descname">p23</code><a class="headerlink" href="#_CPPv2N6quotek5quant11fibo_levels3p23E" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant8fibo_ext4p127E">
+<span id="quotek::quant::fibo_ext::p127__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__ext_1adcda8705afeb5bb4b7cbb6f052bc33dc"></span>float <code class="descname">p127</code><a class="headerlink" href="#_CPPv2N6quotek5quant8fibo_ext4p127E" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores level 127.2 % </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N6quotek5quant8fibo_ext4p161E">
+<span id="quotek::quant::fibo_ext::p161__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__ext_1a33f0ca15d784a6963e81d1b04053a914"></span>float <code class="descname">p161</code><a class="headerlink" href="#_CPPv2N6quotek5quant8fibo_ext4p161E" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores level 161.8%. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N6quotek5quant8fibo_ext4p200E">
+<span id="quotek::quant::fibo_ext::p200__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__ext_1a3dc18a8e643116ffce427e4a9d3e66ff"></span>float <code class="descname">p200</code><a class="headerlink" href="#_CPPv2N6quotek5quant8fibo_ext4p200E" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores level 200 % </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N6quotek5quant8fibo_ext4p261E">
+<span id="quotek::quant::fibo_ext::p261__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__ext_1a04103fd8bc1f596eef3cbcdaf5a48bac"></span>float <code class="descname">p261</code><a class="headerlink" href="#_CPPv2N6quotek5quant8fibo_ext4p261E" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores level 261.8 % </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv2N6quotek5quant8fibo_retE">
+<span id="quotek::quant::fibo_ret"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__ret"></span><em class="property">struct </em><code class="descname">fibo_ret</code><a class="headerlink" href="#_CPPv2N6quotek5quant8fibo_retE" title="Permalink to this definition">¶</a></dt>
+<dd><em>#include &lt;quant.hpp&gt;</em><p><a class="reference internal" href="#project0structquotek_1_1quant_1_1fibo__ret"><span>fibo_ret</span></a> is a structure that stores the different fibonacci retracements for a time-serie </p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N6quotek5quant8fibo_ret2p0E">
+<span id="quotek::quant::fibo_ret::p0__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__ret_1a867eac3426512905dbccecdbeb6eee8c"></span>float <code class="descname">p0</code><a class="headerlink" href="#_CPPv2N6quotek5quant8fibo_ret2p0E" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores level 0% </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N6quotek5quant8fibo_ret3p23E">
+<span id="quotek::quant::fibo_ret::p23__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__ret_1a8b1ac2510b07b23c69fd965fa04a29a3"></span>float <code class="descname">p23</code><a class="headerlink" href="#_CPPv2N6quotek5quant8fibo_ret3p23E" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stores level 23.6 % </p>
 </dd></dl>
 
 <dl class="member">
-<dt id="_CPPv2N6quotek5quant11fibo_levels3p38E">
-<span id="quotek::quant::fibo_levels::p38__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__levels_1a0a69072b2e11b8176cb6258ac8d63dd4"></span>float <code class="descname">p38</code><a class="headerlink" href="#_CPPv2N6quotek5quant11fibo_levels3p38E" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant8fibo_ret3p38E">
+<span id="quotek::quant::fibo_ret::p38__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__ret_1a9a84597d2e29ec1d7219179c3a045b06"></span>float <code class="descname">p38</code><a class="headerlink" href="#_CPPv2N6quotek5quant8fibo_ret3p38E" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stores level 38.2 % </p>
 </dd></dl>
 
 <dl class="member">
-<dt id="_CPPv2N6quotek5quant11fibo_levels3p50E">
-<span id="quotek::quant::fibo_levels::p50__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__levels_1afe44ffe0dc4507b4ccb612e27df8877d"></span>float <code class="descname">p50</code><a class="headerlink" href="#_CPPv2N6quotek5quant11fibo_levels3p50E" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant8fibo_ret3p50E">
+<span id="quotek::quant::fibo_ret::p50__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__ret_1a43496127028edf590a652677e835d45b"></span>float <code class="descname">p50</code><a class="headerlink" href="#_CPPv2N6quotek5quant8fibo_ret3p50E" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stores level 50%. Please note that this is not really a fibo level but since it is highly used, it is also computed. </p>
 </dd></dl>
 
 <dl class="member">
-<dt id="_CPPv2N6quotek5quant11fibo_levels3p61E">
-<span id="quotek::quant::fibo_levels::p61__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__levels_1a1acb544391d69eae097eb11f3536a4a7"></span>float <code class="descname">p61</code><a class="headerlink" href="#_CPPv2N6quotek5quant11fibo_levels3p61E" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant8fibo_ret3p61E">
+<span id="quotek::quant::fibo_ret::p61__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__ret_1a1bef745d1c9d70c68d28eed282606749"></span>float <code class="descname">p61</code><a class="headerlink" href="#_CPPv2N6quotek5quant8fibo_ret3p61E" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stores level 61.8 % </p>
 </dd></dl>
 
 <dl class="member">
-<dt id="_CPPv2N6quotek5quant11fibo_levels4p100E">
-<span id="quotek::quant::fibo_levels::p100__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__levels_1a1996333f7f015ace7ec983061ec49cfe"></span>float <code class="descname">p100</code><a class="headerlink" href="#_CPPv2N6quotek5quant11fibo_levels4p100E" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N6quotek5quant8fibo_ret4p100E">
+<span id="quotek::quant::fibo_ret::p100__float"></span><span class="target" id="project0structquotek_1_1quant_1_1fibo__ret_1aeae1cdd0d86e1241692d3df4cea5c063"></span>float <code class="descname">p100</code><a class="headerlink" href="#_CPPv2N6quotek5quant8fibo_ret4p100E" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stores level 100 % </p>
 </dd></dl>
 
@@ -791,11 +838,61 @@
 
 </dd></dl>
 
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>In the following example we will see how to use the statistical analysis functions listed above.</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="cp">#include &lt;quotek/record.hpp&gt;</span>
+<span class="cp">#include &lt;quotek/quant.hpp&gt;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">quotek</span><span class="o">::</span><span class="n">data</span><span class="p">;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">quotek</span><span class="o">::</span><span class="n">quant</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+
+
+  <span class="cm">/* First we create fake data. */</span>
+
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">long</span><span class="o">&gt;</span> <span class="n">tstamps</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1437143900</span><span class="p">,</span>
+                                <span class="mi">1437143901</span><span class="p">,</span>
+                                <span class="mi">1437143902</span><span class="p">,</span>
+                                <span class="mi">1437143903</span><span class="p">,</span>
+                                <span class="mi">1437143904</span><span class="p">,</span>
+                                <span class="mi">1437143905</span><span class="p">,</span>
+                                <span class="mi">1437143906</span><span class="p">,</span>
+                                <span class="mi">1437143907</span><span class="p">,</span>
+                                <span class="mi">1437143908</span> <span class="p">};</span>
+
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">vals</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">4530</span><span class="p">,</span> <span class="mi">4575</span><span class="p">,</span> <span class="mi">4890</span><span class="p">,</span> <span class="mi">4235</span><span class="p">,</span> <span class="mi">4144</span><span class="p">,</span> <span class="mi">4356</span><span class="p">,</span> <span class="mi">4588</span><span class="p">,</span> <span class="mi">4720</span><span class="p">,</span> <span class="mi">4989</span> <span class="p">};</span>
+
+
+  <span class="cm">/* Then we create a records container from these data. */</span>
+  <span class="n">records</span> <span class="n">r1</span> <span class="o">=</span> <span class="n">records</span><span class="p">(</span><span class="n">vals</span><span class="p">);</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span> <span class="n">r1</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="n">r1</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">timestamp</span> <span class="o">=</span> <span class="n">tstamps</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+
+  <span class="p">}</span>
+
+  <span class="cm">/* We find the minimum value inside the r1 time-series, value is 4144. */</span>
+  <span class="kt">float</span> <span class="n">minval</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">r1</span><span class="p">);</span>
+
+  <span class="cm">/* Now we compute the 5 periods Exponential moving average for the r1 time-series.</span>
+<span class="cm">     Result is the following: {4552.5, 4560, 4670, 4525, 4398, 4384, 4452, 4541.33 }. */</span>
+
+  <span class="n">records</span> <span class="n">r3</span> <span class="o">=</span> <span class="n">EMA</span><span class="p">(</span><span class="n">r1</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
+
+  <span class="cm">/* Finally We compute the linear regression of the r1 time-series. Affine parameters are</span>
+<span class="cm">  (29.8, 4409.56) */</span>
+
+  <span class="n">affine</span> <span class="n">af</span> <span class="o">=</span> <span class="n">linear_regression</span><span class="p">(</span><span class="n">r1</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="generators.html">Random Distributions Generators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="blackscholes.html">Options pricing</a></li>
 </ul>
+</div>
 </div>
 </div>
 

@@ -81,6 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="record.html">Record</a></li>
 <li class="toctree-l2"><a class="reference internal" href="records.html">Records</a></li>
 <li class="toctree-l2"><a class="reference internal" href="history.html">History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marray.html">N-Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="news.html">News</a></li>
 </ul>
 </li>
@@ -214,6 +215,39 @@
 </div>
 </dd></dl>
 
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>You will find below a sample source code about how to use the Quotek Twitter client to fetch
+the 40 most recent tweets containing the word &#8220;DOWJONES&#8221;. <a href="#id1"><span class="problematic" id="id2">*</span></a>/</p>
+<blockquote>
+<div><div class="highlight-c++"><div class="highlight"><pre><span class="cp">#include &lt;quotek/quotek.hpp&gt;</span>
+<span class="cp">#include &lt;quotek/datasources/twitter.hpp&gt;</span>
+<span class="cp">#include &lt;iostream&gt;</span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">quotek</span><span class="o">::</span><span class="n">datasource</span><span class="p">;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">quotek</span><span class="o">::</span><span class="n">data</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="c1">//We declare a new Twitter client.</span>
+  <span class="n">twitter</span> <span class="n">tw1</span><span class="p">(</span><span class="s">&quot;TWITTER-CONSUMER-KEY&quot;</span><span class="p">,</span>
+              <span class="s">&quot;TWITTER-CONSUMER-SECRET&quot;</span><span class="p">,</span>
+              <span class="s">&quot;TWITTER-TOKEN&quot;</span><span class="p">,</span>
+              <span class="s">&quot;TWITTER-TOKEN-SECRET&quot;</span><span class="p">);</span>
+
+  <span class="c1">//we fetch the 40 most recent tweets matching &quot;DOWJONES&quot;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">news</span><span class="o">&gt;</span> <span class="n">nvect</span> <span class="o">=</span> <span class="n">tw1</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="s">&quot;DOWJONES&quot;</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="s">&quot;recent&quot;</span><span class="p">,</span><span class="s">&quot;en&quot;</span><span class="p">);</span>
+
+  <span class="c1">//Then we iterate through them to display their content on stdout.</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">nvect</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">nvect</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">content</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+  <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
 </div>
 
 
