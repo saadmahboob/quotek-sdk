@@ -34,6 +34,11 @@ In order to get full instructions about how to Setup Quotek SDK in your environm
 Changelog
 =========
 
+v2.2.2
+------
+
+  - Added eToro OpenBook API Client.
+
 v2.2.1
 ------
 
