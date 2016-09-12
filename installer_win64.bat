@@ -1,6 +1,8 @@
 @echo OFF
 
-echo "Quotek SDK 2.2 Installer"
+cd /d %~dp0
+
+echo "Quotek SDK 3.0 Installer"
 echo "========================"
 
 mkdir "C:\Program Files\quotek\sdk"

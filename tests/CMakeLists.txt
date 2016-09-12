@@ -2,19 +2,11 @@ cmake_minimum_required(VERSION 2.6)
 
 project(quotek)
 
-SET (CMAKE_CXX_COMPILER "/usr/bin/clang++")
-SET (CMAKE_C_COMPILER "/usr/bib/clang")
-SET (CMAKE_CXX_FLAGS "-O3 -std=c++1y -stdlib=libc++ -fPIC")
+SET (CMAKE_CXX_COMPILER "/usr/bin/g++")
+SET (CMAKE_C_COMPILER "/usr/bin/gcc")
+SET (CMAKE_CXX_FLAGS "-O3 -std=c++1y -fPIC")
 
 SET (CMAKE_LINKER_FLAGS    "-rdynamic")
-
-SET (CMAKE_AR      "/usr/bin/llvm-ar")
-SET (CMAKE_LINKER  "/usr/bin/ld")
-SET (CMAKE_NM      "/usr/bin/llvm-nm")
-SET (CMAKE_OBJDUMP "/usr/bin/llvm-objdump")
-SET (CMAKE_RANLIB  "/usr/bin/llvm-ranlib")
-SET (CMAKE_INSTALL_PREFIX  "/usr")
-
 
 add_executable(
        test_quant
@@ -24,6 +16,11 @@ add_executable(
 add_executable(
        test_record
        src/test_record.cpp
+)
+
+add_executable(
+       test_ml
+       src/test_ml.cpp
 )
 
 add_executable(
@@ -98,10 +95,37 @@ add_executable(
     src/test_techanalysis.cpp
 )
 
+
 add_executable(
-       test_marray
-       src/test_marray.cpp
+       test_json
+       src/test_json.cpp
 )
+
+add_executable(
+       test_linear_regression
+       src/test_linear_regression.cpp
+)
+
+add_executable(
+       test_logistic_regression
+       src/test_logistic_regression.cpp
+)
+
+add_executable(
+       test_imap
+       src/test_imap.cpp
+)
+
+add_executable(
+       test_email
+       src/test_email.cpp
+)
+
+add_executable(
+       test_kalman
+       src/test_kalman.cpp
+)
+
 
 
 
@@ -209,6 +233,57 @@ target_link_libraries(
 
 target_link_libraries(
         test_techanalysis
+        quotek
+        pthread
+        curl
+)
+
+target_link_libraries(
+        test_json
+        quotek
+        pthread
+        curl
+)
+
+
+target_link_libraries(
+        test_linear_regression
+        quotek
+        pthread
+        curl
+)
+
+target_link_libraries(
+        test_logistic_regression
+        quotek
+        pthread
+        curl
+)
+
+target_link_libraries(
+        test_imap
+        quotek
+        pthread
+        curl
+)
+
+target_link_libraries(
+        test_email
+        quotek
+        pthread
+        curl
+)
+
+
+target_link_libraries(
+        test_ml
+        quotek
+        pthread
+        curl
+)
+
+target_link_libraries(
+        test_kalman
         quotek
         pthread
         curl

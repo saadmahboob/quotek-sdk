@@ -1,6 +1,6 @@
 /*
-Quotek Strategies SDK 2.0
-Copyright 2013-2015 Quotek SAS 
+Quotek Strategies SDK 3.0
+Copyright 2013-2016 Quotek SAS 
 http://www.quotek.io
 */
 
@@ -20,6 +20,7 @@ namespace quotek {
     #define MACD(_a,_b,_c,_d) moving_average_convergeance_divergeance(_a,_b,_c,_d)
     #define FIBO_RETR(_a) fibo_retrace(_a)
     #define FIBO_EXT(_a) fibo_extension(_a)
+    
 
     /** MACD is an early trend indicator. It is composed of 2 graph lines. The first line, MACD, is a difference between an EMA small period and an EMA long period.
      *  the second line, the signal line, is usually a 9 periods EMA.
@@ -40,6 +41,17 @@ namespace quotek {
                                                  int periods_long_ema,
                                                  int periods_signal_line);
 
+    /** trix is an oscilator created to detect oversold or overbought markets.
+     *  values returned by the trix indicator oscilate around a zero-line: If the
+     *  value crosses above the zero-line it is a buy signal, if the value crosses below
+     *  it is a sell signal.
+     *  @param periods number of periods to compute trix for.
+     *  @return the trix oscilation values for the provided datasets.
+     */
+
+    quotek::data::records trix(quotek::data::records& recs,
+                            int periods);
+
     /** fibo_retrace takes a time-series and computes the different fibonacci 
      *  retracement levels and puts it in a quotek::quant::fibo_ret structure.
      *  @param recs dataset to compute fibonacci levels for.
@@ -56,6 +68,21 @@ namespace quotek {
 
     quotek::quant::fibo_ext fibo_extension(quotek::data::records& recs);
 
+    /** pivots computes the pivot point as well as the four supports/resistances 
+        for a given history.
+        @param recs dataset to compute pivot points for.
+        @return a quotek::quant::pivot structure
+    */
+
+    quotek::quant::pivot pivots(quotek::data::records& recs);
+
+    /** same as previous, but takes (high,low,close) values instead of full 
+     *  data history for computing.
+     *  @return a quotek::quant::pivot structure
+     */
+
+    quotek::quant::pivot pivots(float high, float low, float close);
+    
 
 
   }

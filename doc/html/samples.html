@@ -23,45 +23,43 @@
 <!-- <body style="background:#333333;color:white;"> -->
 <body>
 
-    <div class="header">
-    <div class="container" id="doc-mcontainer">
+    <div class="header-common">
 
-        <div class="row-fluid">
+            <div class="container-fluid">
 
-          <div class="col-md-4">
-            <a href="http://quotek.io/"><img id="header-logo" src="_static/img/quotek-logo.png"/></a>
-          </div>
-
-          <div class="col-md-8 header-menu">
-
-             <a id="header-pbtn" href="#">Products</a>
-             <!-- <a href="http://demo.quotek.io">Demo</a> -->
-             <span style="color:#cccccc;font-size:18px;margin-left:20px">Demo</span>
-
-             <a href="http://docs.quotek.io">Documentation</a>
-             <a href="http://quotek.io/contact">Contact</a>
-
-             <div id="product-dropdown">
-
-              <div id="product-dropdown-ct">
-                <div>
-                  <a href="http://quotek.io/products/saas">Quotek&copy; SaaS</a>
-                </div>
-                <div style="margin-top:5px">
-                <a href="http://quotek.io/products/sdk">Quotek&copy; SDK</a>
-                </div>
-                <div style="margin-top:5px">
-                  <a href="http://quotek.io/products/pricing">Pricing</a>
-                </div>
+              <div class="col-md-4">
+                <a href="http://quotek.io"><img alt="" id="header-logo" src="_static/img/quotek-logo.png"></a>
               </div>
+             
+              <div class="col-md-8 header-menu header-menu-common">
 
-             </div>
+                 <a href="http://quotek.io/saas">Product</a>
+                 <a href="http://quotek.io/sdk">SDK</a>
+                 <a href="http://quotek.io/pricing">Pricing</a>
+                 <a href="http://docs.quotek.io">Documentation</a>
 
-          </div>
-        </div>
-    </div>
+              </div>
+            </div>
+      </div>
+
+<!--
+<div class="doc-nav">
+
+    <div class="container">
+
+    <ul class="nav nav-pills">
+      <li role="presentation" class="disabled"><a href="#">SaaS</a></li>
+      <li role="presentation" class="active"><a href="/sdk">SDK</a></li>
+      <li role="presentation"><a href="/faq">FAQ</a></li>
+    </ul>
+
   </div>
+
+  </div>
+-->
+
   <div class="content-3"></div>
+
 
   <div class="container" style="margin-top:-80px">
  
@@ -71,41 +69,15 @@
 
         
         <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="index.html">Welcome to Quotek SDK documentation!</a></li>
-<li class="toctree-l1"><a class="reference internal" href="start.html">Quick Start</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="install.html">Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="firstcode.html">First Program</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="data_struct.html">Data Structures</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="record.html">Record</a></li>
-<li class="toctree-l2"><a class="reference internal" href="records.html">Records</a></li>
-<li class="toctree-l2"><a class="reference internal" href="history.html">History</a></li>
-<li class="toctree-l2"><a class="reference internal" href="marray.html">N-Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="news.html">News</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="quant.html">Quantitative Analysis</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="generators.html">Random Distributions Generators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blackscholes.html">Options pricing</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="ml.html">Machine Learning</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mlstruct.html">Data Structures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="alchemy.html">Alchemy API</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="data_sources.html">Data Sources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="quandl.html">Quandl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="etoro.html">eToro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="twitter.html">Twitter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="yahoo.html">Yahoo! Finance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rss.html">RSS Feeds</a></li>
-<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_struct.html">Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quant.html">Quant Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ta.html">Technical Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.html">Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nlp.html">Natural Language Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_sources.html">Data Sources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="broker.html">Broker API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extras.html">Extras</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">SDK Examples</a><ul class="simple">
 </ul>
 </li>
@@ -130,9 +102,9 @@ algorithms in real situations.</em></p>
 <div class="section" id="stock-market-sentiment-analysis-with-alchemy-api">
 <h2>Stock market sentiment analysis with Alchemy API<a class="headerlink" href="#stock-market-sentiment-analysis-with-alchemy-api" title="Permalink to this headline">¶</a></h2>
 <p>In this example we will use the Alchemy API service to evaluate the overall sentiment of the US equity market using the content provided by the Wall-Street Journal RSS feed.</p>
-<div class="highlight-c++"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;quotek/alchemy.hpp&gt;</span>
-<span class="cp">#include &lt;quotek/datasources/rss.hpp&gt;</span>
+<div class="highlight-c++"><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;quotek/alchemy.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;quotek/datasources/rss.hpp&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 
@@ -188,10 +160,10 @@ algorithms in real situations.</em></p>
 </ul>
 </div></blockquote>
 <p>Also in order see some things, we will simulate a full day of dow-jones quotation by using a random, normally distributed sample (17000, sigma of 100).</p>
-<div class="highlight-c++"><div class="highlight"><pre><span class="cp">#include &lt;quotek/record.hpp&gt;</span>
-<span class="cp">#include &lt;quotek/generators.hpp&gt;</span>
-<span class="cp">#include &lt;quotek/quant.hpp&gt;</span>
-<span class="cp">#include &lt;iostream&gt;</span>
+<div class="highlight-c++"><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&lt;quotek/record.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;quotek/generators.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;quotek/quant.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">quotek</span><span class="o">::</span><span class="n">quant</span><span class="p">;</span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">quotek</span><span class="o">::</span><span class="n">rand</span><span class="p">;</span>

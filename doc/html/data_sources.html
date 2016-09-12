@@ -23,45 +23,43 @@
 <!-- <body style="background:#333333;color:white;"> -->
 <body>
 
-    <div class="header">
-    <div class="container" id="doc-mcontainer">
+    <div class="header-common">
 
-        <div class="row-fluid">
+            <div class="container-fluid">
 
-          <div class="col-md-4">
-            <a href="http://quotek.io/"><img id="header-logo" src="_static/img/quotek-logo.png"/></a>
-          </div>
-
-          <div class="col-md-8 header-menu">
-
-             <a id="header-pbtn" href="#">Products</a>
-             <!-- <a href="http://demo.quotek.io">Demo</a> -->
-             <span style="color:#cccccc;font-size:18px;margin-left:20px">Demo</span>
-
-             <a href="http://docs.quotek.io">Documentation</a>
-             <a href="http://quotek.io/contact">Contact</a>
-
-             <div id="product-dropdown">
-
-              <div id="product-dropdown-ct">
-                <div>
-                  <a href="http://quotek.io/products/saas">Quotek&copy; SaaS</a>
-                </div>
-                <div style="margin-top:5px">
-                <a href="http://quotek.io/products/sdk">Quotek&copy; SDK</a>
-                </div>
-                <div style="margin-top:5px">
-                  <a href="http://quotek.io/products/pricing">Pricing</a>
-                </div>
+              <div class="col-md-4">
+                <a href="http://quotek.io"><img alt="" id="header-logo" src="_static/img/quotek-logo.png"></a>
               </div>
+             
+              <div class="col-md-8 header-menu header-menu-common">
 
-             </div>
+                 <a href="http://quotek.io/saas">Product</a>
+                 <a href="http://quotek.io/sdk">SDK</a>
+                 <a href="http://quotek.io/pricing">Pricing</a>
+                 <a href="http://docs.quotek.io">Documentation</a>
 
-          </div>
-        </div>
-    </div>
+              </div>
+            </div>
+      </div>
+
+<!--
+<div class="doc-nav">
+
+    <div class="container">
+
+    <ul class="nav nav-pills">
+      <li role="presentation" class="disabled"><a href="#">SaaS</a></li>
+      <li role="presentation" class="active"><a href="/sdk">SDK</a></li>
+      <li role="presentation"><a href="/faq">FAQ</a></li>
+    </ul>
+
   </div>
+
+  </div>
+-->
+
   <div class="content-3"></div>
+
 
   <div class="container" style="margin-top:-80px">
  
@@ -71,30 +69,12 @@
 
         
         <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="index.html">Welcome to Quotek SDK documentation!</a></li>
-<li class="toctree-l1"><a class="reference internal" href="start.html">Quick Start</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="install.html">Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="firstcode.html">First Program</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="data_struct.html">Data Structures</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="record.html">Record</a></li>
-<li class="toctree-l2"><a class="reference internal" href="records.html">Records</a></li>
-<li class="toctree-l2"><a class="reference internal" href="history.html">History</a></li>
-<li class="toctree-l2"><a class="reference internal" href="marray.html">N-Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="news.html">News</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="quant.html">Quantitative Analysis</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="generators.html">Random Distributions Generators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blackscholes.html">Options pricing</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="ml.html">Machine Learning</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mlstruct.html">Data Structures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="alchemy.html">Alchemy API</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_struct.html">Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quant.html">Quant Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ta.html">Technical Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.html">Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nlp.html">Natural Language Processing</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Data Sources</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="quandl.html">Quandl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="etoro.html">eToro</a></li>
@@ -104,11 +84,9 @@
 <li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ta.html">Technical Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="broker.html">Broker API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="samples.html">SDK Examples</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="extras.html">Extras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="samples.html">SDK Examples</a></li>
 </ul>
 
       </div>
@@ -120,66 +98,62 @@
         
   <div class="section" id="data-sources">
 <h1>Data Sources<a class="headerlink" href="#data-sources" title="Permalink to this headline">¶</a></h1>
-<dl class="type">
-<dt id="_CPPv2N6quotek10datasourceE">
-<span id="quotek::datasource"></span><span class="target" id="project0namespacequotek_1_1datasource"></span><em class="property">namespace </em><code class="descclassname">quotek::</code><code class="descname">datasource</code><a class="headerlink" href="#_CPPv2N6quotek10datasourceE" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="class">
-<dt id="_CPPv2N6quotek10datasource3csvE">
-<span id="quotek::datasource::csv"></span><span class="target" id="project0classquotek_1_1datasource_1_1csv"></span><em class="property">class </em><code class="descname">csv</code><a class="headerlink" href="#_CPPv2N6quotek10datasource3csvE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;csv.hpp&gt;</em><p>csv is a class that helps importing financial data stored in CSV files. it has multiple import features depending on what user wants to achieve. </p>
-</dd></dl>
-
-<dl class="class">
-<dt id="_CPPv2N6quotek10datasource10datasourceE">
-<span id="quotek::datasource::datasource"></span><span class="target" id="project0classquotek_1_1datasource_1_1datasource"></span><em class="property">class </em><code class="descname">datasource</code><a class="headerlink" href="#_CPPv2N6quotek10datasource10datasourceE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;datasource.hpp&gt;</em><p>datasource is a meta class meant to retrieve data from multiple data sources. </p>
-</dd></dl>
-
-<dl class="class">
-<dt id="_CPPv2N6quotek10datasource5etoroE">
-<span id="quotek::datasource::etoro"></span><span class="target" id="project0classquotek_1_1datasource_1_1etoro"></span><em class="property">class </em><code class="descname">etoro</code><a class="headerlink" href="#_CPPv2N6quotek10datasource5etoroE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;etoro.hpp&gt;</em><p>etoro is a class meant to make easy queries to the eToro OpenBook API. </p>
-</dd></dl>
-
-<dl class="class">
-<dt id="_CPPv2N6quotek10datasource6quandlE">
-<span id="quotek::datasource::quandl"></span><span class="target" id="project0classquotek_1_1datasource_1_1quandl"></span><em class="property">class </em><code class="descname">quandl</code><a class="headerlink" href="#_CPPv2N6quotek10datasource6quandlE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;quandl.hpp&gt;</em><p>quandl is a class meant to provide a simple quandl API client. Quandl is a very useful service for retrieving lots of financial data coming from various sources. </p>
-</dd></dl>
-
-<dl class="class">
-<dt id="_CPPv2N6quotek10datasource9quandl_dbE">
-<span id="quotek::datasource::quandl_db"></span><span class="target" id="project0classquotek_1_1datasource_1_1quandl__db"></span><em class="property">class </em><code class="descname">quandl_db</code><a class="headerlink" href="#_CPPv2N6quotek10datasource9quandl_dbE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;quandl.hpp&gt;</em><p><a class="reference internal" href="#project0classquotek_1_1datasource_1_1quandl__db"><span>quandl_db</span></a> is a class created to store information relative to databases, fetched via get_databases() </p>
-</dd></dl>
-
-<dl class="class">
-<dt id="_CPPv2N6quotek10datasource11quandl_metaE">
-<span id="quotek::datasource::quandl_meta"></span><span class="target" id="project0classquotek_1_1datasource_1_1quandl__meta"></span><em class="property">class </em><code class="descname">quandl_meta</code><a class="headerlink" href="#_CPPv2N6quotek10datasource11quandl_metaE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;quandl.hpp&gt;</em><p><a class="reference internal" href="#project0classquotek_1_1datasource_1_1quandl__meta"><span>quandl_meta</span></a> is a class meant to store quandl dataset metadata. </p>
-</dd></dl>
-
-<dl class="class">
-<dt id="_CPPv2N6quotek10datasource3rssE">
-<span id="quotek::datasource::rss"></span><span class="target" id="project0classquotek_1_1datasource_1_1rss"></span><em class="property">class </em><code class="descname">rss</code><a class="headerlink" href="#_CPPv2N6quotek10datasource3rssE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;rss.hpp&gt;</em><p>rss is a class which allows to fetch rss feeds inside quotek strategies in order to process them (and potentially dedude positions to take). </p>
-</dd></dl>
-
-<dl class="class">
-<dt id="_CPPv2N6quotek10datasource7twitterE">
-<span id="quotek::datasource::twitter"></span><span class="target" id="project0classquotek_1_1datasource_1_1twitter"></span><em class="property">class </em><code class="descname">twitter</code><a class="headerlink" href="#_CPPv2N6quotek10datasource7twitterE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;twitter.hpp&gt;</em><p>Twitter is a class that allows to fetch twitter content from the regular API. </p>
-</dd></dl>
-
-<dl class="class">
-<dt id="_CPPv2N6quotek10datasource12yahoofinanceE">
-<span id="quotek::datasource::yahoofinance"></span><span class="target" id="project0classquotek_1_1datasource_1_1yahoofinance"></span><em class="property">class </em><code class="descname">yahoofinance</code><a class="headerlink" href="#_CPPv2N6quotek10datasource12yahoofinanceE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;yahoofinance.hpp&gt;</em><p>yahoofinance is a class which allows to query the Yahoo! Finance API service to fetch historical data on stocks and indices. </p>
-</dd></dl>
-
-</dd></dl>
-
+<a class="qimg reference internal image-reference" href="_images/ds.png"><img alt="Datasources Logo" class="qimg align-left" src="_images/ds.png" style="width: 120px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p>In the Quotek SDK, Data source modules are the ones that will enable you to import Data from many different locations. Theses locations can be local, remote or cloud services, depending on the module you are using to import your data. So far most of the source modules are for external data services (cloud), but some other remote connectors like Kdb+, ODBC, HDF5 and hadoop will follow soon.</p>
+<div class="section" id="table-of-content">
+<h2>Table of Content<a class="headerlink" href="#table-of-content" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quandl.html">Quandl</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quandl.html#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="etoro.html">eToro</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="etoro.html#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="twitter.html">Twitter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="twitter.html#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="yahoo.html">Yahoo! Finance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="yahoo.html#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rss.html">RSS Feeds</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rss.html#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="csv.html">CSV Importer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="csv.html#example">Example</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
 </div>
 </div>
 

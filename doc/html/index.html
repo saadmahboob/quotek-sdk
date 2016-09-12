@@ -1,7 +1,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Welcome to Quotek SDK documentation!</title>
+  <title>Welcome to the Quotek SDK documentation!</title>
   
   <link href='_static/css/bootstrap.css' rel='stylesheet' type='text/css'>
   <link href='_static/css/bootstrap-theme.css' rel='stylesheet' type='text/css'>
@@ -23,45 +23,43 @@
 <!-- <body style="background:#333333;color:white;"> -->
 <body>
 
-    <div class="header">
-    <div class="container" id="doc-mcontainer">
+    <div class="header-common">
 
-        <div class="row-fluid">
+            <div class="container-fluid">
 
-          <div class="col-md-4">
-            <a href="http://quotek.io/"><img id="header-logo" src="_static/img/quotek-logo.png"/></a>
-          </div>
-
-          <div class="col-md-8 header-menu">
-
-             <a id="header-pbtn" href="#">Products</a>
-             <!-- <a href="http://demo.quotek.io">Demo</a> -->
-             <span style="color:#cccccc;font-size:18px;margin-left:20px">Demo</span>
-
-             <a href="http://docs.quotek.io">Documentation</a>
-             <a href="http://quotek.io/contact">Contact</a>
-
-             <div id="product-dropdown">
-
-              <div id="product-dropdown-ct">
-                <div>
-                  <a href="http://quotek.io/products/saas">Quotek&copy; SaaS</a>
-                </div>
-                <div style="margin-top:5px">
-                <a href="http://quotek.io/products/sdk">Quotek&copy; SDK</a>
-                </div>
-                <div style="margin-top:5px">
-                  <a href="http://quotek.io/products/pricing">Pricing</a>
-                </div>
+              <div class="col-md-4">
+                <a href="http://quotek.io"><img alt="" id="header-logo" src="_static/img/quotek-logo.png"></a>
               </div>
+             
+              <div class="col-md-8 header-menu header-menu-common">
 
-             </div>
+                 <a href="http://quotek.io/saas">Product</a>
+                 <a href="http://quotek.io/sdk">SDK</a>
+                 <a href="http://quotek.io/pricing">Pricing</a>
+                 <a href="http://docs.quotek.io">Documentation</a>
 
-          </div>
-        </div>
-    </div>
+              </div>
+            </div>
+      </div>
+
+<!--
+<div class="doc-nav">
+
+    <div class="container">
+
+    <ul class="nav nav-pills">
+      <li role="presentation" class="disabled"><a href="#">SaaS</a></li>
+      <li role="presentation" class="active"><a href="/sdk">SDK</a></li>
+      <li role="presentation"><a href="/faq">FAQ</a></li>
+    </ul>
+
   </div>
+
+  </div>
+-->
+
   <div class="content-3"></div>
+
 
   <div class="container" style="margin-top:-80px">
  
@@ -70,45 +68,17 @@
       <div id="doc-leftmenu">
 
         
-        <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Welcome to Quotek SDK documentation!</a></li>
-<li class="toctree-l1"><a class="reference internal" href="start.html">Quick Start</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="install.html">Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="firstcode.html">First Program</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="data_struct.html">Data Structures</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="record.html">Record</a></li>
-<li class="toctree-l2"><a class="reference internal" href="records.html">Records</a></li>
-<li class="toctree-l2"><a class="reference internal" href="history.html">History</a></li>
-<li class="toctree-l2"><a class="reference internal" href="marray.html">N-Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="news.html">News</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="quant.html">Quantitative Analysis</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="generators.html">Random Distributions Generators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blackscholes.html">Options pricing</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="ml.html">Machine Learning</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mlstruct.html">Data Structures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="alchemy.html">Alchemy API</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="data_sources.html">Data Sources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="quandl.html">Quandl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="etoro.html">eToro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="twitter.html">Twitter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="yahoo.html">Yahoo! Finance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rss.html">RSS Feeds</a></li>
-<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
-</ul>
-</li>
+        <ul>
+<li class="toctree-l1"><a class="reference internal" href="start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_struct.html">Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quant.html">Quant Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ta.html">Technical Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.html">Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nlp.html">Natural Language Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_sources.html">Data Sources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="broker.html">Broker API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="samples.html">SDK Examples</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="extras.html">Extras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="samples.html">SDK Examples</a></li>
 </ul>
 
       </div>
@@ -118,33 +88,37 @@
 
       <div class="rst-content">
         
-  <div class="section" id="welcome-to-quotek-sdk-documentation">
-<h1>Welcome to Quotek SDK documentation!<a class="headerlink" href="#welcome-to-quotek-sdk-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Quotek SDK is a set of C++ classes and functions which was created in order to help algo-traders to code fast and efficient strategies in a short amount of time.</p>
+  <div class="section" id="welcome-to-the-quotek-sdk-documentation">
+<h1>Welcome to the Quotek SDK documentation!<a class="headerlink" href="#welcome-to-the-quotek-sdk-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Quotek SDK is a set of C++ classes and functions which aims to provide quants with the most useful functions,
+to develop fast and efficient strategies in a short amount of time.</p>
 <div class="section" id="what-s-in-it">
 <h2>What&#8217;s in it ?<a class="headerlink" href="#what-s-in-it" title="Permalink to this headline">¶</a></h2>
 <p>You&#8217;ll find plenty of classes in this SDK, all of them serving multiple purposes. Beyond them you will find
 data source fetching classes, statistical analysis and financial modeling functions, machine learning service clients and algorithms, etc..</p>
 <p>The scheme below shows the distribution of functionalities among the namespaces of the SDK:</p>
-<a class="qimg reference internal image-reference" href="_images/quotek_sdk_ns.png"><img alt="Quotek SDK Namespace" class="qimg align-center" src="_images/quotek_sdk_ns.png" style="width: 600px;" /></a>
+<a class="qimg reference internal image-reference" href="_images/quotek_namespace.png"><img alt="Quotek SDK Namespace" class="qimg align-center" src="_images/quotek_namespace.png" style="width: 600px;" /></a>
 <div class="toctree-wrapper compound">
 </div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
 <p>Now we&#8217;ll make a short description of each important namespace and what they contain.</p>
-<div class="section" id="data-structures-quotek-data">
-<h3>Data structures (quotek::data)<a class="headerlink" href="#data-structures-quotek-data" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="core-quotek-core">
+<h3>Core (quotek::core)<a class="headerlink" href="#core-quotek-core" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>This is a set of classes which are meant to store structured data, and especially time-series ones.</div></blockquote>
+<div>Embedds the strategy and portfolio management classes, plus some extra non finance related functions like HTTP and client, JSON Parser, time data manipulation functions..</div></blockquote>
 </div>
 <div class="section" id="qunatitative-analysis-quotek-quant">
 <h3>Qunatitative Analysis (quotek::quant)<a class="headerlink" href="#qunatitative-analysis-quotek-quant" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div>The most important category of all, it regroups all the classes and functions needed to process assets historical data from a quantitative perspective.</div></blockquote>
 </div>
-<div class="section" id="machine-learning-quotek-ml">
-<h3>Machine Learning (quotek::ml)<a class="headerlink" href="#machine-learning-quotek-ml" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="data-structures-quotek-data">
+<h3>Data structures (quotek::data)<a class="headerlink" href="#data-structures-quotek-data" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>This namespace regroups all the classes and functions related to machine learning / deep learning.
-Since this aspect of algo-trading is really promising, expect it to be much deeper in the future.</div></blockquote>
+<div>This is a set of classes which are meant to store and manipulate structured data, and especially time-series ones.</div></blockquote>
 </div>
 <div class="section" id="data-sources-quotek-datasource">
 <h3>Data Sources (quotek::datasource)<a class="headerlink" href="#data-sources-quotek-datasource" title="Permalink to this headline">¶</a></h3>
@@ -152,10 +126,17 @@ Since this aspect of algo-trading is really promising, expect it to be much deep
 <div>quotek::datasource regroups all the classes which purpose is to fetch data from remote datasources.
 We can for instance think of Yahoo! finance historical data, RSS feeds, etc..</div></blockquote>
 </div>
-<div class="section" id="technical-analysis-quotek-ta">
-<h3>Technical Analysis (quotek::ta)<a class="headerlink" href="#technical-analysis-quotek-ta" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="machine-learning-quotek-ml">
+<h3>Machine Learning (quotek::ml)<a class="headerlink" href="#machine-learning-quotek-ml" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>quotek::ta contains some functions that are meant to compute technical indicators (MACD, RSI, etc..) from historical data.</div></blockquote>
+<div>This namespace regroups all the classes and functions related to machine learning / deep learning.
+Since this aspect of algo-trading is really promising, expect it to be much deeper in the future.</div></blockquote>
+</div>
+<div class="section" id="natural-language-processing-quotek-nlp">
+<h3>Natural Language Processing (quotek::nlp)<a class="headerlink" href="#natural-language-processing-quotek-nlp" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>quotek::nlp gives the needed tools to perform Natural Language Processing on financial news/reports, etc..
+With these tools, you can classify text data, extract meaning, etc..</div></blockquote>
 </div>
 <div class="section" id="broker-interractions-quotek-broker">
 <h3>Broker Interractions (quotek::broker)<a class="headerlink" href="#broker-interractions-quotek-broker" title="Permalink to this headline">¶</a></h3>

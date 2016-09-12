@@ -1,6 +1,6 @@
 /*
-Quotek Strategies SDK 2.0
-Copyright 2013-2015 Quotek SAS
+Quotek Strategies SDK 3.0
+Copyright 2013-2016 Quotek SAS
 http://www.quotek.io
 */
 
@@ -11,15 +11,18 @@ http://www.quotek.io
 #include <map>
 
 #include "any.hpp"
+#include "backend.hpp"
 #include "cqueue.hpp"
 #include "cvector.hpp"
 #include "position.hpp"
 #include "record.hpp"
+#include "utils.hpp"
 
 
 /**
-* strategy class is one of the most important of quotek adam bot.
-* When a strategy is created by an user, it inherits from it.
+* strategy class is one of the most important of quotek qate bot.
+* This is mostly an interface class: When a strategy is created by an user, 
+* it must implement this class.
 * strategy class also handles the execution of the strat through the run() method.
 */
 
@@ -28,7 +31,10 @@ class strategy {
 public:
 
 /** strategy constructor. */
-strategy() {}
+strategy() {
+  lock_iters = 0;
+  lock_counter = 0;
+}
 
 /**
  * strategy destructor
@@ -44,28 +50,74 @@ strategy() {}
  */
 void set_env(quotek::data::records* recs,
            std::map<std::string, quotek::data::any>* store,
-           quotek::data::cvector<quotek::core::position>*portfolio) {
+           quotek::data::cvector<quotek::core::position>*portfolio,
+		   backend* backend_) {
 
   this->recs = recs;
   this->store = store;
-  this->portfolio = portfolio;  
+  this->portfolio = portfolio;
+  this->back = backend_;  
 
 }
 
 /**
- * order() is a method meant to make direct orders to adam bot.
+ * order() is a method meant to make direct orders to qate bot.
  * @param order_data string representing the bot order to pass.
  */
  void order(std::string order_data) {
-   orders_queue.push(order_data);
+   if (lock_counter == 0) orders_queue.push(order_data);
  }
 
+ /**
+  * lock(nb_iters) is a useful method meant to block orders passing for 
+  * a certain number of evaluation cycles. It is useful because 
+  * it can very much simplify the structure of trading algorithms.
+  * @param nb_iters number of evaluate() cycles we want to prevent orders to be passed.
+  */
+
+  void lock(int nb_iters) {
+    lock_iters = nb_iters;
+  }
+  
 /**
-* log() is a method that allows the user algorithm to forward log data to adam.
+* log() is a method that allows the user algorithm to forward log data to qate.
 * @param log_string string to log.
 */
 void log(std::string log_string) {
   log_queue.push(log_string);
+}
+
+/** flushlogs takes all the data inside the logs stringstream, processes it and flushes the stream. */
+
+void flushlogs() {
+  std::vector<std::string> slist = quotek::core::utils::split(logs.str(),'\n');
+  for (int i=0;i< slist.size();i++) log_queue.push(slist[i]);
+  logs.str(std::string());
+}
+
+/**
+ * save() takes an object of the strategy to save it in backend.
+ * This is very useful if you want to graph some extra data of your algorithms.
+ * @param name of of the value you want to save
+ * @param save_mode saving mode for the value. can be either "update" or "append". update litteraly
+ * override the data in backend and append just adds another entry.
+ * @add_timestamp tells if we must add timestamp to the data or not.
+ */
+ 
+template <typename T>
+void save(std::string tag, T val, const bool add_tstamp = true) {
+
+  char sep = 0x1e;
+
+  stringstream ss;
+  if (add_tstamp ) ss << time(0);
+  else ss << 0;
+
+  ss << sep << tag << "@" << asset_name ;
+  ss << sep << val;
+  
+  save_queue.push(ss.str());
+
 }
 
 /**
@@ -73,6 +125,22 @@ void log(std::string log_string) {
  * This method is executed only once, before the first evaluation. 
  */
 virtual int initialize() { return 0; }
+
+/** evaluate() wrapper, adds some extra logic for orders locking. */
+virtual void __evaluate__() {
+
+  if (lock_iters != 0 ) {
+    if ( lock_counter == lock_iters ) {
+      lock_iters = 0;
+      lock_counter = 0;
+    }
+    else lock_counter++;  
+  }
+
+  evaluate();
+
+}
+
 
 /**
  * evaluate() method is the very core of the the strategy, this is where 
@@ -103,7 +171,6 @@ std::string asset_name;
 /** Strategy Thread Identifier. If you use Quotek SaaS, NEVER overwrite this variable */
 std::string identifier;
 
-
 /** t stores the current epoch timestamp */
 long t;
 
@@ -112,6 +179,7 @@ long t;
  */
 quotek::data::cqueue<std::string> log_queue;
 quotek::data::cqueue<std::string> orders_queue;
+quotek::data::cqueue<std::string> save_queue;
 
 /**
  * recs variable points to the inmem values history of the processed asset.
@@ -127,10 +195,25 @@ std::map<std::string, quotek::data::any>* store;
  * portfolio contains the current list of running positions.
  */
 quotek::data::cvector<quotek::core::position>* portfolio;
+
+/**
+ * backend reference, to query prices from it.
+ */
+backend* back;
+
 /**
  * counters allow to maintain a series of variables to count and keep various steps across ticks.
  */
 std::map<std::string, int> counters;
+
+/**
+ * logging stringstream, to avoid using log(str);
+ */
+stringstream logs;
+
+uint16_t lock_counter;
+uint16_t lock_iters;
+
 
 };
 

@@ -19,11 +19,22 @@ void test_above(quotek::data::records& recs) {
 
 }
 
-void test_crosses(quotek::data::records& recs1,
+void test_cross(quotek::data::records& recs1,
                   quotek::data::records& recs2) {
 
-  assert(quotek::quant::crosses(recs1,recs2));
-  
+  assert(quotek::quant::cross(recs1,recs2));
+
+  std::vector<float> r3_raw = {1000,200,3000,2458,3482};
+  quotek::data::records r3(r3_raw);
+
+  assert(quotek::quant::cross(recs1,r3) == false);
+
+}
+
+void test_cross_ex(quotek::data::records& recs1,
+                  quotek::data::records& recs2) {
+
+  assert(quotek::quant::cross_ex(recs1,recs2) == 1 );
 
 }
 
@@ -97,6 +108,17 @@ void test_exponential_moving_average(quotek::data::records& recs) {
   
 }
 
+/* not very fund of this test, needs rewrite */
+void test_tema(quotek::data::records& recs) {
+  
+  std::vector<float> t1 = quotek::quant::TEMA(recs,5);
+  assert( t1.size() > 0 );
+  for(int i=0; i< t1.size(); i++ ) {
+    assert(t1[i] > 0);
+  }
+
+}
+
 void test_weighted_moving_average(quotek::data::records& recs) {
 
   std::vector<float> v1 = quotek::quant::WMA(recs,2);
@@ -134,6 +156,18 @@ void test_linear_regression(quotek::data::records& recs) {
 
 }
 
+void test_aurocorrelation(quotek::data::records& recs) {
+
+  std::vector<float> res = quotek::quant::autocorrelation(recs);
+
+  assert(res.size() == 9);
+  for (auto num : res) {
+    assert( num <= 1 && num >= -1 );
+  }
+
+}
+
+
 int main() {
 
   //creates false record
@@ -160,7 +194,8 @@ int main() {
   }
 
   test_above(r1);
-  test_crosses(r1,r2);
+  test_cross(r1,r2);
+  test_cross_ex(r1,r2);
   test_min(r1);
   test_max(r1);
   test_average(r1);
@@ -169,8 +204,12 @@ int main() {
   test_variance(r1);
   test_moving_average(r1);
   test_exponential_moving_average(r1);
+  test_tema(r1);
   test_weighted_moving_average(r1);
   test_linear_regression(r1);
   test_trend_percentage(r1);
+  test_aurocorrelation(r1);
+
+  exit(0);
 
 }

@@ -1,4 +1,4 @@
-Quotek Algo-trading SDK v2.2
+Quotek Algo-trading SDK v3.0
 ============================
 
 Quotek SDK is a C++ programming toolkit that aims to help traders and finance engineers to code
@@ -19,20 +19,36 @@ The goal behind Quotek SDK is to offer the maximum number of useful functions to
 
 The following scheme summurizes all the features which are already available in the SDK:
 
-![Quotek namespaces scheme](http://docs.quotek.io/sdk/_images/quotek_sdk_ns.png)
+![Quotek namespaces scheme](http://docs.quotek.io/sdk3/_images/quotek_namespace.png)
 
 Documentation
 =============
 
-You can find the full SDK documentation either directly in this repository or on the quotek documentation portal: http://docs.quotek.io/sdk
+You can find the full SDK documentation either directly in this repository or on the quotek documentation portal: http://docs.quotek.io/sdk3
 
 Setup
 =====
 
-In order to get full instructions about how to Setup Quotek SDK in your environment, please look at the documentation page http://docs.quotek.io/sdk/install.html
+In order to get full instructions about how to Setup Quotek SDK in your environment, please look at the documentation page http://docs.quotek.io/sdk3/install.html
 
 Changelog
 =========
+
+v3.0.0
+------
+
+  - [ML] The first Machine Learning Algorithms are now implemnted: Linear Regression, Classification, Non-linear functions, etc..
+  - [GEN] SDK now embedds the Eigen C++ Linear Algebra library (see http://eigen.tuxfamily.org ), and an additional set of numerical solvers (cppoptlib).
+  - [TA] Implemented T-EMA oscillator.
+  - [QUANT] New moving average: Triple-exponential.
+  - [TSA] Implemented FFT-Based autoregression filter.
+  - [TSA][Experimental][Undoc] SDK now has a kalman filter implementation.
+  - [GEN][Experimental][Undoc] Implementation of an Imap client to fetch email data.
+  - [GEN] Started benchmarking of the most important functions of the SDK, with the help of Google Benchmark.
+  - [DOC] Improved documentation: The documentation of the SDK is now much more complete and clear.
+  - [GEN] SDK now has its own implementation of a JSON parser.
+  - [GEN] Removed the array_xd classes for support of n-dimensions arrays. Now the SDK benefits of Eigen custom classes.
+  - [GEN] Also plenty of bugfixes were passed !.
 
 v2.2.2
 ------
@@ -90,38 +106,33 @@ v2.0.0
 
   - Initial Release
 
-
 SDK Roadmap
 ===========
 
 You'll find below the main milestones of the Quotek SDK. To sum up, the next releases will focus on implementing Machine learning, deep learning, 
 and new datasource connectors.
 
-2.2 (Q4 2015)
+Notes about the roadmap: 
+-----------------------
+
+This roadmap is potentially subject to heavy changes, given the way and pace technology and business move.
+To see the roadmap history, just navigate through the different version commits.
+
+3.1 (Q1 2017)
 -------------
 
-- Adding of a JSON parser/serializer in the SDK.
-- Support of quandl API. 
-- Support of more AlchemyAPI functionalities.
+- Machine learning Algorithms implementation, part2 (Neural-Nets, CNNs, RNNs, LSTM.. )
+- Work on Python Support, part2
+- Integration/Implementation of a kdb+ Connector.
+- Integration/Implementation of an odbc connector.
+- New TA and TSA functions.
 
-2.3 (Q2 2016)
--------------
+3.2 (Q3 2017)(Possible Improvements)
+------------------------------------
 
-- Amazon S3 Connector for remote files fetching.
-- Amazon Machine Learning API connector.
-- Azure Machine learning API connector.
-- HDF5 Connector.
-
-2.4 (Q4 2016)
--------------
-
-- Hadoop connector.
-- Machine learning algorithms implementation, Part 1.
-
-2.5 (Q2 2017)
--------------
-
-- Machine learning algorithms implementation, Part 2.
+- Hadoop Connector
+- HDF5 Connector
+- New TA and TSA functions.
 
 Contact
 =======

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Quotek SDK 2.2 Installer"
+echo "Quotek SDK 3.0 Installer"
 echo "========================"
 
 if [ ! -d /opt/quotek ]; then

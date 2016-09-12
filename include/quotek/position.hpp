@@ -1,6 +1,6 @@
 /*
-Quotek Strategies SDK 2.0
-Copyright 2013-2015 Quotek SAS
+Quotek Strategies SDK 3.0
+Copyright 2013-2016 Quotek SAS
 http://www.quotek.io
 */
 
@@ -38,6 +38,13 @@ namespace quotek {
         /** tells how many times position's vlimit was decreased */
         int vlimit_decrements;
 
+        /** Returns the pos stats object under the form of a json-formated string */
+        std::string str();
+
+        //Maybe better than str()
+        /*operator std::string () const {
+          return "SomeClassStringRepresentation";
+        }*/
     };
 
     /**
@@ -81,8 +88,8 @@ namespace quotek {
          *  @return vlimit value;
          */
         float get_vlimit();
-
-        /** returns position as a string */
+        
+        /** returns position as a json-formated string */
         std::string str();
 
 

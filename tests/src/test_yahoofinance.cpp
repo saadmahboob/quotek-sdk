@@ -10,11 +10,10 @@ http://www.quotek.io
 void test_history() {
 
   quotek::datasource::yahoofinance y1;
-  std::vector<quotek::data::history> hist = y1.history(quotek::datasource::yahoofinance::CAC40,
-                                                       "2015-07-19",
-                                                        "2015-07-24");
-
-  assert( hist.size() == 5 );
+  std::vector<quotek::data::history> hist = y1.history(quotek::datasource::yahoofinance::DAX,
+                                                       "2016-04-19",
+                                                        "2016-04-20");
+  assert( hist.size() > 0 );
   assert( hist[0].open > 4000  && hist[0].open < 6000);
 
 }
@@ -36,5 +35,7 @@ int main() {
 
   test_history();
   test_close_history();
+
+  exit(0);
 
 }

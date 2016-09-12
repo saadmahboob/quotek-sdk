@@ -24,45 +24,43 @@
 <!-- <body style="background:#333333;color:white;"> -->
 <body>
 
-    <div class="header">
-    <div class="container" id="doc-mcontainer">
+    <div class="header-common">
 
-        <div class="row-fluid">
+            <div class="container-fluid">
 
-          <div class="col-md-4">
-            <a href="http://quotek.io/"><img id="header-logo" src="_static/img/quotek-logo.png"/></a>
-          </div>
-
-          <div class="col-md-8 header-menu">
-
-             <a id="header-pbtn" href="#">Products</a>
-             <!-- <a href="http://demo.quotek.io">Demo</a> -->
-             <span style="color:#cccccc;font-size:18px;margin-left:20px">Demo</span>
-
-             <a href="http://docs.quotek.io">Documentation</a>
-             <a href="http://quotek.io/contact">Contact</a>
-
-             <div id="product-dropdown">
-
-              <div id="product-dropdown-ct">
-                <div>
-                  <a href="http://quotek.io/products/saas">Quotek&copy; SaaS</a>
-                </div>
-                <div style="margin-top:5px">
-                <a href="http://quotek.io/products/sdk">Quotek&copy; SDK</a>
-                </div>
-                <div style="margin-top:5px">
-                  <a href="http://quotek.io/products/pricing">Pricing</a>
-                </div>
+              <div class="col-md-4">
+                <a href="http://quotek.io"><img alt="" id="header-logo" src="_static/img/quotek-logo.png"></a>
               </div>
+             
+              <div class="col-md-8 header-menu header-menu-common">
 
-             </div>
+                 <a href="http://quotek.io/saas">Product</a>
+                 <a href="http://quotek.io/sdk">SDK</a>
+                 <a href="http://quotek.io/pricing">Pricing</a>
+                 <a href="http://docs.quotek.io">Documentation</a>
 
-          </div>
-        </div>
-    </div>
+              </div>
+            </div>
+      </div>
+
+<!--
+<div class="doc-nav">
+
+    <div class="container">
+
+    <ul class="nav nav-pills">
+      <li role="presentation" class="disabled"><a href="#">SaaS</a></li>
+      <li role="presentation" class="active"><a href="/sdk">SDK</a></li>
+      <li role="presentation"><a href="/faq">FAQ</a></li>
+    </ul>
+
   </div>
+
+  </div>
+-->
+
   <div class="content-3"></div>
+
 
   <div class="container" style="margin-top:-80px">
  
@@ -72,44 +70,16 @@
 
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Welcome to Quotek SDK documentation!</a></li>
-<li class="toctree-l1"><a class="reference internal" href="start.html">Quick Start</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="install.html">Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="firstcode.html">First Program</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="data_struct.html">Data Structures</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="record.html">Record</a></li>
-<li class="toctree-l2"><a class="reference internal" href="records.html">Records</a></li>
-<li class="toctree-l2"><a class="reference internal" href="history.html">History</a></li>
-<li class="toctree-l2"><a class="reference internal" href="marray.html">N-Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="news.html">News</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="quant.html">Quantitative Analysis</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="generators.html">Random Distributions Generators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blackscholes.html">Options pricing</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="ml.html">Machine Learning</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mlstruct.html">Data Structures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="alchemy.html">Alchemy API</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="data_sources.html">Data Sources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="quandl.html">Quandl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="etoro.html">eToro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="twitter.html">Twitter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="yahoo.html">Yahoo! Finance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rss.html">RSS Feeds</a></li>
-<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_struct.html">Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quant.html">Quant Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ta.html">Technical Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.html">Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nlp.html">Natural Language Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_sources.html">Data Sources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="broker.html">Broker API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="samples.html">SDK Examples</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="extras.html">Extras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="samples.html">SDK Examples</a></li>
 </ul>
 
       </div>
@@ -166,243 +136,51 @@
   </dt>
 
       
-  <dt><a href="data_struct.html#_CPPv2N6quotek4dataE">quotek::data (C++ type)</a>
+  <dt><a href="extras.html#_CPPv2N6quotek4core4time7datestrENSt6time_tENSt6stringE">quotek::core::time::datestr (C++ function)</a>
   </dt>
 
       
-  <dt><a href="data_struct.html#_CPPv2N6quotek4data3anyE">quotek::data::any (C++ class)</a>
+  <dt><a href="extras.html#_CPPv2N6quotek4core4time7is_timeENSt6stringEl">quotek::core::time::is_time (C++ function)</a>
   </dt>
 
       
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array1dE">quotek::data::array1d (C++ class)</a>
+  <dt><a href="extras.html#_CPPv2N6quotek4core4time9month_dayEl">quotek::core::time::month_day (C++ function)</a>
   </dt>
 
       
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array1dI18array_element_typeE7array1dEi">quotek::data::array1d&lt;array_element_type&gt;::array1d (C++ function)</a>
+  <dt><a href="extras.html#_CPPv2N6quotek4core4time7timeintEl">quotek::core::time::timeint (C++ function)</a>
   </dt>
 
       
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array1dI18array_element_typeE2atEi">quotek::data::array1d&lt;array_element_type&gt;::at (C++ function)</a>
+  <dt><a href="extras.html#_CPPv2N6quotek4core4time7timestrEl">quotek::core::time::timestr (C++ function)</a>
   </dt>
 
       
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array1dI18array_element_typeE7length1Ev">quotek::data::array1d&lt;array_element_type&gt;::length1 (C++ function)</a>
+  <dt><a href="extras.html#_CPPv2N6quotek4core4time8week_dayEl">quotek::core::time::week_day (C++ function)</a>
   </dt>
 
       
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array1dI18array_element_typeED0Ev">quotek::data::array1d&lt;array_element_type&gt;::~array1d (C++ function)</a>
+  <dt><a href="extras.html#_CPPv2N6quotek4core5utils5ltrimERNSt6stringE">quotek::core::utils::ltrim (C++ function)</a>
   </dt>
 
       
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array2dE">quotek::data::array2d (C++ class)</a>
+  <dt><a href="extras.html#_CPPv2N6quotek4core5utils5rtrimERNSt6stringE">quotek::core::utils::rtrim (C++ function)</a>
   </dt>
 
       
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array2dI18array_element_typeE7array2dEii">quotek::data::array2d&lt;array_element_type&gt;::array2d (C++ function)</a>
+  <dt><a href="extras.html#_CPPv2N6quotek4core5utils5splitERKNSt6stringEc">quotek::core::utils::split (C++ function)</a>
   </dt>
 
       
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array2dI18array_element_typeE2atEii">quotek::data::array2d&lt;array_element_type&gt;::at (C++ function)</a>
+  <dt><a href="extras.html#_CPPv2N6quotek4core5utils8tokeniseERNSt6stringE">quotek::core::utils::tokenise (C++ function)</a>
   </dt>
 
       
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array2dI18array_element_typeE7length1Ev">quotek::data::array2d&lt;array_element_type&gt;::length1 (C++ function)</a>
+  <dt><a href="extras.html#_CPPv2N6quotek4core5utils4trimERNSt6stringE">quotek::core::utils::trim (C++ function)</a>
   </dt>
 
       
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array2dI18array_element_typeE7length2Ev">quotek::data::array2d&lt;array_element_type&gt;::length2 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array2dI18array_element_typeED0Ev">quotek::data::array2d&lt;array_element_type&gt;::~array2d (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array3dE">quotek::data::array3d (C++ class)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array3dI18array_element_typeE7array3dEiii">quotek::data::array3d&lt;array_element_type&gt;::array3d (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array3dI18array_element_typeE2atEiii">quotek::data::array3d&lt;array_element_type&gt;::at (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array3dI18array_element_typeE7length1Ev">quotek::data::array3d&lt;array_element_type&gt;::length1 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array3dI18array_element_typeE7length2Ev">quotek::data::array3d&lt;array_element_type&gt;::length2 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array3dI18array_element_typeE7length3Ev">quotek::data::array3d&lt;array_element_type&gt;::length3 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array3dI18array_element_typeED0Ev">quotek::data::array3d&lt;array_element_type&gt;::~array3d (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array4dE">quotek::data::array4d (C++ class)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array4dI18array_element_typeE7array4dEiiii">quotek::data::array4d&lt;array_element_type&gt;::array4d (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array4dI18array_element_typeE2atEiiii">quotek::data::array4d&lt;array_element_type&gt;::at (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array4dI18array_element_typeE7length1Ev">quotek::data::array4d&lt;array_element_type&gt;::length1 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array4dI18array_element_typeE7length2Ev">quotek::data::array4d&lt;array_element_type&gt;::length2 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array4dI18array_element_typeE7length3Ev">quotek::data::array4d&lt;array_element_type&gt;::length3 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array4dI18array_element_typeE7length4Ev">quotek::data::array4d&lt;array_element_type&gt;::length4 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array4dI18array_element_typeED0Ev">quotek::data::array4d&lt;array_element_type&gt;::~array4d (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array5dE">quotek::data::array5d (C++ class)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array5dI18array_element_typeE7array5dEiiiii">quotek::data::array5d&lt;array_element_type&gt;::array5d (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array5dI18array_element_typeE2atEiiiii">quotek::data::array5d&lt;array_element_type&gt;::at (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array5dI18array_element_typeE7length1Ev">quotek::data::array5d&lt;array_element_type&gt;::length1 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array5dI18array_element_typeE7length2Ev">quotek::data::array5d&lt;array_element_type&gt;::length2 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array5dI18array_element_typeE7length3Ev">quotek::data::array5d&lt;array_element_type&gt;::length3 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array5dI18array_element_typeE7length4Ev">quotek::data::array5d&lt;array_element_type&gt;::length4 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array5dI18array_element_typeE7length5Ev">quotek::data::array5d&lt;array_element_type&gt;::length5 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array5dI18array_element_typeED0Ev">quotek::data::array5d&lt;array_element_type&gt;::~array5d (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array6dE">quotek::data::array6d (C++ class)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array6dI18array_element_typeE7array6dEiiiiii">quotek::data::array6d&lt;array_element_type&gt;::array6d (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array6dI18array_element_typeE2atEiiiiii">quotek::data::array6d&lt;array_element_type&gt;::at (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array6dI18array_element_typeE7length1Ev">quotek::data::array6d&lt;array_element_type&gt;::length1 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array6dI18array_element_typeE7length2Ev">quotek::data::array6d&lt;array_element_type&gt;::length2 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array6dI18array_element_typeE7length3Ev">quotek::data::array6d&lt;array_element_type&gt;::length3 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array6dI18array_element_typeE7length4Ev">quotek::data::array6d&lt;array_element_type&gt;::length4 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array6dI18array_element_typeE7length5Ev">quotek::data::array6d&lt;array_element_type&gt;::length5 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array6dI18array_element_typeE7length6Ev">quotek::data::array6d&lt;array_element_type&gt;::length6 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array6dI18array_element_typeED0Ev">quotek::data::array6d&lt;array_element_type&gt;::~array6d (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array7dE">quotek::data::array7d (C++ class)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array7dI18array_element_typeE7array7dEiiiiiii">quotek::data::array7d&lt;array_element_type&gt;::array7d (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array7dI18array_element_typeE2atEiiiiiii">quotek::data::array7d&lt;array_element_type&gt;::at (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array7dI18array_element_typeE7length1Ev">quotek::data::array7d&lt;array_element_type&gt;::length1 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array7dI18array_element_typeE7length2Ev">quotek::data::array7d&lt;array_element_type&gt;::length2 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array7dI18array_element_typeE7length3Ev">quotek::data::array7d&lt;array_element_type&gt;::length3 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array7dI18array_element_typeE7length4Ev">quotek::data::array7d&lt;array_element_type&gt;::length4 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array7dI18array_element_typeE7length5Ev">quotek::data::array7d&lt;array_element_type&gt;::length5 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array7dI18array_element_typeE7length6Ev">quotek::data::array7d&lt;array_element_type&gt;::length6 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="marray.html#_CPPv2N6quotek4data7array7dI18array_element_typeE7length7Ev">quotek::data::array7d&lt;array_element_type&gt;::length7 (C++ function)</a>
-  </dt>
-
-      
-  <dt><a href="data_struct.html#_CPPv2N6quotek4data6cqueueE">quotek::data::cqueue (C++ class)</a>
-  </dt>
-
-      
-  <dt><a href="data_struct.html#_CPPv2N6quotek4data7cvectorE">quotek::data::cvector (C++ class)</a>
-  </dt>
-
-      
-  <dt><a href="data_struct.html#_CPPv2N6quotek4data7historyE">quotek::data::history (C++ class)</a>, <a href="history.html#_CPPv2N6quotek4data7historyE">[1]</a>
+  <dt><a href="history.html#_CPPv2N6quotek4data7historyE">quotek::data::history (C++ class)</a>
   </dt>
 
       
@@ -434,7 +212,7 @@
   </dt>
 
       
-  <dt><a href="data_struct.html#_CPPv2N6quotek4data4newsE">quotek::data::news (C++ class)</a>, <a href="news.html#_CPPv2N6quotek4data4newsE">[1]</a>
+  <dt><a href="news.html#_CPPv2N6quotek4data4newsE">quotek::data::news (C++ class)</a>
   </dt>
 
       
@@ -466,7 +244,7 @@
   </dt>
 
       
-  <dt><a href="data_struct.html#_CPPv2N6quotek4data6recordE">quotek::data::record (C++ class)</a>, <a href="record.html#_CPPv2N6quotek4data6recordE">[1]</a>
+  <dt><a href="record.html#_CPPv2N6quotek4data6recordE">quotek::data::record (C++ class)</a>
   </dt>
 
       
@@ -478,7 +256,15 @@
   </dt>
 
       
+  <dt><a href="record.html#_CPPv2N6quotek4data6record3strEKb">quotek::data::record::str (C++ function)</a>
+  </dt>
+
+      
   <dt><a href="record.html#_CPPv2N6quotek4data6record9timestampE">quotek::data::record::timestamp (C++ member)</a>
+  </dt>
+
+      
+  <dt><a href="record.html#_CPPv2N6quotek4data6record9to_vectorEKb">quotek::data::record::to_vector (C++ function)</a>
   </dt>
 
       
@@ -490,11 +276,11 @@
   </dt>
 
       
-  <dt><a href="data_struct.html#_CPPv2N6quotek4data7recordsE">quotek::data::records (C++ class)</a>, <a href="records.html#_CPPv2N6quotek4data7recordsE">[1]</a>
+  <dt><a href="records.html#_CPPv2N6quotek4data7recordsE">quotek::data::records (C++ class)</a>
   </dt>
 
       
-  <dt><a href="records.html#_CPPv2N6quotek4data7records6appendERN6quotek4data6recordE">quotek::data::records::append (C++ function)</a>, <a href="records.html#_CPPv2N6quotek4data7records6appendEf">[1]</a>, <a href="records.html#_CPPv2N6quotek4data7records6appendElf">[2]</a>, <a href="records.html#_CPPv2N6quotek4data7records6appendElff">[3]</a>
+  <dt><a href="records.html#_CPPv2N6quotek4data7records6appendERN6quotek4data6recordE">quotek::data::records::append (C++ function)</a>, <a href="records.html#_CPPv2N6quotek4data7records6appendERN6quotek4data7recordsE">[1]</a>, <a href="records.html#_CPPv2N6quotek4data7records6appendEf">[2]</a>, <a href="records.html#_CPPv2N6quotek4data7records6appendElf">[3]</a>, <a href="records.html#_CPPv2N6quotek4data7records6appendElff">[4]</a>
   </dt>
 
       
@@ -514,7 +300,7 @@
   </dt>
 
       
-  <dt><a href="records.html#_CPPv2N6quotek4data7records7extractEii">quotek::data::records::extract (C++ function)</a>
+  <dt><a href="records.html#_CPPv2N6quotek4data7records7extractEi">quotek::data::records::extract (C++ function)</a>, <a href="records.html#_CPPv2N6quotek4data7records7extractEii">[1]</a>
   </dt>
 
       
@@ -554,15 +340,23 @@
   </dt>
 
       
+  <dt><a href="records.html#_CPPv2N6quotek4data7records3strEKb">quotek::data::records::str (C++ function)</a>
+  </dt>
+
+      
+  <dt><a href="records.html#_CPPv2N6quotek4data7records9to_matrixEKb">quotek::data::records::to_matrix (C++ function)</a>
+  </dt>
+
+      
+  <dt><a href="records.html#_CPPv2N6quotek4data7records9to_vectorEv">quotek::data::records::to_vector (C++ function)</a>
+  </dt>
+
+      
   <dt><a href="records.html#_CPPv2N6quotek4data7recordsD0Ev">quotek::data::records::~records (C++ function)</a>
   </dt>
 
       
-  <dt><a href="data_sources.html#_CPPv2N6quotek10datasourceE">quotek::datasource (C++ type)</a>
-  </dt>
-
-      
-  <dt><a href="csv.html#_CPPv2N6quotek10datasource3csvE">quotek::datasource::csv (C++ class)</a>, <a href="data_sources.html#_CPPv2N6quotek10datasource3csvE">[1]</a>
+  <dt><a href="csv.html#_CPPv2N6quotek10datasource3csvE">quotek::datasource::csv (C++ class)</a>
   </dt>
 
       
@@ -606,10 +400,6 @@
   </dt>
 
       
-  <dt><a href="data_sources.html#_CPPv2N6quotek10datasource10datasourceE">quotek::datasource::datasource (C++ class)</a>
-  </dt>
-
-      
   <dt><a href="etoro.html#_CPPv2N6quotek10datasource8eto_userE">quotek::datasource::eto_user (C++ class)</a>
   </dt>
 
@@ -638,11 +428,9 @@
   </dt>
 
       
-  <dt><a href="data_sources.html#_CPPv2N6quotek10datasource5etoroE">quotek::datasource::etoro (C++ class)</a>, <a href="etoro.html#_CPPv2N6quotek10datasource5etoroE">[1]</a>
+  <dt><a href="etoro.html#_CPPv2N6quotek10datasource5etoroE">quotek::datasource::etoro (C++ class)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="etoro.html#_CPPv2N6quotek10datasource5etoro5etoroEv">quotek::datasource::etoro::etoro (C++ function)</a>
   </dt>
@@ -672,7 +460,7 @@
   </dt>
 
       
-  <dt><a href="data_sources.html#_CPPv2N6quotek10datasource6quandlE">quotek::datasource::quandl (C++ class)</a>, <a href="quandl.html#_CPPv2N6quotek10datasource6quandlE">[1]</a>
+  <dt><a href="quandl.html#_CPPv2N6quotek10datasource6quandlE">quotek::datasource::quandl (C++ class)</a>
   </dt>
 
       
@@ -708,15 +496,7 @@
   </dt>
 
       
-  <dt><a href="data_sources.html#_CPPv2N6quotek10datasource9quandl_dbE">quotek::datasource::quandl_db (C++ class)</a>
-  </dt>
-
-      
-  <dt><a href="data_sources.html#_CPPv2N6quotek10datasource11quandl_metaE">quotek::datasource::quandl_meta (C++ class)</a>
-  </dt>
-
-      
-  <dt><a href="data_sources.html#_CPPv2N6quotek10datasource3rssE">quotek::datasource::rss (C++ class)</a>, <a href="rss.html#_CPPv2N6quotek10datasource3rssE">[1]</a>
+  <dt><a href="rss.html#_CPPv2N6quotek10datasource3rssE">quotek::datasource::rss (C++ class)</a>
   </dt>
 
       
@@ -732,7 +512,7 @@
   </dt>
 
       
-  <dt><a href="data_sources.html#_CPPv2N6quotek10datasource7twitterE">quotek::datasource::twitter (C++ class)</a>, <a href="twitter.html#_CPPv2N6quotek10datasource7twitterE">[1]</a>
+  <dt><a href="twitter.html#_CPPv2N6quotek10datasource7twitterE">quotek::datasource::twitter (C++ class)</a>
   </dt>
 
       
@@ -752,7 +532,7 @@
   </dt>
 
       
-  <dt><a href="data_sources.html#_CPPv2N6quotek10datasource12yahoofinanceE">quotek::datasource::yahoofinance (C++ class)</a>, <a href="yahoo.html#_CPPv2N6quotek10datasource12yahoofinanceE">[1]</a>
+  <dt><a href="yahoo.html#_CPPv2N6quotek10datasource12yahoofinanceE">quotek::datasource::yahoofinance (C++ class)</a>
   </dt>
 
       
@@ -772,403 +552,513 @@
   </dt>
 
       
-  <dt><a href="mlstruct.html#_CPPv2N6quotek2ml6actionE">quotek::ml::action (C++ class)</a>
+  <dt><a href="extras.html#_CPPv2N6quotek4httpE">quotek::http (C++ class)</a>
   </dt>
 
       
-  <dt><a href="mlstruct.html#_CPPv2N6quotek2ml6action7negatedE">quotek::ml::action::negated (C++ member)</a>
+  <dt><a href="extras.html#_CPPv2N6quotek4http10add_headerENSt6stringE">quotek::http::add_header (C++ function)</a>
   </dt>
 
       
-  <dt><a href="mlstruct.html#_CPPv2N6quotek2ml6action5tenseE">quotek::ml::action::tense (C++ member)</a>
+  <dt><a href="extras.html#_CPPv2N6quotek4http2chE">quotek::http::ch (C++ member)</a>
   </dt>
 
       
-  <dt><a href="mlstruct.html#_CPPv2N6quotek2ml6action4textE">quotek::ml::action::text (C++ member)</a>
+  <dt><a href="extras.html#_CPPv2N6quotek4http3delENSt6stringE">quotek::http::del (C++ function)</a>
   </dt>
 
       
-  <dt><a href="alchemy.html#_CPPv2N6quotek2ml7alchemyE">quotek::ml::alchemy (C++ class)</a>
+  <dt><a href="extras.html#_CPPv2N6quotek4http7destroyEv">quotek::http::destroy (C++ function)</a>
   </dt>
 
       
-  <dt><a href="alchemy.html#_CPPv2N6quotek2ml7alchemy7alchemyENSt6stringENSt6stringE">quotek::ml::alchemy::alchemy (C++ function)</a>
+  <dt><a href="extras.html#_CPPv2N6quotek4http6escapeENSt6stringE">quotek::http::escape (C++ function)</a>
   </dt>
 
       
-  <dt><a href="alchemy.html#_CPPv2N6quotek2ml7alchemy8languageENSt6stringENSt6stringE">quotek::ml::alchemy::language (C++ function)</a>
+  <dt><a href="extras.html#_CPPv2N6quotek4http3getENSt6stringE">quotek::http::get (C++ function)</a>, <a href="extras.html#_CPPv2N6quotek4http3getENSt6stringERNSt3mapINSt6stringENSt6stringEEE">[1]</a>
   </dt>
 
       
-  <dt><a href="alchemy.html#_CPPv2N6quotek2ml7alchemy3rawENSt6stringENSt3mapINSt6stringENSt6stringEEE">quotek::ml::alchemy::raw (C++ function)</a>
+  <dt><a href="extras.html#_CPPv2N6quotek4http7headersE">quotek::http::headers (C++ member)</a>
   </dt>
 
       
-  <dt><a href="alchemy.html#_CPPv2N6quotek2ml7alchemy9relationsENSt6stringENSt6stringE">quotek::ml::alchemy::relations (C++ function)</a>
+  <dt><a href="extras.html#_CPPv2N6quotek4http4httpEv">quotek::http::http (C++ function)</a>
   </dt>
 
       
-  <dt><a href="alchemy.html#_CPPv2N6quotek2ml7alchemy9sentimentENSt6stringENSt6stringENSt6stringE">quotek::ml::alchemy::sentiment (C++ function)</a>
+  <dt><a href="extras.html#_CPPv2N6quotek4http4postENSt6stringERNSt3mapINSt6stringENSt6stringEEE">quotek::http::post (C++ function)</a>, <a href="extras.html#_CPPv2N6quotek4http4postENSt6stringERNSt6stringE">[1]</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="alchemy.html#_CPPv2N6quotek2ml7alchemy8taxonomyENSt6stringENSt6stringE">quotek::ml::alchemy::taxonomy (C++ function)</a>
+  <dt><a href="extras.html#_CPPv2N6quotek4httpD0Ev">quotek::http::~http (C++ function)</a>
   </dt>
 
       
-  <dt><a href="alchemy.html#_CPPv2N6quotek2ml7alchemyD0Ev">quotek::ml::alchemy::~alchemy (C++ function)</a>
+  <dt><a href="ml_utils.html#_CPPv2N6quotek2ml8add_biasER7dataset">quotek::ml::add_bias (C++ function)</a>
   </dt>
 
       
-  <dt><a href="mlstruct.html#_CPPv2N6quotek2ml8relationE">quotek::ml::relation (C++ class)</a>
+  <dt><a href="ml_utils.html#_CPPv2N6quotek2ml6kmeansER7dataseti">quotek::ml::kmeans (C++ function)</a>
   </dt>
 
       
-  <dt><a href="mlstruct.html#_CPPv2N6quotek2ml8relation6actionE">quotek::ml::relation::action (C++ member)</a>
+  <dt><a href="ml_linreg.html#_CPPv2N6quotek2ml16linearRegressionE">quotek::ml::linearRegression (C++ class)</a>
   </dt>
 
       
-  <dt><a href="mlstruct.html#_CPPv2N6quotek2ml8relation6objectE">quotek::ml::relation::object (C++ member)</a>
+  <dt><a href="ml_linreg.html#_CPPv2N6quotek2ml16linearRegression12coefficientsE">quotek::ml::linearRegression::coefficients (C++ member)</a>
   </dt>
 
       
-  <dt><a href="mlstruct.html#_CPPv2N6quotek2ml8relation8sentenceE">quotek::ml::relation::sentence (C++ member)</a>
+  <dt><a href="ml_linreg.html#_CPPv2N6quotek2ml16linearRegression16linearRegressionEb">quotek::ml::linearRegression::linearRegression (C++ function)</a>, <a href="ml_linreg.html#_CPPv2N6quotek2ml16linearRegression16linearRegressionEv">[1]</a>
   </dt>
 
       
-  <dt><a href="mlstruct.html#_CPPv2N6quotek2ml8relation7subjectE">quotek::ml::relation::subject (C++ member)</a>
+  <dt><a href="ml_linreg.html#_CPPv2N6quotek2ml16linearRegression7predictER7dataset">quotek::ml::linearRegression::predict (C++ function)</a>, <a href="ml_linreg.html#_CPPv2N6quotek2ml16linearRegression7predictER7datasetRNSt6vectorIdEE">[1]</a>
   </dt>
 
       
-  <dt><a href="mlstruct.html#_CPPv2N6quotek2ml9sentimentE">quotek::ml::sentiment (C++ class)</a>
+  <dt><a href="ml_linreg.html#_CPPv2N6quotek2ml16linearRegression10regularizeE">quotek::ml::linearRegression::regularize (C++ member)</a>
   </dt>
 
       
-  <dt><a href="mlstruct.html#_CPPv2N6quotek2ml9sentiment5errorE">quotek::ml::sentiment::error (C++ member)</a>
+  <dt><a href="ml_linreg.html#_CPPv2N6quotek2ml16linearRegression5trainER7dataset">quotek::ml::linearRegression::train (C++ function)</a>, <a href="ml_linreg.html#_CPPv2N6quotek2ml16linearRegression5trainER7datasetR7dvector">[1]</a>
   </dt>
 
       
-  <dt><a href="mlstruct.html#_CPPv2N6quotek2ml9sentiment13error_messageE">quotek::ml::sentiment::error_message (C++ member)</a>
+  <dt><a href="ml_linreg.html#_CPPv2N6quotek2ml16linearRegressionD0Ev">quotek::ml::linearRegression::~linearRegression (C++ function)</a>
   </dt>
 
       
-  <dt><a href="mlstruct.html#_CPPv2N6quotek2ml9sentiment5mixedE">quotek::ml::sentiment::mixed (C++ member)</a>
+  <dt><a href="ml_logreg.html#_CPPv2N6quotek2ml18logisticRegressionE">quotek::ml::logisticRegression (C++ class)</a>
   </dt>
 
       
-  <dt><a href="mlstruct.html#_CPPv2N6quotek2ml9sentiment5scoreE">quotek::ml::sentiment::score (C++ member)</a>
+  <dt><a href="ml_logreg.html#_CPPv2N6quotek2ml18logisticRegression12coefficientsE">quotek::ml::logisticRegression::coefficients (C++ member)</a>
   </dt>
 
       
-  <dt><a href="mlstruct.html#_CPPv2N6quotek2ml9sentiment12sentimentstrE">quotek::ml::sentiment::sentimentstr (C++ member)</a>
+  <dt><a href="ml_logreg.html#_CPPv2N6quotek2ml18logisticRegression18logisticRegressionEv">quotek::ml::logisticRegression::logisticRegression (C++ function)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quantE">quotek::quant (C++ type)</a>
+  <dt><a href="ml_logreg.html#_CPPv2N6quotek2ml18logisticRegression7predictER7dataset">quotek::ml::logisticRegression::predict (C++ function)</a>, <a href="ml_logreg.html#_CPPv2N6quotek2ml18logisticRegression7predictER7datasetRNSt6vectorIiEE">[1]</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant7_greeksE">quotek::quant::_greeks (C++ class)</a>
+  <dt><a href="ml_logreg.html#_CPPv2N6quotek2ml18logisticRegression10regularizeE">quotek::ml::logisticRegression::regularize (C++ member)</a>
   </dt>
 
-      <dd><dl>
-        
-  <dt><a href="quant.html#_CPPv2N6quotek5quant7_greeksE">(C++ type)</a>
+      
+  <dt><a href="ml_logreg.html#_CPPv2N6quotek2ml18logisticRegression10theresholdE">quotek::ml::logisticRegression::thereshold (C++ member)</a>
+  </dt>
+
+      
+  <dt><a href="ml_logreg.html#_CPPv2N6quotek2ml18logisticRegression5trainER7dataset">quotek::ml::logisticRegression::train (C++ function)</a>, <a href="ml_logreg.html#_CPPv2N6quotek2ml18logisticRegression5trainER7datasetR7dvector">[1]</a>
+  </dt>
+
+      
+  <dt><a href="ml_logreg.html#_CPPv2N6quotek2ml18logisticRegressionD0Ev">quotek::ml::logisticRegression::~logisticRegression (C++ function)</a>
+  </dt>
+
+      
+  <dt><a href="ml_utils.html#_CPPv2N6quotek2ml12nl_rectifierER7dataset">quotek::ml::nl_rectifier (C++ function)</a>, <a href="ml_utils.html#_CPPv2N6quotek2ml12nl_rectifierEd">[1]</a>
+  </dt>
+
+      
+  <dt><a href="ml_utils.html#_CPPv2N6quotek2ml10nl_sigmoidER7dataset">quotek::ml::nl_sigmoid (C++ function)</a>, <a href="ml_utils.html#_CPPv2N6quotek2ml10nl_sigmoidEd">[1]</a>
+  </dt>
+
+      
+  <dt><a href="ml_utils.html#_CPPv2N6quotek2ml7nl_tanhER7dataset">quotek::ml::nl_tanh (C++ function)</a>
+  </dt>
+
+      
+  <dt><a href="ml_utils.html#_CPPv2N6quotek2ml9normalizeER7dataset">quotek::ml::normalize (C++ function)</a>
+  </dt>
+
+      
+  <dt><a href="ml_utils.html#_CPPv2N6quotek2ml3pcaER7dataseti">quotek::ml::pca (C++ function)</a>
+  </dt>
+
+      
+  <dt><a href="ml_utils.html#_CPPv2N6quotek2ml19polynomial_featuresER7dataseti">quotek::ml::polynomial_features (C++ function)</a>
+  </dt>
+
+      
+  <dt><a href="nlp_struct.html#_CPPv2N6quotek3nlp6actionE">quotek::nlp::action (C++ class)</a>
+  </dt>
+
+      
+  <dt><a href="nlp_struct.html#_CPPv2N6quotek3nlp6action7negatedE">quotek::nlp::action::negated (C++ member)</a>
+  </dt>
+
+      
+  <dt><a href="nlp_struct.html#_CPPv2N6quotek3nlp6action5tenseE">quotek::nlp::action::tense (C++ member)</a>
+  </dt>
+
+      
+  <dt><a href="nlp_struct.html#_CPPv2N6quotek3nlp6action4textE">quotek::nlp::action::text (C++ member)</a>
+  </dt>
+
+      
+  <dt><a href="alchemy.html#_CPPv2N6quotek3nlp7alchemyE">quotek::nlp::alchemy (C++ class)</a>
+  </dt>
+
+      
+  <dt><a href="alchemy.html#_CPPv2N6quotek3nlp7alchemy7alchemyENSt6stringENSt6stringE">quotek::nlp::alchemy::alchemy (C++ function)</a>
+  </dt>
+
+      
+  <dt><a href="alchemy.html#_CPPv2N6quotek3nlp7alchemy8languageENSt6stringENSt6stringE">quotek::nlp::alchemy::language (C++ function)</a>
+  </dt>
+
+      
+  <dt><a href="alchemy.html#_CPPv2N6quotek3nlp7alchemy3rawENSt6stringENSt3mapINSt6stringENSt6stringEEE">quotek::nlp::alchemy::raw (C++ function)</a>
+  </dt>
+
+      
+  <dt><a href="alchemy.html#_CPPv2N6quotek3nlp7alchemy9relationsENSt6stringENSt6stringE">quotek::nlp::alchemy::relations (C++ function)</a>
+  </dt>
+
+      
+  <dt><a href="alchemy.html#_CPPv2N6quotek3nlp7alchemy9sentimentENSt6stringENSt6stringENSt6stringE">quotek::nlp::alchemy::sentiment (C++ function)</a>
+  </dt>
+
+      
+  <dt><a href="alchemy.html#_CPPv2N6quotek3nlp7alchemy8taxonomyENSt6stringENSt6stringE">quotek::nlp::alchemy::taxonomy (C++ function)</a>
+  </dt>
+
+      
+  <dt><a href="alchemy.html#_CPPv2N6quotek3nlp7alchemyD0Ev">quotek::nlp::alchemy::~alchemy (C++ function)</a>
+  </dt>
+
+      
+  <dt><a href="nlp_struct.html#_CPPv2N6quotek3nlp8relationE">quotek::nlp::relation (C++ class)</a>
+  </dt>
+
+      
+  <dt><a href="nlp_struct.html#_CPPv2N6quotek3nlp8relation6actionE">quotek::nlp::relation::action (C++ member)</a>
+  </dt>
+
+      
+  <dt><a href="nlp_struct.html#_CPPv2N6quotek3nlp8relation6objectE">quotek::nlp::relation::object (C++ member)</a>
+  </dt>
+
+      
+  <dt><a href="nlp_struct.html#_CPPv2N6quotek3nlp8relation8sentenceE">quotek::nlp::relation::sentence (C++ member)</a>
+  </dt>
+
+      
+  <dt><a href="nlp_struct.html#_CPPv2N6quotek3nlp8relation7subjectE">quotek::nlp::relation::subject (C++ member)</a>
+  </dt>
+
+      
+  <dt><a href="nlp_struct.html#_CPPv2N6quotek3nlp9sentimentE">quotek::nlp::sentiment (C++ class)</a>
+  </dt>
+
+      
+  <dt><a href="nlp_struct.html#_CPPv2N6quotek3nlp9sentiment5errorE">quotek::nlp::sentiment::error (C++ member)</a>
+  </dt>
+
+      
+  <dt><a href="nlp_struct.html#_CPPv2N6quotek3nlp9sentiment13error_messageE">quotek::nlp::sentiment::error_message (C++ member)</a>
+  </dt>
+
+      
+  <dt><a href="nlp_struct.html#_CPPv2N6quotek3nlp9sentiment5mixedE">quotek::nlp::sentiment::mixed (C++ member)</a>
+  </dt>
+
+      
+  <dt><a href="nlp_struct.html#_CPPv2N6quotek3nlp9sentiment5scoreE">quotek::nlp::sentiment::score (C++ member)</a>
   </dt>
 
-      </dl></dd>
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant7_greeks5deltaE">quotek::quant::_greeks::delta (C++ member)</a>
+  <dt><a href="nlp_struct.html#_CPPv2N6quotek3nlp9sentiment12sentimentstrE">quotek::nlp::sentiment::sentimentstr (C++ member)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant7_greeks5gammaE">quotek::quant::_greeks::gamma (C++ member)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant7_greeksE">quotek::quant::_greeks (C++ class)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant7_greeks3rhoE">quotek::quant::_greeks::rho (C++ member)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant7_greeks5deltaE">quotek::quant::_greeks::delta (C++ member)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant7_greeks5thetaE">quotek::quant::_greeks::theta (C++ member)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant7_greeks5gammaE">quotek::quant::_greeks::gamma (C++ member)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant7_greeks4vegaE">quotek::quant::_greeks::vega (C++ member)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant7_greeks3rhoE">quotek::quant::_greeks::rho (C++ member)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant5aboveERN6quotek4data7recordsEff">quotek::quant::above (C++ function)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant7_greeks5thetaE">quotek::quant::_greeks::theta (C++ member)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant6affineE">quotek::quant::affine (C++ class)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant7_greeks4vegaE">quotek::quant::_greeks::vega (C++ member)</a>
   </dt>
 
-      <dd><dl>
-        
-  <dt><a href="quant.html#_CPPv2N6quotek5quant6affineE">(C++ type)</a>
+      
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant5aboveERN6quotek4data7recordsEff">quotek::quant::above (C++ function)</a>
   </dt>
 
-      </dl></dd>
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant6affine1aE">quotek::quant::affine::a (C++ member)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant6affineE">quotek::quant::affine (C++ class)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant6affine1bE">quotek::quant::affine::b (C++ member)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant6affine1aE">quotek::quant::affine::a (C++ member)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant7averageERN6quotek4data7recordsE">quotek::quant::average (C++ function)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant6affine1bE">quotek::quant::affine::b (C++ member)</a>
   </dt>
 
       
-  <dt><a href="blackscholes.html#_CPPv2N6quotek5quant12blackscholesE">quotek::quant::blackscholes (C++ class)</a>, <a href="quant.html#_CPPv2N6quotek5quant12blackscholesE">[1]</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant15autocorrelationEN6quotek4data7recordsE">quotek::quant::autocorrelation (C++ function)</a>
   </dt>
 
       
-  <dt><a href="blackscholes.html#_CPPv2N6quotek5quant12blackscholes12blackscholesER6optionfff">quotek::quant::blackscholes::blackscholes (C++ function)</a>, <a href="quant.html#_CPPv2N6quotek5quant12blackscholes12blackscholesER6optionfff">[1]</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant7averageERN6quotek4data7recordsE">quotek::quant::average (C++ function)</a>
   </dt>
 
       
-  <dt><a href="blackscholes.html#_CPPv2N6quotek5quant12blackscholes14compute_greeksEv">quotek::quant::blackscholes::compute_greeks (C++ function)</a>, <a href="quant.html#_CPPv2N6quotek5quant12blackscholes14compute_greeksEv">[1]</a>
+  <dt><a href="quant_blackscholes.html#_CPPv2N6quotek5quant12blackscholesE">quotek::quant::blackscholes (C++ class)</a>
   </dt>
 
       
-  <dt><a href="blackscholes.html#_CPPv2N6quotek5quant12blackscholesD0Ev">quotek::quant::blackscholes::~blackscholes (C++ function)</a>, <a href="quant.html#_CPPv2N6quotek5quant12blackscholesD0Ev">[1]</a>
+  <dt><a href="quant_blackscholes.html#_CPPv2N6quotek5quant12blackscholes12blackscholesER6optionfff">quotek::quant::blackscholes::blackscholes (C++ function)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant10covarianceERN6quotek4data7recordsERN6quotek4data7recordsE">quotek::quant::covariance (C++ function)</a>
+  <dt><a href="quant_blackscholes.html#_CPPv2N6quotek5quant12blackscholes14compute_greeksEv">quotek::quant::blackscholes::compute_greeks (C++ function)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant12covariance_qERN6quotek4data7recordsERN6quotek4data7recordsEff">quotek::quant::covariance_q (C++ function)</a>
+  <dt><a href="quant_blackscholes.html#_CPPv2N6quotek5quant12blackscholesD0Ev">quotek::quant::blackscholes::~blackscholes (C++ function)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant7crossesERN6quotek4data7recordsERN6quotek4data7recordsE">quotek::quant::crosses (C++ function)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant10covarianceERN6quotek4data7recordsERN6quotek4data7recordsE">quotek::quant::covariance (C++ function)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant26exponential_moving_averageERN6quotek4data7recordsEi">quotek::quant::exponential_moving_average (C++ function)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant12covariance_qERN6quotek4data7recordsERN6quotek4data7recordsEff">quotek::quant::covariance_q (C++ function)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant8fibo_extE">quotek::quant::fibo_ext (C++ class)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant5crossERN6quotek4data7recordsERN6quotek4data7recordsE">quotek::quant::cross (C++ function)</a>
   </dt>
 
-      <dd><dl>
-        
-  <dt><a href="quant.html#_CPPv2N6quotek5quant8fibo_extE">(C++ type)</a>
+      
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant8cross_exERN6quotek4data7recordsERN6quotek4data7recordsE">quotek::quant::cross_ex (C++ function)</a>
   </dt>
 
-      </dl></dd>
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant8fibo_ext4p100E">quotek::quant::fibo_ext::p100 (C++ member)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant26exponential_moving_averageERN6quotek4data7recordsEi">quotek::quant::exponential_moving_average (C++ function)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant8fibo_ext4p127E">quotek::quant::fibo_ext::p127 (C++ member)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant8fibo_extE">quotek::quant::fibo_ext (C++ class)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant8fibo_ext4p161E">quotek::quant::fibo_ext::p161 (C++ member)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant8fibo_ext4p100E">quotek::quant::fibo_ext::p100 (C++ member)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant8fibo_ext4p200E">quotek::quant::fibo_ext::p200 (C++ member)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant8fibo_ext4p127E">quotek::quant::fibo_ext::p127 (C++ member)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant8fibo_ext4p261E">quotek::quant::fibo_ext::p261 (C++ member)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant8fibo_ext4p161E">quotek::quant::fibo_ext::p161 (C++ member)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant8fibo_retE">quotek::quant::fibo_ret (C++ class)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant8fibo_ext4p200E">quotek::quant::fibo_ext::p200 (C++ member)</a>
   </dt>
 
-      <dd><dl>
-        
-  <dt><a href="quant.html#_CPPv2N6quotek5quant8fibo_retE">(C++ type)</a>
+      
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant8fibo_ext4p261E">quotek::quant::fibo_ext::p261 (C++ member)</a>
   </dt>
 
-      </dl></dd>
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant8fibo_ret2p0E">quotek::quant::fibo_ret::p0 (C++ member)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant8fibo_retE">quotek::quant::fibo_ret (C++ class)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant8fibo_ret4p100E">quotek::quant::fibo_ret::p100 (C++ member)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant8fibo_ret2p0E">quotek::quant::fibo_ret::p0 (C++ member)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant8fibo_ret3p23E">quotek::quant::fibo_ret::p23 (C++ member)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant8fibo_ret4p100E">quotek::quant::fibo_ret::p100 (C++ member)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant8fibo_ret3p38E">quotek::quant::fibo_ret::p38 (C++ member)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant8fibo_ret3p23E">quotek::quant::fibo_ret::p23 (C++ member)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant8fibo_ret3p50E">quotek::quant::fibo_ret::p50 (C++ member)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant8fibo_ret3p38E">quotek::quant::fibo_ret::p38 (C++ member)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant8fibo_ret3p61E">quotek::quant::fibo_ret::p61 (C++ member)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant8fibo_ret3p50E">quotek::quant::fibo_ret::p50 (C++ member)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant17linear_regressionERN6quotek4data7recordsE">quotek::quant::linear_regression (C++ function)</a>, <a href="quant.html#_CPPv2N6quotek5quant17linear_regressionERN6quotek4data7recordsERNSt6vectorIfEE">[1]</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant8fibo_ret3p61E">quotek::quant::fibo_ret::p61 (C++ member)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant3maxERN6quotek4data7recordsE">quotek::quant::max (C++ function)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant17linear_regressionERN6quotek4data7recordsE">quotek::quant::linear_regression (C++ function)</a>, <a href="quant_tsa.html#_CPPv2N6quotek5quant17linear_regressionERN6quotek4data7recordsERNSt6vectorIfEE">[1]</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant3minERN6quotek4data7recordsE">quotek::quant::min (C++ function)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant3maxERN6quotek4data7recordsE">quotek::quant::max (C++ function)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant14moving_averageERN6quotek4data7recordsEi">quotek::quant::moving_average (C++ function)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant3minERN6quotek4data7recordsE">quotek::quant::min (C++ function)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant30normal_cumulative_distributionEf">quotek::quant::normal_cumulative_distribution (C++ function)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant14moving_averageERN6quotek4data7recordsEi">quotek::quant::moving_average (C++ function)</a>
   </dt>
 
       
-  <dt><a href="blackscholes.html#_CPPv2N6quotek5quant6optionE">quotek::quant::option (C++ class)</a>, <a href="quant.html#_CPPv2N6quotek5quant6optionE">[1]</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant30normal_cumulative_distributionEf">quotek::quant::normal_cumulative_distribution (C++ function)</a>
   </dt>
 
       
-  <dt><a href="blackscholes.html#_CPPv2N6quotek5quant6option7expiresE">quotek::quant::option::expires (C++ member)</a>, <a href="quant.html#_CPPv2N6quotek5quant6option7expiresE">[1]</a>
+  <dt><a href="quant_blackscholes.html#_CPPv2N6quotek5quant6optionE">quotek::quant::option (C++ class)</a>
   </dt>
 
       
-  <dt><a href="blackscholes.html#_CPPv2N6quotek5quant6option11is_in_moneyEv">quotek::quant::option::is_in_money (C++ function)</a>, <a href="quant.html#_CPPv2N6quotek5quant6option11is_in_moneyEv">[1]</a>
+  <dt><a href="quant_blackscholes.html#_CPPv2N6quotek5quant6option7expiresE">quotek::quant::option::expires (C++ member)</a>
   </dt>
 
       
-  <dt><a href="blackscholes.html#_CPPv2N6quotek5quant6option6optionEiNSt6stringEfff">quotek::quant::option::option (C++ function)</a>, <a href="blackscholes.html#_CPPv2N6quotek5quant6option6optionEv">[1]</a>, <a href="quant.html#_CPPv2N6quotek5quant6option6optionEiNSt6stringEfff">[2]</a>, <a href="quant.html#_CPPv2N6quotek5quant6option6optionEv">[3]</a>
+  <dt><a href="quant_blackscholes.html#_CPPv2N6quotek5quant6option11is_in_moneyEv">quotek::quant::option::is_in_money (C++ function)</a>
   </dt>
 
       
-  <dt><a href="blackscholes.html#_CPPv2N6quotek5quant6option5priceE">quotek::quant::option::price (C++ member)</a>, <a href="quant.html#_CPPv2N6quotek5quant6option5priceE">[1]</a>
+  <dt><a href="quant_blackscholes.html#_CPPv2N6quotek5quant6option6optionEiNSt6stringEfff">quotek::quant::option::option (C++ function)</a>, <a href="quant_blackscholes.html#_CPPv2N6quotek5quant6option6optionEv">[1]</a>
   </dt>
 
       
-  <dt><a href="blackscholes.html#_CPPv2N6quotek5quant6option6strikeE">quotek::quant::option::strike (C++ member)</a>, <a href="quant.html#_CPPv2N6quotek5quant6option6strikeE">[1]</a>
+  <dt><a href="quant_blackscholes.html#_CPPv2N6quotek5quant6option5priceE">quotek::quant::option::price (C++ member)</a>
   </dt>
 
       
-  <dt><a href="blackscholes.html#_CPPv2N6quotek5quant6option4typeE">quotek::quant::option::type (C++ member)</a>, <a href="quant.html#_CPPv2N6quotek5quant6option4typeE">[1]</a>
+  <dt><a href="quant_blackscholes.html#_CPPv2N6quotek5quant6option6strikeE">quotek::quant::option::strike (C++ member)</a>
   </dt>
 
       
-  <dt><a href="blackscholes.html#_CPPv2N6quotek5quant6option10underlyingE">quotek::quant::option::underlying (C++ member)</a>, <a href="quant.html#_CPPv2N6quotek5quant6option10underlyingE">[1]</a>
+  <dt><a href="quant_blackscholes.html#_CPPv2N6quotek5quant6option4typeE">quotek::quant::option::type (C++ member)</a>
   </dt>
 
       
-  <dt><a href="blackscholes.html#_CPPv2N6quotek5quant6optionD0Ev">quotek::quant::option::~option (C++ function)</a>, <a href="quant.html#_CPPv2N6quotek5quant6optionD0Ev">[1]</a>
+  <dt><a href="quant_blackscholes.html#_CPPv2N6quotek5quant6option10underlyingE">quotek::quant::option::underlying (C++ member)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant13percent_deltaERN6quotek4data7recordsE">quotek::quant::percent_delta (C++ function)</a>
+  <dt><a href="quant_blackscholes.html#_CPPv2N6quotek5quant6optionD0Ev">quotek::quant::option::~option (C++ function)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant21polynomial_regressionERN6quotek4data7recordsE">quotek::quant::polynomial_regression (C++ function)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant5pivotE">quotek::quant::pivot (C++ class)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant17risk_reward_ratioEfii">quotek::quant::risk_reward_ratio (C++ function)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant21polynomial_regressionERN6quotek4data7recordsE">quotek::quant::polynomial_regression (C++ function)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant18standard_deviationERN6quotek4data7recordsEb">quotek::quant::standard_deviation (C++ function)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant17risk_reward_ratioEfii">quotek::quant::risk_reward_ratio (C++ function)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant28standard_normal_distributionEf">quotek::quant::standard_normal_distribution (C++ function)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant18standard_deviationERN6quotek4data7recordsEb">quotek::quant::standard_deviation (C++ function)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant7trend_pE">quotek::quant::trend_p (C++ class)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant28standard_normal_distributionEf">quotek::quant::standard_normal_distribution (C++ function)</a>
   </dt>
 
-      <dd><dl>
-        
-  <dt><a href="quant.html#_CPPv2N6quotek5quant7trend_pE">(C++ type)</a>
+      
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant7trend_pE">quotek::quant::trend_p (C++ class)</a>
   </dt>
 
-      </dl></dd>
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant7trend_p4bearE">quotek::quant::trend_p::bear (C++ member)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant7trend_p4bearE">quotek::quant::trend_p::bear (C++ member)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant7trend_p4bullE">quotek::quant::trend_p::bull (C++ member)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant7trend_p4bullE">quotek::quant::trend_p::bull (C++ member)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant7trend_p7neutralE">quotek::quant::trend_p::neutral (C++ member)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant7trend_p7neutralE">quotek::quant::trend_p::neutral (C++ member)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant17trend_percentagesERN6quotek4data7recordsE">quotek::quant::trend_percentages (C++ function)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant17trend_percentagesERN6quotek4data7recordsE">quotek::quant::trend_percentages (C++ function)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant6trinomE">quotek::quant::trinom (C++ class)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant6trinomE">quotek::quant::trinom (C++ class)</a>
   </dt>
 
-      <dd><dl>
-        
-  <dt><a href="quant.html#_CPPv2N6quotek5quant6trinomE">(C++ type)</a>
+      
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant33triple_exponential_moving_averageERN6quotek4data7recordsEi">quotek::quant::triple_exponential_moving_average (C++ function)</a>
   </dt>
 
-      </dl></dd>
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant8varianceERN6quotek4data7recordsEb">quotek::quant::variance (C++ function)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant8varianceERN6quotek4data7recordsEb">quotek::quant::variance (C++ function)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant10variance_qERN6quotek4data7recordsEbf">quotek::quant::variance_q (C++ function)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant10variance_qERN6quotek4data7recordsEbf">quotek::quant::variance_q (C++ function)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant16weighted_averageERN6quotek4data7recordsERNSt6vectorIiEE">quotek::quant::weighted_average (C++ function)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant16weighted_averageERN6quotek4data7recordsERNSt6vectorIiEE">quotek::quant::weighted_average (C++ function)</a>
   </dt>
 
       
-  <dt><a href="quant.html#_CPPv2N6quotek5quant23weighted_moving_averageERN6quotek4data7recordsEi">quotek::quant::weighted_moving_average (C++ function)</a>
+  <dt><a href="quant_tsa.html#_CPPv2N6quotek5quant23weighted_moving_averageERN6quotek4data7recordsEi">quotek::quant::weighted_moving_average (C++ function)</a>
   </dt>
 
       
-  <dt><a href="generators.html#_CPPv2N6quotek4rand10generatorsE">quotek::rand::generators (C++ type)</a>
+  <dt><a href="quant_generators.html#_CPPv2N6quotek4rand10generatorsE">quotek::rand::generators (C++ type)</a>
   </dt>
 
       
-  <dt><a href="generators.html#_CPPv2N6quotek4rand10generators8binomialEiif">quotek::rand::generators::binomial (C++ function)</a>
+  <dt><a href="quant_generators.html#_CPPv2N6quotek4rand10generators8binomialEiif">quotek::rand::generators::binomial (C++ function)</a>
   </dt>
 
       
-  <dt><a href="generators.html#_CPPv2N6quotek4rand10generators9lognormalEiff">quotek::rand::generators::lognormal (C++ function)</a>
+  <dt><a href="quant_generators.html#_CPPv2N6quotek4rand10generators9lognormalEiff">quotek::rand::generators::lognormal (C++ function)</a>
   </dt>
 
       
-  <dt><a href="generators.html#_CPPv2N6quotek4rand10generators6normalEiff">quotek::rand::generators::normal (C++ function)</a>
+  <dt><a href="quant_generators.html#_CPPv2N6quotek4rand10generators6normalEiff">quotek::rand::generators::normal (C++ function)</a>
   </dt>
 
       
-  <dt><a href="generators.html#_CPPv2N6quotek4rand10generators7poissonEii">quotek::rand::generators::poisson (C++ function)</a>
+  <dt><a href="quant_generators.html#_CPPv2N6quotek4rand10generators7poissonEii">quotek::rand::generators::poisson (C++ function)</a>
   </dt>
 
       
-  <dt><a href="generators.html#_CPPv2N6quotek4rand10generators7uniformEiff">quotek::rand::generators::uniform (C++ function)</a>
+  <dt><a href="quant_generators.html#_CPPv2N6quotek4rand10generators7uniformEiff">quotek::rand::generators::uniform (C++ function)</a>
   </dt>
 
       
@@ -1185,6 +1075,14 @@
 
       
   <dt><a href="ta.html#_CPPv2N6quotek2ta39moving_average_convergeance_divergeanceERN6quotek4data7recordsEiii">quotek::ta::moving_average_convergeance_divergeance (C++ function)</a>
+  </dt>
+
+      
+  <dt><a href="ta.html#_CPPv2N6quotek2ta6pivotsERN6quotek4data7recordsE">quotek::ta::pivots (C++ function)</a>, <a href="ta.html#_CPPv2N6quotek2ta6pivotsEfff">[1]</a>
+  </dt>
+
+      
+  <dt><a href="ta.html#_CPPv2N6quotek2ta4trixERN6quotek4data7recordsEi">quotek::ta::trix (C++ function)</a>
   </dt>
 
   </dl></td>

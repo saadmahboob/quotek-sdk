@@ -23,45 +23,43 @@
 <!-- <body style="background:#333333;color:white;"> -->
 <body>
 
-    <div class="header">
-    <div class="container" id="doc-mcontainer">
+    <div class="header-common">
 
-        <div class="row-fluid">
+            <div class="container-fluid">
 
-          <div class="col-md-4">
-            <a href="http://quotek.io/"><img id="header-logo" src="_static/img/quotek-logo.png"/></a>
-          </div>
-
-          <div class="col-md-8 header-menu">
-
-             <a id="header-pbtn" href="#">Products</a>
-             <!-- <a href="http://demo.quotek.io">Demo</a> -->
-             <span style="color:#cccccc;font-size:18px;margin-left:20px">Demo</span>
-
-             <a href="http://docs.quotek.io">Documentation</a>
-             <a href="http://quotek.io/contact">Contact</a>
-
-             <div id="product-dropdown">
-
-              <div id="product-dropdown-ct">
-                <div>
-                  <a href="http://quotek.io/products/saas">Quotek&copy; SaaS</a>
-                </div>
-                <div style="margin-top:5px">
-                <a href="http://quotek.io/products/sdk">Quotek&copy; SDK</a>
-                </div>
-                <div style="margin-top:5px">
-                  <a href="http://quotek.io/products/pricing">Pricing</a>
-                </div>
+              <div class="col-md-4">
+                <a href="http://quotek.io"><img alt="" id="header-logo" src="_static/img/quotek-logo.png"></a>
               </div>
+             
+              <div class="col-md-8 header-menu header-menu-common">
 
-             </div>
+                 <a href="http://quotek.io/saas">Product</a>
+                 <a href="http://quotek.io/sdk">SDK</a>
+                 <a href="http://quotek.io/pricing">Pricing</a>
+                 <a href="http://docs.quotek.io">Documentation</a>
 
-          </div>
-        </div>
-    </div>
+              </div>
+            </div>
+      </div>
+
+<!--
+<div class="doc-nav">
+
+    <div class="container">
+
+    <ul class="nav nav-pills">
+      <li role="presentation" class="disabled"><a href="#">SaaS</a></li>
+      <li role="presentation" class="active"><a href="/sdk">SDK</a></li>
+      <li role="presentation"><a href="/faq">FAQ</a></li>
+    </ul>
+
   </div>
+
+  </div>
+-->
+
   <div class="content-3"></div>
+
 
   <div class="container" style="margin-top:-80px">
  
@@ -71,44 +69,22 @@
 
         
         <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="index.html">Welcome to Quotek SDK documentation!</a></li>
-<li class="toctree-l1"><a class="reference internal" href="start.html">Quick Start</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="install.html">Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="firstcode.html">First Program</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="start.html">Quick Start</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Data Structures</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="record.html">Record</a></li>
 <li class="toctree-l2"><a class="reference internal" href="records.html">Records</a></li>
 <li class="toctree-l2"><a class="reference internal" href="history.html">History</a></li>
-<li class="toctree-l2"><a class="reference internal" href="marray.html">N-Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="news.html">News</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="quant.html">Quantitative Analysis</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="generators.html">Random Distributions Generators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blackscholes.html">Options pricing</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="ml.html">Machine Learning</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mlstruct.html">Data Structures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="alchemy.html">Alchemy API</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="data_sources.html">Data Sources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="quandl.html">Quandl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="etoro.html">eToro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="twitter.html">Twitter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="yahoo.html">Yahoo! Finance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rss.html">RSS Feeds</a></li>
-<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV Importer</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="quant.html">Quant Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ta.html">Technical Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.html">Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nlp.html">Natural Language Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_sources.html">Data Sources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="broker.html">Broker API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="samples.html">SDK Examples</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="extras.html">Extras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="samples.html">SDK Examples</a></li>
 </ul>
 
       </div>
@@ -155,7 +131,7 @@ which is the typical data structure returned by financial databases like yahoo! 
 <h3>Extracting and Down-Sampling<a class="headerlink" href="#extracting-and-down-sampling" title="Permalink to this headline">¶</a></h3>
 <p>In order to analyze time-series data, you will often have to use a subset sample or reduce the amount of ticks in the sample.
 This is why these functions were implemented in Quotek SDK, and they work as follows:</p>
-<div class="highlight-c++"><div class="highlight"><pre><span class="cp">#include &lt;quotek/record.hpp&gt;</span>
+<div class="highlight-c++"><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&lt;quotek/record.hpp&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 
@@ -174,100 +150,18 @@ This is why these functions were implemented in Quotek SDK, and they work as fol
 </div>
 <div class="section" id="multi-dimentional-arrays">
 <h2>Multi-Dimentional Arrays<a class="headerlink" href="#multi-dimentional-arrays" title="Permalink to this headline">¶</a></h2>
-<p>Quotek SDK embedds a series of classes which were created to instanciate and manipulate multi-dimentional
-arrays. This is the original work of Pramod Gupta from University of Washington, and it was designed for
-maximum performance and ease of use.</p>
-<div class="section" id="quotek-data-array-n-d">
-<h3>quotek::data::array{n}d<a class="headerlink" href="#quotek-data-array-n-d" title="Permalink to this headline">¶</a></h3>
-<p>This is the main set of classes for handling multi-dimentional arrays. the {n} parameter depends
-of the number of dimensions you want to create for your array.</p>
-<div class="highlight-c++"><div class="highlight"><pre><span class="cp">#include &lt;quotek/marray.hpp&gt;</span>
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-
-  <span class="c1">//instanciates a 3 dimensions array</span>
-  <span class="n">quotek</span><span class="o">::</span><span class="n">data</span><span class="o">::</span><span class="n">array3d</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">a1</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
-  <span class="c1">//assigns a value to array coord(1,1,1)</span>
-  <span class="n">a1</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="mf">1.618</span><span class="p">;</span>
-
-  <span class="c1">//instanciates a 7 dimensions array</span>
-  <span class="n">quotek</span><span class="o">::</span><span class="n">data</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">a2</span><span class="p">(</span><span class="mi">23</span><span class="p">,</span><span class="mi">38</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">61</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">123</span><span class="p">,</span><span class="mi">138</span><span class="p">);</span>
-  <span class="c1">//assigns a value to array coord(7,7,7,7,7,7,7)</span>
-  <span class="n">a2</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span> <span class="o">=</span> <span class="mf">1.618</span><span class="p">;</span>
-
-  <span class="c1">//retrieves value we just set</span>
-  <span class="kt">float</span> <span class="n">golden</span> <span class="o">=</span> <span class="n">a2</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">);</span>
-
-<span class="p">}</span>
-</pre></div>
-</div>
-</div>
+<p>The quotek SDK embedds the <a class="reference external" href="http://eigen.tuxfamily.org/">Eigen Linear Algebra Library</a> and at this regard, it benefits from the multiple containers usable in Eigen. For more informations, please visit <a class="reference external" href="http://eigen.tuxfamily.org/dox/">http://eigen.tuxfamily.org/dox/</a></p>
 </div>
 <div class="section" id="text-data">
 <h2>Text Data<a class="headerlink" href="#text-data" title="Permalink to this headline">¶</a></h2>
 <p>Along with time series, text information can be vital to assess market contexts, especially financial news.
 That&#8217;s why the quotek::data::news class was created, and every news datasource class in the SDK uses it to return news content.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
 </div>
-<div class="section" id="namespace-documentation">
-<h2>Namespace Documentation<a class="headerlink" href="#namespace-documentation" title="Permalink to this headline">¶</a></h2>
-<dl class="type">
-<dt id="_CPPv2N6quotek4dataE">
-<span id="quotek::data"></span><span class="target" id="project0namespacequotek_1_1data"></span><em class="property">namespace </em><code class="descclassname">quotek::</code><code class="descname">data</code><a class="headerlink" href="#_CPPv2N6quotek4dataE" title="Permalink to this definition">¶</a></dt>
-<dd><div class="breathe-sectiondef container">
-<p class="breathe-sectiondef-title rubric">Typedefs</p>
-<dl class="type">
-<dt>
-<span class="target" id="project0namespacequotek_1_1data_1af534907d621028392e8e26dbefee0c39"></span><em class="property">typedef </em><code class="descname">using quotek::data::StorageType = typedef typename decay&lt;typename remove_reference&lt;T&gt;::type&gt;::type</code></dt>
-<dd></dd></dl>
-
-</div>
-<dl class="class">
-<dt id="_CPPv2N6quotek4data3anyE">
-<span id="quotek::data::any"></span><span class="target" id="project0structquotek_1_1data_1_1any"></span><em class="property">struct </em><code class="descname">any</code><a class="headerlink" href="#_CPPv2N6quotek4data3anyE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;any.hpp&gt;</em><p>any is a generic type able to store any kind of data. It is very useful for store containers and genetics containers. </p>
-</dd></dl>
-
-<dl class="class">
-<dt>
-<span class="target" id="project0classquotek_1_1data_1_1cqueue"></span>template &lt;class <em>T</em>&gt;</dt>
-<dt id="_CPPv2N6quotek4data6cqueueE">
-<span id="quotek::data::cqueue"></span><em class="property">class </em><code class="descname">cqueue</code><a class="headerlink" href="#_CPPv2N6quotek4data6cqueueE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;cqueue.hpp&gt;</em><p>cqueue class is a thread-safe implementation of std::queue </p>
-</dd></dl>
-
-<dl class="class">
-<dt>
-<span class="target" id="project0classquotek_1_1data_1_1cvector"></span>template &lt;class <em>T</em>&gt;</dt>
-<dt id="_CPPv2N6quotek4data7cvectorE">
-<span id="quotek::data::cvector"></span><em class="property">class </em><code class="descname">cvector</code><a class="headerlink" href="#_CPPv2N6quotek4data7cvectorE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;cvector.hpp&gt;</em><p>Concurrent Vector class, to avoid race condition for vectors shared across many threads. </p>
-</dd></dl>
-
-<dl class="class">
-<dt id="_CPPv2N6quotek4data7historyE">
-<span id="quotek::data::history"></span><span class="target" id="project0classquotek_1_1data_1_1history"></span><em class="property">class </em><code class="descname">history</code><a class="headerlink" href="#_CPPv2N6quotek4data7historyE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;history.hpp&gt;</em><p>history is a container which aims to store historical data of an asset fetched from a remote or local datasource. While <a class="reference internal" href="record.html#project0classquotek_1_1data_1_1record"><span>quotek::data::record</span></a> is meant to store raw asset values provided by broker in real-time, history is more about storing historical data having a longer tick, usually the kind of data available from quotes information providers. </p>
-</dd></dl>
-
-<dl class="class">
-<dt id="_CPPv2N6quotek4data4newsE">
-<span id="quotek::data::news"></span><span class="target" id="project0classquotek_1_1data_1_1news"></span><em class="property">class </em><code class="descname">news</code><a class="headerlink" href="#_CPPv2N6quotek4data4newsE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;news.hpp&gt;</em><p>news is a container which aims to store data comming from remote financial news feeds, being RSS, twitter, etc.. </p>
-</dd></dl>
-
-<dl class="class">
-<dt id="_CPPv2N6quotek4data6recordE">
-<span id="quotek::data::record"></span><span class="target" id="project0classquotek_1_1data_1_1record"></span><em class="property">class </em><code class="descname">record</code><a class="headerlink" href="#_CPPv2N6quotek4data6recordE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;record.hpp&gt;</em><p>Record is a container class specially crafted to store asset values data. </p>
-</dd></dl>
-
-<dl class="class">
-<dt id="_CPPv2N6quotek4data7recordsE">
-<span id="quotek::data::records"></span><span class="target" id="project0classquotek_1_1data_1_1records"></span><em class="property">class </em><code class="descname">records</code><a class="headerlink" href="#_CPPv2N6quotek4data7recordsE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;record.hpp&gt;</em><p>records is a class that is is a <a class="reference internal" href="record.html#project0classquotek_1_1data_1_1record"><span>quotek::data::record</span></a> container </p>
-</dd></dl>
-
-</dd></dl>
-
 </div>
 </div>
 
